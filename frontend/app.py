@@ -3,6 +3,7 @@ import json
 import requests
 from typing import Dict, Any
 import logging
+import time
 
 USE_MOCK = True
 API_IRL="http://localhost:5000/api/ask"
@@ -94,6 +95,7 @@ def mock_post(url: str, json: Dict[str, Any]):
 
         def json(self):
             logger.info("Returning mock response JSON")
+            time.sleep(1.0)
             return mock_response
 
     return MockResponse()
