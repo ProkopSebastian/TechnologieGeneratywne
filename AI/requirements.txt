@@ -1,0 +1,11 @@
+pandas
+openai
+langchain
+langchain-community
+langchain-openai
+chromadb
+tiktoken
+faiss-cpu
+jq
+
+python-dotenv
