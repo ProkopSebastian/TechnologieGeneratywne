@@ -1,0 +1,116 @@
+{
+  "scraped_at": "2025-05-29T22:22:34.711639",
+  "total_products": 10,
+  "products": [
+    {
+      "name": "Mięso w słoiku Kraina Wędlin, 280 g",
+      "price": "5,99",
+      "original_price": null,
+      "discount_info": "64% taniej na drugi produkt",
+      "unit": "kg",
+      "promotion_type": "Drugi 64% taniej",
+      "product_url": "https://www.biedronka.pl/pl/product,id,438411,name,mieso-w-sloiku-kraina-wedlin-280-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T22A/mb/mieso_w_sloiku_kraina_wedlin_280_2x2.jpg",
+      "scraped_at": "2025-05-29T22:22:34.709909"
+    },
+    {
+      "name": "Smalec Kraina Wędlin, 180 g",
+      "price": "3,49",
+      "original_price": null,
+      "discount_info": "60% taniej na drugi produkt",
+      "unit": "kg",
+      "promotion_type": "Drugi 60% taniej",
+      "product_url": "https://www.biedronka.pl/pl/product,id,438412,name,smalec-kraina-wedlin-180-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T22A/mb/smalec_kraina_wedlin_180_g_2x2.jpg",
+      "scraped_at": "2025-05-29T22:22:34.709919"
+    },
+    {
+      "name": "Konserwa golonkowa lub Konserwa mielonka Luksusowa Krakus, 300 g",
+      "price": "6,49",
+      "original_price": null,
+      "discount_info": "52% taniej na drugi produkt",
+      "unit": "kg",
+      "promotion_type": "Drugi 52% taniej",
+      "product_url": "https://www.biedronka.pl/pl/product,id,438413,name,konserwa-golonkowa-lub-konserwa-mielonka-luksusowa-krakus-300-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T22A/mb/konserwa_golonkowa_lub_konserwa_2x2.jpg",
+      "scraped_at": "2025-05-29T22:22:34.709922"
+    },
+    {
+      "name": "Kawa rozpuszczalna Nescafé Crema, 200 g",
+      "price": "26,99",
+      "original_price": null,
+      "discount_info": "32% taniej",
+      "unit": "kg",
+      "promotion_type": null,
+      "product_url": "https://www.biedronka.pl/pl/product,id,438414,name,kawa-rozpuszczalna-nescafe-crema-200-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T22A/mb/kawa_rozpuszczalna_nescaf_crema_2x2.jpg",
+      "scraped_at": "2025-05-29T22:22:34.709924"
+    },
+    {
+      "name": "Wszystkie zielone herbaty Big Active, 100/120 g lub 20 torebek",
+      "price": "3,99",
+      "original_price": null,
+      "discount_info": null,
+      "unit": null,
+      "promotion_type": "SUPERCENA",
+      "product_url": "https://www.biedronka.pl/pl/product,id,438415,name,wszystkie-zielone-herbaty-big-active-100-120-g-lub-20-torebek",
+      "image_url": "https://cdn.biedronka.pl/__2025/T22A/mb/wszystkie_zielone_herbaty_big_active_2x2.jpg",
+      "scraped_at": "2025-05-29T22:22:34.709926"
+    },
+    {
+      "name": "Kawa mielona Jacobs Krönung, 500 g",
+      "price": "25,99",
+      "original_price": null,
+      "discount_info": "31% taniej",
+      "unit": "opak",
+      "promotion_type": null,
+      "product_url": "https://www.biedronka.pl/pl/product,id,438416,name,kawa-mielona-jacobs-kronung-500-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T22A/mb/kawa_mielona_jacobs_kr_nung_500_2x2.jpg",
+      "scraped_at": "2025-05-29T22:22:34.709928"
+    },
+    {
+      "name": "Świeży filet z piersi kurczaka pakowany próżniowo Kraina Mięs, Mega Paka",
+      "price": "24,90",
+      "original_price": null,
+      "discount_info": "70% taniej na drugi produkt",
+      "unit": "kg",
+      "promotion_type": "Drugi 70% taniej",
+      "product_url": "https://www.biedronka.pl/pl/product,id,438769,name,swiezy-filet-z-piersi-kurczaka-pakowany-prozniowo-kraina-mies-mega-paka",
+      "image_url": "https://cdn.biedronka.pl/__2025/T22B/mb/swiezy_filet_z_piersi_kurczaka_2x2.jpg",
+      "scraped_at": "2025-05-29T22:22:34.709930"
+    },
+    {
+      "name": "Szynka wieprzowa bez kości pakowana próżniowo Kraina Mięs",
+      "price": "7,99",
+      "original_price": null,
+      "discount_info": "57% taniej",
+      "unit": "kg",
+      "promotion_type": null,
+      "product_url": "https://www.biedronka.pl/pl/product,id,438770,name,szynka-wieprzowa-bez-kosci-pakowana-prozniowo-kraina-mies",
+      "image_url": "https://cdn.biedronka.pl/__2025/T22B/mb/szynka_wieprzowa_bez_kosci_pakowana_2x2.jpg",
+      "scraped_at": "2025-05-29T22:22:34.709948"
+    },
+    {
+      "name": "Mięso mielone z łopatki wieprzowej Kraina Mięs, 500 g",
+      "price": "5,49",
+      "original_price": null,
+      "discount_info": "50% taniej",
+      "unit": "opak",
+      "promotion_type": "1+1 GRATIS",
+      "product_url": "https://www.biedronka.pl/pl/product,id,438771,name,mieso-mielone-z-lopatki-wieprzowej-kraina-mies-500-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T22B/mb/mieso_mielone_z_lopatki_wieprzowej_2x2.jpg",
+      "scraped_at": "2025-05-29T22:22:34.709950"
+    },
+    {
+      "name": "Udo lub podudzie z kurczaka",
+      "price": "7,99",
+      "original_price": null,
+      "discount_info": "36% taniej",
+      "unit": "kg",
+      "promotion_type": null,
+      "product_url": "https://www.biedronka.pl/pl/product,id,438772,name,udo-lub-podudzie-z-kurczaka",
+      "image_url": "https://cdn.biedronka.pl/__2025/T22B/mb/udo_lub_podudzie_z_kurczaka_2x2.jpg",
+      "scraped_at": "2025-05-29T22:22:34.709952"
+    }
+  ]
+}

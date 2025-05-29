@@ -10,6 +10,24 @@ services:
       - app-network
     restart: unless-stopped
 
+  scraper:
+    build:
+      context: ./scraper
+    volumes:
+      - ./scraper:/app
+      - ./shared_data:/shared  # Lokalny katalog - łatwiejszy dostęp
+    networks:
+      - app-network
+    restart: "no"  # Nie restartuj po zakończeniu
+    environment:
+      - PYTHONUNBUFFERED=1
+      - SCRAPER_URL=https://www.biedronka.pl/pl/oferta-z-karta-moja-biedronka
+      - MAX_PRODUCTS=10  # Zmniejszona liczba dla szybszego testu
+      - OUTPUT_FILE=/shared/biedronka_offers.json
+    # Wybierz jedną z opcji:
+    command: ["python", "-u", "main.py"]  # Jednorazowe uruchomienie
+    # command: ["python", "-u", "scheduler.py"]  # Cykliczne uruchamianie
+
 networks:
   app-network:
     driver: bridge
