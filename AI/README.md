@@ -19,6 +19,7 @@ This is simple rag that embeds biedronka offers
 
 simple question:
 ```
+What is the best deal?
 ```
 
 ```
