@@ -4,15 +4,17 @@ import requests
 from typing import Dict, Any
 import logging
 import time
+import sys
 
-USE_MOCK = True
-API_IRL="http://localhost:5000/api/ask"
+USE_MOCK = False
+API_IRL="http://rag-backend:5000/api/ask"
 
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[logging.StreamHandler()]
+    stream=sys.stdout,
 )
+
 logger = logging.getLogger(__name__)
 
 
@@ -195,6 +197,7 @@ if st.button("Stwórz jadłospis"):
                 else:
                     logger.exception("no meal key in JSON recived")
                     st.error("Brak danych w odpowiedzi")
+                    logger.info(f'Data: {result}')
 
         except Exception as e:
             logger.exception("Unhandled exception during diet generation")

@@ -7,5 +7,6 @@ chromadb
 tiktoken
 faiss-cpu
 jq
+Flask
 
 python-dotenv

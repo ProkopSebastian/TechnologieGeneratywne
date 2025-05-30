@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2025-05-29T22:26:41.669026",
+  "scraped_at": "2025-05-30T00:20:27.090134",
   "total_products": 10,
   "products": [
     {
@@ -11,7 +11,7 @@
       "promotion_type": "Drugi 64% taniej",
       "product_url": "https://www.biedronka.pl/pl/product,id,438411,name,mieso-w-sloiku-kraina-wedlin-280-g",
       "image_url": "https://cdn.biedronka.pl/__2025/T22A/mb/mieso_w_sloiku_kraina_wedlin_280_2x2.jpg",
-      "scraped_at": "2025-05-29T22:26:41.665876"
+      "scraped_at": "2025-05-30T00:20:27.087983"
     },
     {
       "name": "Smalec Kraina Wędlin, 180 g",
@@ -22,7 +22,7 @@
       "promotion_type": "Drugi 60% taniej",
       "product_url": "https://www.biedronka.pl/pl/product,id,438412,name,smalec-kraina-wedlin-180-g",
       "image_url": "https://cdn.biedronka.pl/__2025/T22A/mb/smalec_kraina_wedlin_180_g_2x2.jpg",
-      "scraped_at": "2025-05-29T22:26:41.665888"
+      "scraped_at": "2025-05-30T00:20:27.087997"
     },
     {
       "name": "Konserwa golonkowa lub Konserwa mielonka Luksusowa Krakus, 300 g",
@@ -33,7 +33,7 @@
       "promotion_type": "Drugi 52% taniej",
       "product_url": "https://www.biedronka.pl/pl/product,id,438413,name,konserwa-golonkowa-lub-konserwa-mielonka-luksusowa-krakus-300-g",
       "image_url": "https://cdn.biedronka.pl/__2025/T22A/mb/konserwa_golonkowa_lub_konserwa_2x2.jpg",
-      "scraped_at": "2025-05-29T22:26:41.665890"
+      "scraped_at": "2025-05-30T00:20:27.088001"
     },
     {
       "name": "Kawa rozpuszczalna Nescafé Crema, 200 g",
@@ -44,7 +44,7 @@
       "promotion_type": null,
       "product_url": "https://www.biedronka.pl/pl/product,id,438414,name,kawa-rozpuszczalna-nescafe-crema-200-g",
       "image_url": "https://cdn.biedronka.pl/__2025/T22A/mb/kawa_rozpuszczalna_nescaf_crema_2x2.jpg",
-      "scraped_at": "2025-05-29T22:26:41.665893"
+      "scraped_at": "2025-05-30T00:20:27.088004"
     },
     {
       "name": "Wszystkie zielone herbaty Big Active, 100/120 g lub 20 torebek",
@@ -55,7 +55,7 @@
       "promotion_type": "SUPERCENA",
       "product_url": "https://www.biedronka.pl/pl/product,id,438415,name,wszystkie-zielone-herbaty-big-active-100-120-g-lub-20-torebek",
       "image_url": "https://cdn.biedronka.pl/__2025/T22A/mb/wszystkie_zielone_herbaty_big_active_2x2.jpg",
-      "scraped_at": "2025-05-29T22:26:41.665895"
+      "scraped_at": "2025-05-30T00:20:27.088006"
     },
     {
       "name": "Kawa mielona Jacobs Krönung, 500 g",
@@ -66,7 +66,7 @@
       "promotion_type": null,
       "product_url": "https://www.biedronka.pl/pl/product,id,438416,name,kawa-mielona-jacobs-kronung-500-g",
       "image_url": "https://cdn.biedronka.pl/__2025/T22A/mb/kawa_mielona_jacobs_kr_nung_500_2x2.jpg",
-      "scraped_at": "2025-05-29T22:26:41.665897"
+      "scraped_at": "2025-05-30T00:20:27.088009"
     },
     {
       "name": "Świeży filet z piersi kurczaka pakowany próżniowo Kraina Mięs, Mega Paka",
@@ -77,7 +77,7 @@
       "promotion_type": "Drugi 70% taniej",
       "product_url": "https://www.biedronka.pl/pl/product,id,438769,name,swiezy-filet-z-piersi-kurczaka-pakowany-prozniowo-kraina-mies-mega-paka",
       "image_url": "https://cdn.biedronka.pl/__2025/T22B/mb/swiezy_filet_z_piersi_kurczaka_2x2.jpg",
-      "scraped_at": "2025-05-29T22:26:41.665899"
+      "scraped_at": "2025-05-30T00:20:27.088011"
     },
     {
       "name": "Szynka wieprzowa bez kości pakowana próżniowo Kraina Mięs",
@@ -88,7 +88,7 @@
       "promotion_type": null,
       "product_url": "https://www.biedronka.pl/pl/product,id,438770,name,szynka-wieprzowa-bez-kosci-pakowana-prozniowo-kraina-mies",
       "image_url": "https://cdn.biedronka.pl/__2025/T22B/mb/szynka_wieprzowa_bez_kosci_pakowana_2x2.jpg",
-      "scraped_at": "2025-05-29T22:26:41.665916"
+      "scraped_at": "2025-05-30T00:20:27.088104"
     },
     {
       "name": "Mięso mielone z łopatki wieprzowej Kraina Mięs, 500 g",
@@ -99,7 +99,7 @@
       "promotion_type": "1+1 GRATIS",
       "product_url": "https://www.biedronka.pl/pl/product,id,438771,name,mieso-mielone-z-lopatki-wieprzowej-kraina-mies-500-g",
       "image_url": "https://cdn.biedronka.pl/__2025/T22B/mb/mieso_mielone_z_lopatki_wieprzowej_2x2.jpg",
-      "scraped_at": "2025-05-29T22:26:41.665918"
+      "scraped_at": "2025-05-30T00:20:27.088110"
     },
     {
       "name": "Udo lub podudzie z kurczaka",
@@ -110,7 +110,7 @@
       "promotion_type": null,
       "product_url": "https://www.biedronka.pl/pl/product,id,438772,name,udo-lub-podudzie-z-kurczaka",
       "image_url": "https://cdn.biedronka.pl/__2025/T22B/mb/udo_lub_podudzie_z_kurczaka_2x2.jpg",
-      "scraped_at": "2025-05-29T22:26:41.665920"
+      "scraped_at": "2025-05-30T00:20:27.088113"
     }
   ]
 }

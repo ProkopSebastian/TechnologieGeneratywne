@@ -10,6 +10,19 @@ services:
       - app-network
     restart: unless-stopped
 
+  rag-backend:
+    build:
+      context: ./AI
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./AI:/app
+      - ./shared_data:/app/shared_data
+    networks:
+      - app-network
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    restart: unless-stopped
   scraper:
     build:
       context: ./scraper
