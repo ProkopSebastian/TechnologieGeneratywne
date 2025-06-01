@@ -23,6 +23,7 @@ services:
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
     restart: unless-stopped
+
   scraper:
     build:
       context: ./scraper
@@ -35,11 +36,14 @@ services:
     environment:
       - PYTHONUNBUFFERED=1
       - SCRAPER_URL=https://www.biedronka.pl/pl/oferta-z-karta-moja-biedronka
-      - MAX_PRODUCTS=10  # Zmniejszona liczba dla szybszego testu
+      - MAX_PRODUCTS=50  # Zmniejszona liczba dla szybszego testu
       - OUTPUT_FILE=/shared/biedronka_offers.json
+      - OPENAI_API_KEY=${OPENAI_API_KEY} # Dodaj klucz API dla skryptu enhancer.py
     # Wybierz jedną z opcji:
-    command: ["python", "-u", "main.py"]  # Jednorazowe uruchomienie
-    # command: ["python", "-u", "scheduler.py"]  # Cykliczne uruchamianie
+    # command: ["python", "-u", "main.py"]
+    # command: ["python", "-u", "scheduler.py"]
+    command: ["sh", "-c", "python -u main.py && python -u enhancer.py"] # Uruchom main.py, a po sukcesie enhancer.py
+
 
 networks:
   app-network:
