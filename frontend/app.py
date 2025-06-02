@@ -81,59 +81,82 @@ def display_meals(meals, plan_info):
                 if main_products:
                     st.markdown("**🏷️ Produkty promocyjne z Biedronki:**")
                     for product in main_products:
-                        st.write(f"- 🛒 **{product}**")
-                
+                        product_info = f"- 🛒 **{product['name']}**"
+                        if 'quantity' in product:
+                            product_info += f" ({product['quantity']})"
+                        if 'price' in product:
+                            product_info += f" - {product['price']}"
+                        st.write(product_info)
+
                 # Additional ingredients
                 additional_ingredients = meal.get("additional_ingredients", [])
                 if additional_ingredients:
                     st.markdown("**🧂 Dodatkowe składniki:**")
                     for ingredient in additional_ingredients:
-                        st.write(f"- {ingredient}")
-                
-                st.markdown("---")
+                        ingredient_info = f"- {ingredient['name']}"
+                        if 'quantity' in ingredient:
+                            ingredient_info += f" ({ingredient['quantity']})"
+                        if 'estimated_price' in ingredient:
+                            ingredient_info += f" - ~{ingredient['estimated_price']}"
+                        st.write(ingredient_info)
+
+                    st.markdown("---")
 
 def display_shopping_summary(shopping_summary, meals):
-    st.subheader("🛒 Podsumowanie zakupów")
+    st.subheader("🛍️ Podsumowanie zakupów")
     
-    if shopping_summary:
-        col1, col2, col3 = st.columns(3)
-        
-        with col1:
-            promo_cost = shopping_summary.get("promotional_products_cost", "0.00 PLN")
-            st.metric("🏷️ Produkty promocyjne", promo_cost)
-        
-        with col2:
-            additional_cost = shopping_summary.get("additional_ingredients_cost", "0.00 PLN")
-            st.metric("🧂 Dodatkowe składniki", additional_cost)
-        
-        with col3:
-            savings = shopping_summary.get("total_savings", "0.00 PLN")
-            st.metric("💰 Oszczędności", savings, delta=savings)
-    
-    st.markdown("---")
-    
-    # Create shopping list from meals
-    st.subheader("📝 Lista zakupów")
-    
-    # Collect all products
+    # Zbierz wszystkie produkty i składniki
     all_main_products = set()
     all_additional_ingredients = set()
     
     for meal in meals:
+        # Obsługa main_products (nowy format - lista słowników)
         for product in meal.get("main_products", []):
-            all_main_products.add(product)
+            if isinstance(product, dict):
+                # Dla nowego formatu używamy nazwy produktu jako klucza
+                product_str = product['name']
+                if 'quantity' in product:
+                    product_str += f" ({product['quantity']})"
+                all_main_products.add(product_str)
+            else:
+                # Dla starego formatu (string) dodajemy bez zmian
+                all_main_products.add(product)
+        
+        # Obsługa additional_ingredients (nowy format - lista słowników)
         for ingredient in meal.get("additional_ingredients", []):
-            all_additional_ingredients.add(ingredient)
+            if isinstance(ingredient, dict):
+                # Dla nowego formatu używamy nazwy składnika jako klucza
+                ingredient_str = ingredient['name']
+                if 'quantity' in ingredient:
+                    ingredient_str += f" ({ingredient['quantity']})"
+                all_additional_ingredients.add(ingredient_str)
+            else:
+                # Dla starego formatu (string) dodajemy bez zmian
+                all_additional_ingredients.add(ingredient)
     
+    # Wyświetl produkty promocyjne
     if all_main_products:
-        st.markdown("**🏷️ Produkty promocyjne z Biedronki:**")
+        st.markdown("**🏷️ Produkty promocyjne do kupienia w Biedronce:**")
         for product in sorted(all_main_products):
-            st.write(f"- 🛒 {product}")
+            st.write(f"- {product}")
     
+    # Wyświetl dodatkowe składniki
     if all_additional_ingredients:
-        st.markdown("**🧂 Dodatkowe składniki do kupienia:**")
+        st.markdown("**🧂 Inne potrzebne składniki:**")
         for ingredient in sorted(all_additional_ingredients):
             st.write(f"- {ingredient}")
+    
+    # Wyświetl podsumowanie kosztów
+    if shopping_summary:
+        st.markdown("**💰 Podsumowanie kosztów:**")
+        if 'promotional_products_cost' in shopping_summary:
+            st.write(f"- Koszt produktów promocyjnych: {shopping_summary['promotional_products_cost']}")
+        if 'additional_ingredients_cost' in shopping_summary:
+            st.write(f"- Koszt dodatkowych składników: {shopping_summary['additional_ingredients_cost']}")
+        if 'total_savings' in shopping_summary:
+            st.write(f"- Oszczędności dzięki promocjom: {shopping_summary['total_savings']}")
+        if 'estimated_total_cost' in shopping_summary:
+            st.write(f"- **Łączny szacowany koszt: {shopping_summary['estimated_total_cost']}**")
 
 def display_error_message(result):
     """Display error message from API response"""

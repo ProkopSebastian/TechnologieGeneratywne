@@ -30,11 +30,11 @@ class MealPlannerAPI:
             
             self.products = products_data['products']
             
-            print(f"Załadowano {len(self.recipe_data['recipes_df'])} przepisów")
-            print(f"Załadowano {len(self.products)} produktów z Biedronki")
+            print(f"Loaded {len(self.recipe_data['recipes_df'])} recipes")
+            print(f"Loaded {len(self.products)} products from Biedronka")
             
         except Exception as e:
-            print(f"Błąd ładowania danych: {e}")
+            print(f"Error loading data: {e}")
             raise
 
     def search_recipes_by_keywords(self, keywords: List[str], top_k: int = 5) -> List[Dict]:
@@ -74,20 +74,20 @@ class MealPlannerAPI:
             return results
             
         except Exception as e:
-            print(f"Błąd wyszukiwania przepisów: {e}")
+            print(f"Recipe search error: {e}")
             return []
 
     def generate_meal_plan_from_products(self, selected_products: List[Dict], 
                                        days: int = 3, people: int = 2) -> Optional[Dict]:
         """Generate meal plan from specific product list"""
-        print(f"Generowanie planu na {days} dni dla {people} osób...")
-        print(f"Używane produkty: {len(selected_products)}")
+        print(f"Generating {days}-day plan for {people} people...")
+        print(f"Using {len(selected_products)} promotional products")
         
         # Prepare context for LLM
-        context = f"DOSTĘPNE PRODUKTY PROMOCYJNE:\n"
+        context = f"AVAILABLE PROMOTIONAL PRODUCTS:\n"
         
         for product in selected_products:
-            context += f"- {product['name']}: {product['price']} PLN ({product.get('discount_info', 'brak zniżki')})\n"
+            context += f"- {product['name']}: {product['price']} PLN ({product.get('discount_info', 'no discount')})\n"
             
             # Add best recipe as inspiration
             keywords = product.get('english_keywords', [])
@@ -95,23 +95,25 @@ class MealPlannerAPI:
                 recipes = self.search_recipes_by_keywords(keywords, top_k=1)
                 if recipes:
                     best_recipe = recipes[0]
-                    context += f"  Sugerowany przepis: {best_recipe['title']}\n"
-                    context += f"  Składniki: {best_recipe['ingredients'][:1000]}...\n" # Limit to 220 characters
-                    context += f"  Cały przepis: {best_recipe['instructions'][:1000]}...\n" # Limit to 220 characters
+                    context += f"  Suggested recipe: {best_recipe['title']}\n"
+                    context += f"  Ingredients: {best_recipe['ingredients'][:1000]}...\n"
+                    context += f"  Full recipe: {best_recipe['instructions'][:1000]}...\n"
         
-        # LLM prompt
-        prompt = f"""Stwórz plan posiłków na {days} dni dla {people} osób, wykorzystując produkty promocyjne z Biedronki.
+        # LLM prompt in English with detailed instructions
+        prompt = f"""Create a detailed meal plan for {days} days for {people} people using promotional products from Biedronka.
 
 {context}
 
-ZASADY:
-- Użyj jak najwięcej produktów promocyjnych z listy
-- Stwórz różnorodne, zdrowe posiłki (śniadanie, lunch, kolacja)
-- Wykorzystaj sugerowane przepisy jako inspirację
-- Podaj oszacowany całkowity koszt
-- Możesz dodać podstawowe składniki (chleb, jajka, mleko, etc.)
+RULES:
+- Use as many promotional products as possible
+- Create varied, healthy meals (breakfast, lunch, dinner)
+- Use suggested recipes as inspiration - you can copy their instructions directly
+- Include precise quantities for all ingredients (e.g., "200g chicken breast")
+- Provide detailed step-by-step cooking instructions
+- Calculate estimated total cost
+- You can add basic ingredients (bread, eggs, milk, etc.)
 
-Zwróć odpowiedź w formacie JSON:
+Return the response in JSON format with Polish text:
 {{
   "plan_info": {{
     "days": {days},
@@ -122,17 +124,30 @@ Zwróć odpowiedź w formacie JSON:
     {{
       "day": 1,
       "type": "breakfast",
-      "name": "Nazwa posiłku",
-      "main_products": ["Produkty z listy promocyjnej"],
-      "additional_ingredients": ["Podstawowe składniki jeśli potrzeba"],
-      "instructions": "Kroki przygotowania posiłku",
-      "prep_time": "XX min"
+      "name": "Meal name in Polish",
+      "main_products": [
+        {{
+          "name": "Product name",
+          "quantity": "200g",
+          "price": "X.XX PLN"
+        }}
+      ],
+      "additional_ingredients": [
+        {{
+          "name": "Basic ingredient",
+          "quantity": "100ml",
+          "estimated_price": "X.XX PLN"
+        }}
+      ],
+      "instructions": "Detailed step-by-step preparation instructions in Polish. Should be very specific with cooking times, temperatures, and techniques. If using a suggested recipe, you can copy its instructions directly.",
+      "prep_time": "XX min",
+      "cooking_time": "XX min"
     }}
   ],
   "shopping_summary": {{
     "promotional_products_cost": "XX.XX PLN",
     "additional_ingredients_cost": "XX.XX PLN",
-    "total_savings": "Ile zaoszczędzono dzięki promocjom"
+    "total_savings": "Savings from promotions in PLN"
   }}
 }}"""
         
@@ -140,7 +155,7 @@ Zwróć odpowiedź w formacie JSON:
             response = self.client.chat.completions.create(
                 model="gpt-4o-mini",
                 messages=[
-                    {"role": "system", "content": "Jesteś ekspertem od planowania posiłków. Odpowiadasz TYLKO w formacie JSON."},
+                    {"role": "system", "content": "You are an expert meal planner. Respond ONLY in the specified JSON format with Polish text."},
                     {"role": "user", "content": prompt}
                 ],
                 temperature=0.3,
@@ -149,10 +164,9 @@ Zwróć odpowiedź w formacie JSON:
             
             result = response.choices[0].message.content.strip()
             
-            # Zapisz całe zapytanie i odpowiedź do pliku debugowania
+            # Save debug info
             with open("shared_data/debug_meal_plan_request.txt", "w", encoding='utf-8') as f:
                 f.write(f"Prompt:\n{prompt}\n\nResponse:\n{result}\n")
-
 
             # Clean JSON response
             if result.startswith('```json'):
@@ -162,7 +176,7 @@ Zwróć odpowiedź w formacie JSON:
             return parsed_plan
             
         except Exception as e:
-            print(f"Błąd generowania planu: {e}")
+            print(f"Meal plan generation error: {e}")
             return None
 
     def get_all_products(self) -> List[str]:
@@ -177,18 +191,18 @@ Zwróć odpowiedź w formacie JSON:
             product = next((p for p in self.products if name.lower() in p['name'].lower()), None)
             if product:
                 selected_products.append(product)
-                print(f"✅ Dodano: {product['name']}")
+                print(f"✅ Added: {product['name']}")
             else:
-                print(f"❌ Nie znaleziono: {name}")
+                print(f"❌ Not found: {name}")
         
         if not selected_products:
-            print("❌ Nie wybrano żadnych produktów!")
-            return {"status": "error", "message": "Nie wybrano żadnych produktów"}
+            print("❌ No products selected!")
+            return {"status": "error", "message": "No products selected"}
         
         plan = self.generate_meal_plan_from_products(selected_products, days, people)
         
         if plan:
-            print(f"\n✅ WYGENEROWANY PLAN:")
+            print(f"\n✅ GENERATED MEAL PLAN:")
             print(json.dumps(plan, ensure_ascii=False, indent=2))
             
             # Add status for API compatibility
@@ -196,13 +210,13 @@ Zwróć odpowiedź w formacie JSON:
             
             return plan
         else:
-            return {"status": "error", "message": "Nie udało się wygenerować planu"}
+            return {"status": "error", "message": "Failed to generate plan"}
 
     def generate_plan_from_all_products(self, days: int = 1, people: int = 1) -> Optional[Dict]:
         """Generate meal plan using all available products"""
         all_product_names = self.get_all_products()
         
-        print(f"\n📦 Produkty do wykorzystania ({len(all_product_names)}):")
+        print(f"\n📦 Available products ({len(all_product_names)}):")
         for i, name in enumerate(all_product_names, 1):
             print(f"{i:2d}. {name}")
         
@@ -215,7 +229,6 @@ Zwróć odpowiedź w formacie JSON:
         """
         try:
             # Generate a plan from all products
-            # In the future, you can extend this to parse the question for specific requirements
             plan = self.generate_plan_from_all_products(days, people)
             
             if plan and plan.get("status") == "success":
