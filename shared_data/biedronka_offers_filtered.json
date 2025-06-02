@@ -1,6 +1,6 @@
 {
   "scraped_at": "2025-06-02T13:39:32.860489",
-  "total_products": 28,
+  "total_products": 19,
   "products": [
     {
       "name": "Kiełbasa Podwawelska Kraina Wędlin",
@@ -105,40 +105,6 @@
       ]
     },
     {
-      "name": "Jogurt proteinowy pitny YoPRO, 270 g",
-      "price": "3,00",
-      "original_price": null,
-      "discount_info": "50% taniej",
-      "unit": "opak",
-      "promotion_type": null,
-      "product_url": "https://www.biedronka.pl/pl/product,id,439150,name,jogurt-proteinowy-pitny-yopro-270-g",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/jogurt_proteinowy_pitny_yopro_2x2.jpg",
-      "scraped_at": "2025-06-02T13:39:32.857793",
-      "english_keywords": [
-        "yogurt",
-        "dairy",
-        "protein",
-        "snack"
-      ]
-    },
-    {
-      "name": "Krem do smarowania Nutella, 350 g",
-      "price": "11,49",
-      "original_price": null,
-      "discount_info": "30% taniej",
-      "unit": "kg",
-      "promotion_type": null,
-      "product_url": "https://www.biedronka.pl/pl/product,id,439151,name,krem-do-smarowania-nutella-350-g",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/krem_do_smarowania_nutella_350_2x2.jpg",
-      "scraped_at": "2025-06-02T13:39:32.857797",
-      "english_keywords": [
-        "spread",
-        "chocolate",
-        "dessert",
-        "sweet"
-      ]
-    },
-    {
       "name": "Pasztet Podlaski Drosed, 195 g",
       "price": "2,69",
       "original_price": null,
@@ -173,23 +139,6 @@
       ]
     },
     {
-      "name": "Herbata Lipton Yellow Label, 25 torebek",
-      "price": "5,00",
-      "original_price": null,
-      "discount_info": "50% taniej",
-      "unit": "opak",
-      "promotion_type": "1+1 GRATIS",
-      "product_url": "https://www.biedronka.pl/pl/product,id,439154,name,herbata-lipton-yellow-label-25-torebek",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/herbata_lipton_yellow_label_25_2x2.jpg",
-      "scraped_at": "2025-06-02T13:39:32.857802",
-      "english_keywords": [
-        "tea",
-        "beverage",
-        "herbal",
-        "infusion"
-      ]
-    },
-    {
       "name": "Herbata Teekanne, 20 torebek",
       "price": "3,99",
       "original_price": null,
@@ -204,57 +153,6 @@
         "beverage",
         "herbal",
         "infusion"
-      ]
-    },
-    {
-      "name": "Kawa ziarnista Jacobs Barista Editions, 1 kg",
-      "price": "57,99",
-      "original_price": null,
-      "discount_info": "27% taniej",
-      "unit": "opak",
-      "promotion_type": null,
-      "product_url": "https://www.biedronka.pl/pl/product,id,439156,name,kawa-ziarnista-jacobs-barista-editions-1-kg",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/kawa_ziarnista_jacobs_barista_editions_2x2.jpg",
-      "scraped_at": "2025-06-02T13:39:32.857806",
-      "english_keywords": [
-        "coffee",
-        "beverage",
-        "beans",
-        "ground"
-      ]
-    },
-    {
-      "name": "Kapsułki Dolce Gusto, 16 szt.",
-      "price": "20,99",
-      "original_price": null,
-      "discount_info": "60% taniej na drugi produkt",
-      "unit": "opak",
-      "promotion_type": "Drugi 60% taniej",
-      "product_url": "https://www.biedronka.pl/pl/product,id,439157,name,kapsulki-dolce-gusto-16-szt",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/kapsulki_dolce_gusto_16_szt_2x2.jpg",
-      "scraped_at": "2025-06-02T13:39:32.857807",
-      "english_keywords": [
-        "coffee",
-        "beverage",
-        "capsules",
-        "espresso"
-      ]
-    },
-    {
-      "name": "Jajko Kinder Joy, 20 g",
-      "price": "3,66",
-      "original_price": null,
-      "discount_info": "33% taniej",
-      "unit": "szt",
-      "promotion_type": null,
-      "product_url": "https://www.biedronka.pl/pl/product,id,439158,name,jajko-kinder-joy-20-g",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/jajko_kinder_joy_20_g_2x2.jpg",
-      "scraped_at": "2025-06-02T13:39:32.857809",
-      "english_keywords": [
-        "chocolate",
-        "snack",
-        "candy",
-        "treat"
       ]
     },
     {
@@ -306,23 +204,6 @@
         "slices",
         "dairy",
         "snack"
-      ]
-    },
-    {
-      "name": "Odżywcze mleczko lub balsam do ciała Nivea, 400 ml",
-      "price": "16,00",
-      "original_price": null,
-      "discount_info": "50% taniej",
-      "unit": "opak",
-      "promotion_type": "1+1 GRATIS",
-      "product_url": "https://www.biedronka.pl/pl/product,id,439137,name,odzywcze-mleczko-lub-balsam-do-ciala-nivea-400-ml",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/odzywcze_mleczko_lub_balsam_do_2x2.jpg",
-      "scraped_at": "2025-06-02T13:39:32.857815",
-      "english_keywords": [
-        "cream",
-        "body",
-        "moisturizer",
-        "skincare"
       ]
     },
     {
@@ -394,23 +275,6 @@
       ]
     },
     {
-      "name": "Lekki krem do twarzy NIVEA Care 5w1, 100 ml",
-      "price": "10,00",
-      "original_price": null,
-      "discount_info": "50% taniej",
-      "unit": "opak",
-      "promotion_type": "1+1 GRATIS",
-      "product_url": "https://www.biedronka.pl/pl/product,id,439136,name,lekki-krem-do-twarzy-nivea-care-5w1-100-ml",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/lekki_krem_do_twarzy_2x2.jpg",
-      "scraped_at": "2025-06-02T13:39:32.857822",
-      "english_keywords": [
-        "cream",
-        "face",
-        "moisturizer",
-        "skincare"
-      ]
-    },
-    {
       "name": "Szynka konserwowa Kraina Wędlin, 200 g",
       "price": "3,99",
       "original_price": null,
@@ -425,23 +289,6 @@
         "ham",
         "pork",
         "deli"
-      ]
-    },
-    {
-      "name": "Płyn do płukania tkanin Silan, opak. 1,32 l",
-      "price": "9,50",
-      "original_price": null,
-      "discount_info": "50% taniej",
-      "unit": "opak",
-      "promotion_type": "1+1 GRATIS",
-      "product_url": "https://www.biedronka.pl/pl/product,id,439138,name,plyn-do-plukania-tkanin-silan-opak-1-32-l",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/plyn_do_plukania_tkanin_silan_2x2.jpg",
-      "scraped_at": "2025-06-02T13:39:32.857825",
-      "english_keywords": [
-        "fabric softener",
-        "cleaning",
-        "household",
-        "laundry"
       ]
     },
     {
@@ -478,5 +325,12 @@
         "deli"
       ]
     }
-  ]
+  ],
+  "filter_info": {
+    "filtered_at": "2025-06-02T13:39:51",
+    "original_count": 28,
+    "filtered_count": 19,
+    "removed_count": 9,
+    "batch_size_used": 40
+  }
 }

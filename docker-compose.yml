@@ -39,7 +39,7 @@ services:
       - MAX_PRODUCTS=50
       - OUTPUT_FILE=/shared/biedronka_offers.json
       - OPENAI_API_KEY=${OPENAI_API_KEY}
-    command: ["sh", "-c", "python -u main.py && python -u enhancer.py"]
+    command: ["sh", "-c", "python -u main.py && python -u enhancer.py && python -u filter.py"]
 
 
 networks:
