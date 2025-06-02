@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
-from rag import ask_rag
+# from rag import ask_rag
+from mealPlanner import ask_rag
 
 
 app = Flask(__name__)

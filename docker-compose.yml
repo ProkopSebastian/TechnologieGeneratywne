@@ -32,17 +32,14 @@ services:
       - ./shared_data:/shared  # Lokalny katalog - łatwiejszy dostęp
     networks:
       - app-network
-    restart: "no"  # Nie restartuj po zakończeniu
+    restart: "no"
     environment:
       - PYTHONUNBUFFERED=1
       - SCRAPER_URL=https://www.biedronka.pl/pl/oferta-z-karta-moja-biedronka
-      - MAX_PRODUCTS=50  # Zmniejszona liczba dla szybszego testu
+      - MAX_PRODUCTS=50
       - OUTPUT_FILE=/shared/biedronka_offers.json
-      - OPENAI_API_KEY=${OPENAI_API_KEY} # Dodaj klucz API dla skryptu enhancer.py
-    # Wybierz jedną z opcji:
-    # command: ["python", "-u", "main.py"]
-    # command: ["python", "-u", "scheduler.py"]
-    command: ["sh", "-c", "python -u main.py && python -u enhancer.py"] # Uruchom main.py, a po sukcesie enhancer.py
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    command: ["sh", "-c", "python -u main.py && python -u enhancer.py"]
 
 
 networks:
