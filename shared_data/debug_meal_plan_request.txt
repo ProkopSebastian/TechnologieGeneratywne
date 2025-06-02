@@ -1,5 +1,5 @@
 Prompt:
-Create a detailed meal plan for 1 days for 1 people using promotional products from Biedronka.
+Create a detailed meal plan for 3 days for 2 people using promotional products from Biedronka.
 
 AVAILABLE PROMOTIONAL PRODUCTS:
 - Kiełbasa Podwawelska Kraina Wędlin: 1,89 PLN (21% taniej)
@@ -176,8 +176,12 @@ Preheat oven to 325°F. Thoroughly pat dry pork steaks. Heat a large ovenproof s
 Wipe out any accu...
 
 
+ADDITIONAL INSTRUCTIONS:
+You are preparing a diet for person that watns following: "Chcę dietę bezmięsną"
+
 RULES:
 - Use as many promotional products as possible
+- One meal can include multiple promotional products
 - Create varied, healthy meals (breakfast, lunch, dinner)
 - Use suggested recipes as inspiration - you can copy their instructions directly
 - Include precise quantities for all ingredients (e.g., "200g chicken breast")
@@ -188,8 +192,8 @@ RULES:
 Return the response in JSON format with Polish text:
 {
   "plan_info": {
-    "days": 1,
-    "people": 1,
+    "days": 3,
+    "people": 2,
     "estimated_total_cost": "XX.XX PLN"
   },
   "meals": [
@@ -227,47 +231,47 @@ Response:
 ```json
 {
   "plan_info": {
-    "days": 1,
-    "people": 1,
-    "estimated_total_cost": "36.48 PLN"
+    "days": 3,
+    "people": 2,
+    "estimated_total_cost": "76.00 PLN"
   },
   "meals": [
     {
       "day": 1,
       "type": "breakfast",
-      "name": "Śniadanie z kiełbasą i jajkiem",
+      "name": "Kanapki z serem i pomidorami",
       "main_products": [
         {
-          "name": "Kiełbasa Podwawelska Kraina Wędlin",
-          "quantity": "200g",
-          "price": "3.78 PLN"
+          "name": "Ser plastry Światowid",
+          "quantity": "250g",
+          "price": "9.99 PLN"
         }
       ],
       "additional_ingredients": [
         {
-          "name": "Jajko",
+          "name": "Chleb pełnoziarnisty",
+          "quantity": "200g",
+          "estimated_price": "3.00 PLN"
+        },
+        {
+          "name": "Pomidor",
           "quantity": "2 szt.",
-          "estimated_price": "1.50 PLN"
+          "estimated_price": "2.00 PLN"
         },
         {
-          "name": "Chleb",
-          "quantity": "2 kromki",
-          "estimated_price": "1.00 PLN"
-        },
-        {
-          "name": "Masło",
-          "quantity": "20g",
-          "estimated_price": "0.50 PLN"
+          "name": "Olej rzepakowy Kujawski",
+          "quantity": "10ml",
+          "estimated_price": "0.20 PLN"
         }
       ],
-      "instructions": "Na patelni rozgrzej masło. Wbij jajka i smaż na średnim ogniu przez około 3-4 minuty, aż białka się zetną, a żółtka pozostaną płynne. W tym czasie pokrój kiełbasę na plasterki i smaż na osobnej patelni przez 5-7 minut, aż będą złociste. Podawaj z kromkami chleba.",
-      "prep_time": "5 min",
-      "cooking_time": "10 min"
+      "instructions": "Pokrój chleb na kromki. Na każdej kromce rozsmaruj odrobinę oleju rzepakowego. Nałóż plasterki sera i pokrojone pomidory. Podawaj na zimno.",
+      "prep_time": "10 min",
+      "cooking_time": "0 min"
     },
     {
       "day": 1,
       "type": "lunch",
-      "name": "Klopsiki wieprzowe z sałatką z ogórków",
+      "name": "Sałatka z ogórków i orzechów",
       "main_products": [
         {
           "name": "Szynka Kraina Wędlin",
@@ -277,14 +281,130 @@ Response:
       ],
       "additional_ingredients": [
         {
+          "name": "Ogórki",
+          "quantity": "300g",
+          "estimated_price": "2.50 PLN"
+        },
+        {
+          "name": "Orzechy włoskie",
+          "quantity": "50g",
+          "estimated_price": "5.00 PLN"
+        },
+        {
+          "name": "Oliwa z oliwek",
+          "quantity": "20ml",
+          "estimated_price": "1.00 PLN"
+        },
+        {
+          "name": "Sól",
+          "quantity": "szczypta",
+          "estimated_price": "0.05 PLN"
+        }
+      ],
+      "instructions": "Ogórki pokrój w kostkę, dodaj pokrojoną szynkę i orzechy. Skrop oliwą, dopraw solą. Wymieszaj i podawaj.",
+      "prep_time": "15 min",
+      "cooking_time": "0 min"
+    },
+    {
+      "day": 1,
+      "type": "dinner",
+      "name": "Fritters z cukinii z jogurtem",
+      "main_products": [
+        {
+          "name": "Jogurt proteinowy pitny YoPRO",
+          "quantity": "270g",
+          "price": "3.00 PLN"
+        }
+      ],
+      "additional_ingredients": [
+        {
           "name": "Cukinia",
-          "quantity": "1 szt.",
+          "quantity": "200g",
           "estimated_price": "2.00 PLN"
         },
         {
-          "name": "Ogórek",
+          "name": "Cebula",
+          "quantity": "1 szt.",
+          "estimated_price": "0.50 PLN"
+        },
+        {
+          "name": "Mąka pszenna",
+          "quantity": "100g",
+          "estimated_price": "0.50 PLN"
+        },
+        {
+          "name": "Jajko",
+          "quantity": "1 szt.",
+          "estimated_price": "0.50 PLN"
+        },
+        {
+          "name": "Sól",
+          "quantity": "szczypta",
+          "estimated_price": "0.05 PLN"
+        },
+        {
+          "name": "Olej do smażenia",
+          "quantity": "50ml",
+          "estimated_price": "0.50 PLN"
+        }
+      ],
+      "instructions": "Cukinię zetrzyj na tarce, odciśnij nadmiar wody. W misce wymieszaj cukinię, cebulę, mąkę, jajko i sól. Smaż na rozgrzanym oleju na złoty kolor z obu stron.",
+      "prep_time": "15 min",
+      "cooking_time": "15 min"
+    },
+    {
+      "day": 2,
+      "type": "breakfast",
+      "name": "Owsianka z owocami",
+      "main_products": [
+        {
+          "name": "Mleko UHT 3,2% Mleczna Dolina",
+          "quantity": "500ml",
+          "price": "1.89 PLN"
+        }
+      ],
+      "additional_ingredients": [
+        {
+          "name": "Płatki owsiane",
+          "quantity": "100g",
+          "estimated_price": "1.00 PLN"
+        },
+        {
+          "name": "Banany",
           "quantity": "2 szt.",
-          "estimated_price": "1.50 PLN"
+          "estimated_price": "2.00 PLN"
+        },
+        {
+          "name": "Miód",
+          "quantity": "20g",
+          "estimated_price": "1.00 PLN"
+        }
+      ],
+      "instructions": "W garnku zagotuj mleko, dodaj płatki owsiane i gotuj przez 5 minut. Podawaj z pokrojonymi bananami i miodem.",
+      "prep_time": "5 min",
+      "cooking_time": "10 min"
+    },
+    {
+      "day": 2,
+      "type": "lunch",
+      "name": "Zupa krem z pomidorów",
+      "main_products": [
+        {
+          "name": "Sok jabłkowy Riviva",
+          "quantity": "1l",
+          "price": "2.99 PLN"
+        }
+      ],
+      "additional_ingredients": [
+        {
+          "name": "Pomidory",
+          "quantity": "500g",
+          "estimated_price": "3.00 PLN"
+        },
+        {
+          "name": "Cebula",
+          "quantity": "1 szt.",
+          "estimated_price": "0.50 PLN"
         },
         {
           "name": "Czosnek",
@@ -292,62 +412,167 @@ Response:
           "estimated_price": "0.50 PLN"
         },
         {
-          "name": "Panko",
-          "quantity": "50g",
+          "name": "Oliwa z oliwek",
+          "quantity": "20ml",
           "estimated_price": "1.00 PLN"
         },
         {
-          "name": "Jogurt naturalny",
-          "quantity": "100g",
-          "estimated_price": "1.00 PLN"
+          "name": "Sól i pieprz",
+          "quantity": "szczypta",
+          "estimated_price": "0.05 PLN"
         }
       ],
-      "instructions": "W misce wymieszaj pokrojoną szynkę, cukinię, ogórki, czosnek, panko oraz przyprawy. Formuj małe klopsiki i smaż na patelni przez 10-12 minut, aż będą złociste. Podawaj z jogurtem jako dipem.",
-      "prep_time": "15 min",
-      "cooking_time": "15 min"
+      "instructions": "Na oliwie zeszklij cebulę i czosnek, dodaj pomidory i gotuj przez 15 minut. Zmiksuj na gładką masę, dopraw solą i pieprzem.",
+      "prep_time": "10 min",
+      "cooking_time": "20 min"
     },
     {
-      "day": 1,
+      "day": 2,
       "type": "dinner",
-      "name": "Kiełbaski w cieście francuskim",
+      "name": "Makaron z sosem pesto",
       "main_products": [
         {
-          "name": "Kiełbasa krakowska parzona w plastrach Kraina Wędlin",
-          "quantity": "250g",
-          "price": "6.49 PLN"
+          "name": "Kabanosy z wędzarni Kraina Wędlin Select",
+          "quantity": "175g",
+          "price": "7.99 PLN"
         }
       ],
       "additional_ingredients": [
         {
-          "name": "Ciasto francuskie",
-          "quantity": "1 opakowanie",
+          "name": "Makaron",
+          "quantity": "200g",
+          "estimated_price": "2.00 PLN"
+        },
+        {
+          "name": "Pesto",
+          "quantity": "100g",
           "estimated_price": "3.00 PLN"
         },
         {
-          "name": "Musztarda",
+          "name": "Parmezan",
           "quantity": "50g",
-          "estimated_price": "0.50 PLN"
+          "estimated_price": "2.00 PLN"
+        }
+      ],
+      "instructions": "Ugotuj makaron według instrukcji. Na patelni podsmaż kabanosy, dodaj pesto i wymieszaj z makaronem. Podawaj z tartym parmezanem.",
+      "prep_time": "10 min",
+      "cooking_time": "15 min"
+    },
+    {
+      "day": 3,
+      "type": "breakfast",
+      "name": "Smoothie owocowe",
+      "main_products": [
+        {
+          "name": "Jogurt proteinowy pitny YoPRO",
+          "quantity": "270g",
+          "price": "3.00 PLN"
+        }
+      ],
+      "additional_ingredients": [
+        {
+          "name": "Banany",
+          "quantity": "2 szt.",
+          "estimated_price": "2.00 PLN"
         },
         {
-          "name": "Kapusta kiszona",
+          "name": "Mango mrożone",
+          "quantity": "100g",
+          "estimated_price": "3.00 PLN"
+        },
+        {
+          "name": "Mleko UHT 3,2% Mleczna Dolina",
+          "quantity": "200ml",
+          "estimated_price": "0.38 PLN"
+        }
+      ],
+      "instructions": "Wszystkie składniki zmiksuj w blenderze na gładką masę. Podawaj schłodzone.",
+      "prep_time": "5 min",
+      "cooking_time": "0 min"
+    },
+    {
+      "day": 3,
+      "type": "lunch",
+      "name": "Sałatka z ciecierzycy",
+      "main_products": [
+        {
+          "name": "Pasztet Podlaski Drosed",
+          "quantity": "195g",
+          "price": "2.69 PLN"
+        }
+      ],
+      "additional_ingredients": [
+        {
+          "name": "Ciecierzyca",
+          "quantity": "200g",
+          "estimated_price": "2.00 PLN"
+        },
+        {
+          "name": "Ogórki",
           "quantity": "100g",
           "estimated_price": "1.00 PLN"
         },
         {
-          "name": "Jajko",
+          "name": "Papryka",
           "quantity": "1 szt.",
-          "estimated_price": "0.75 PLN"
+          "estimated_price": "2.00 PLN"
+        },
+        {
+          "name": "Oliwa z oliwek",
+          "quantity": "20ml",
+          "estimated_price": "1.00 PLN"
+        },
+        {
+          "name": "Sól i pieprz",
+          "quantity": "szczypta",
+          "estimated_price": "0.05 PLN"
         }
       ],
-      "instructions": "Rozgrzej piekarnik do 200°C. Rozwałkuj ciasto francuskie i pokrój na prostokąty. Na każdym prostokącie umieść 1 plaster kiełbasy, 1 łyżeczkę musztardy i 1 łyżeczkę kapusty. Zwiń ciasto i posmaruj jajkiem. Piecz przez 20-25 minut, aż będą złociste.",
+      "instructions": "Ciecierzycę ugotuj do miękkości. W misce wymieszaj z pokrojonymi ogórkami, papryką, pasztetem, oliwą, solą i pieprzem.",
       "prep_time": "10 min",
-      "cooking_time": "25 min"
+      "cooking_time": "30 min"
+    },
+    {
+      "day": 3,
+      "type": "dinner",
+      "name": "Ziemniaki pieczone z warzywami",
+      "main_products": [],
+      "additional_ingredients": [
+        {
+          "name": "Ziemniaki",
+          "quantity": "500g",
+          "estimated_price": "2.00 PLN"
+        },
+        {
+          "name": "Marchew",
+          "quantity": "2 szt.",
+          "estimated_price": "1.00 PLN"
+        },
+        {
+          "name": "Cebula",
+          "quantity": "1 szt.",
+          "estimated_price": "0.50 PLN"
+        },
+        {
+          "name": "Oliwa z oliwek",
+          "quantity": "30ml",
+          "estimated_price": "1.00 PLN"
+        },
+        {
+          "name": "Sól i pieprz",
+          "quantity": "szczypta",
+          "estimated_price": "0.05 PLN"
+        }
+      ],
+      "instructions": "Ziemniaki i marchew pokrój w kostkę, cebulę w pióra. Wymieszaj z oliwą, solą i pieprzem. Piecz w piekarniku w 200°C przez 30-40 minut.",
+      "prep_time": "10 min",
+      "cooking_time": "40 min"
     }
   ],
   "shopping_summary": {
-    "promotional_products_cost": "15.26 PLN",
-    "additional_ingredients_cost": "21.22 PLN",
-    "total_savings": "Savings from promotions in PLN"
+    "promotional_products_cost": "40.00 PLN",
+    "additional_ingredients_cost": "36.00 PLN",
+    "total_savings": "Savings from promotions in 20.00 PLN"
   }
 }
 ```

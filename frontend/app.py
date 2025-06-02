@@ -110,29 +110,17 @@ def display_shopping_summary(shopping_summary, meals):
     all_additional_ingredients = set()
     
     for meal in meals:
-        # Obsługa main_products (nowy format - lista słowników)
         for product in meal.get("main_products", []):
-            if isinstance(product, dict):
-                # Dla nowego formatu używamy nazwy produktu jako klucza
-                product_str = product['name']
-                if 'quantity' in product:
-                    product_str += f" ({product['quantity']})"
-                all_main_products.add(product_str)
-            else:
-                # Dla starego formatu (string) dodajemy bez zmian
-                all_main_products.add(product)
+            product_str = product['name']
+            if 'quantity' in product:
+                product_str += f" ({product['quantity']})"
+            all_main_products.add(product_str)
         
-        # Obsługa additional_ingredients (nowy format - lista słowników)
         for ingredient in meal.get("additional_ingredients", []):
-            if isinstance(ingredient, dict):
-                # Dla nowego formatu używamy nazwy składnika jako klucza
-                ingredient_str = ingredient['name']
-                if 'quantity' in ingredient:
-                    ingredient_str += f" ({ingredient['quantity']})"
-                all_additional_ingredients.add(ingredient_str)
-            else:
-                # Dla starego formatu (string) dodajemy bez zmian
-                all_additional_ingredients.add(ingredient)
+            ingredient_str = ingredient['name']
+            if 'quantity' in ingredient:
+                ingredient_str += f" ({ingredient['quantity']})"
+            all_additional_ingredients.add(ingredient_str)
     
     # Wyświetl produkty promocyjne
     if all_main_products:

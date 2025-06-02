@@ -10,8 +10,10 @@ def ask():
     data = request.get_json()
     if not data or "query" not in data:
         return jsonify({"status": "error", "message": "Missing 'query' in request"}), 400
-
-    result = ask_rag(data["query"])
+    days = data.get("days", 1)
+    people = data.get("people", 1)
+    query = data["query"]
+    result = ask_rag(query, days, people)
     return jsonify(result)
 
 if __name__ == "__main__":

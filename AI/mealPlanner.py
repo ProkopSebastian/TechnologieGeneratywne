@@ -77,7 +77,7 @@ class MealPlannerAPI:
             print(f"Recipe search error: {e}")
             return []
 
-    def generate_meal_plan_from_products(self, selected_products: List[Dict], 
+    def generate_meal_plan_from_products(self, selected_products: List[Dict], question: str, 
                                        days: int = 3, people: int = 2) -> Optional[Dict]:
         """Generate meal plan from specific product list"""
         print(f"Generating {days}-day plan for {people} people...")
@@ -104,8 +104,12 @@ class MealPlannerAPI:
 
 {context}
 
+ADDITIONAL INSTRUCTIONS:
+You are preparing a diet for person that watns following: "{question}"
+
 RULES:
 - Use as many promotional products as possible
+- One meal can include multiple promotional products
 - Create varied, healthy meals (breakfast, lunch, dinner)
 - Use suggested recipes as inspiration - you can copy their instructions directly
 - Include precise quantities for all ingredients (e.g., "200g chicken breast")
@@ -183,7 +187,7 @@ Return the response in JSON format with Polish text:
         """Get all product names"""
         return [product['name'] for product in self.products]
 
-    def quick_meal_plan(self, product_names: List[str], days: int = 2, people: int = 2) -> Optional[Dict]:
+    def quick_meal_plan(self, product_names: List[str], question, days: int = 2, people: int = 2) -> Optional[Dict]:
         """Quick meal plan creation from selected products (by names)"""
         selected_products = []
         
@@ -199,7 +203,7 @@ Return the response in JSON format with Polish text:
             print("❌ No products selected!")
             return {"status": "error", "message": "No products selected"}
         
-        plan = self.generate_meal_plan_from_products(selected_products, days, people)
+        plan = self.generate_meal_plan_from_products(selected_products, question, days, people)
         
         if plan:
             print(f"\n✅ GENERATED MEAL PLAN:")
@@ -212,7 +216,7 @@ Return the response in JSON format with Polish text:
         else:
             return {"status": "error", "message": "Failed to generate plan"}
 
-    def generate_plan_from_all_products(self, days: int = 1, people: int = 1) -> Optional[Dict]:
+    def generate_plan_from_all_products(self, question, days: int = 1, people: int = 1) -> Optional[Dict]:
         """Generate meal plan using all available products"""
         all_product_names = self.get_all_products()
         
@@ -220,7 +224,7 @@ Return the response in JSON format with Polish text:
         for i, name in enumerate(all_product_names, 1):
             print(f"{i:2d}. {name}")
         
-        return self.quick_meal_plan(all_product_names, days, people)
+        return self.quick_meal_plan(all_product_names, question, days, people)
 
     def ask_rag(self, question: str, days: int = 1, people: int = 1) -> Dict:
         """
@@ -229,7 +233,7 @@ Return the response in JSON format with Polish text:
         """
         try:
             # Generate a plan from all products
-            plan = self.generate_plan_from_all_products(days, people)
+            plan = self.generate_plan_from_all_products(question, days, people)
             
             if plan and plan.get("status") == "success":
                 return plan
