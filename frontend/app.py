@@ -73,8 +73,8 @@ def display_meals(meals, plan_info):
                 
                 st.markdown(f"### {meal_emoji} {meal.get('name', 'Posiłek bez nazwy')}")
                 # Display image if available
-                if meal.get('image_name'):
-                    st.image(f"Images/{meal['image_name']}.jpg", caption=meal.get('name', 'Posiłek bez nazwy'), use_container_width=True)
+                #if meal.get('image_name'):
+                #    st.image(f"Images/{meal['image_name']}.jpg", caption=meal.get('name', 'Posiłek bez nazwy'), use_container_width=True)
 
                 st.markdown(f"**Typ:** {meal_type.title()}")
                 st.markdown(f"**⏰ Czas przygotowania:** {meal.get('prep_time', 'N/A')}")

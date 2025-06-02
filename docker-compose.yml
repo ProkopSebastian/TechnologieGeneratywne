@@ -21,8 +21,19 @@ services:
       - ./shared_data:/app/shared_data
     networks:
       - app-network
+      - vector-network
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
+    restart: unless-stopped
+
+  qdrant:
+    image: qdrant/qdrant
+    ports:
+      - "6333:6333" # for local testing
+    volumes:
+      - ./qdrant_data:/qdrant/storage
+    networks:
+      - vector-network
     restart: unless-stopped
 
   scraper:
@@ -45,4 +56,6 @@ services:
 
 networks:
   app-network:
+    driver: bridge
+  vector-network:
     driver: bridge

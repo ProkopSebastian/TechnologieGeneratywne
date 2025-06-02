@@ -8,6 +8,7 @@ from langchain_openai import ChatOpenAI
 import os
 from dotenv import load_dotenv
 import json
+from logger import get_logger
 
 # Config 
 load_dotenv()
@@ -93,10 +94,14 @@ llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 retriever = vectorstore.as_retriever()
 qa_chain = RetrievalQA.from_chain_type(llm=llm, retriever=retriever, chain_type_kwargs={"prompt": prompt})
 
+rag_logger = get_logger("app-rag")
+
 # Ask a question 
 def ask_rag(question: str) -> dict:
+    rag_logger.info(f'Rag question: {question}')
     response = qa_chain.invoke({"query": question})
-    print(response)
+    rag_logger.info(f'Rag Response: {response["result"]}')
+    
     try:
         return json.loads(response["result"])
     except json.JSONDecodeError:

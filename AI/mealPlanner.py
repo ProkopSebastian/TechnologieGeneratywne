@@ -5,6 +5,13 @@ import openai
 import pickle
 from typing import List, Dict, Any, Optional
 import os
+from logger import get_logger
+from langchain.vectorstores import Qdrant
+from qdrant_client import QdrantClient
+from langchain.embeddings import OpenAIEmbeddings
+import pandas as pd
+from uuid import uuid4
+from qdrant_client.models import VectorParams, Distance, PointStruct
 
 class MealPlannerAPI:
     def __init__(self):
@@ -13,76 +20,124 @@ class MealPlannerAPI:
         self.PRODUCTS_FILE = "shared_data/biedronka_offers_enhanced.json"
         
         self.client = openai.OpenAI(api_key=self.API_KEY)
+        self.logger = get_logger("app-MealPlanner")
+
+        self.qdrant_client = QdrantClient(host="qdrant", port=6333)
+        self.embedding_model = OpenAIEmbeddings(openai_api_key=self.API_KEY)
+
+        self.vectorstore = Qdrant(
+            client=self.qdrant_client,
+            collection_name="recipes",
+            embeddings=self.embedding_model,
+        )
+
+        self.retriever = self.vectorstore.as_retriever(search_kwargs={"k": 5})
         
         # Load data
         self._load_data()
+
+    def embed_and_push_test_json(self, json_path="shared_data/sample_recipes.json", collection_name="recipes"):
+        """
+        Embed and upload recipes from JSON file (with 'embedding_text') to Qdrant.
+        """
+        self.logger.info(f"📄 Loading test recipes from: {json_path}")
+        
+        try:
+            with open(json_path, "r", encoding="utf-8") as f:
+                recipes = json.load(f)
+        except Exception as e:
+            self.logger.error(f"❌ Failed to load JSON: {e}")
+            return
+
+        texts = [r.get("embedding_text", "") for r in recipes]
+        self.logger.info(f"🔢 Generating {len(texts)} embeddings...")
+
+        try:
+            response = self.client.embeddings.create(input=texts, model="text-embedding-3-small")
+            embeddings = [r.embedding for r in response.data]
+        except Exception as e:
+            self.logger.error(f"❌ Failed to get embeddings: {e}")
+            return
+
+        self.logger.info("📦 Recreating Qdrant collection...")
+        self.qdrant_client.recreate_collection(
+            collection_name=collection_name,
+            vectors_config=VectorParams(size=1536, distance=Distance.COSINE)
+        )
+
+        points = []
+        for i, (recipe, vector) in enumerate(zip(recipes, embeddings)):
+            points.append(PointStruct(
+                id=str(uuid4()),
+                vector=vector,
+                payload={
+                    "page_content": recipe.get("embedding_text", ""),
+                    "title": recipe.get("Title", ""),
+                    "ingredients": recipe.get("Cleaned_Ingredients", ""),
+                    "instructions": recipe.get("Instructions", ""),
+                    "image_name": recipe.get("Image_Name", ""),
+                    "id": recipe.get("Unnamed: 0", i)
+                }
+            ))
+
+        self.logger.info(f"⬆️ Uploading {len(points)} vectors to Qdrant...")
+        try:
+            self.qdrant_client.upsert(collection_name=collection_name, points=points)
+            self.logger.info("✅ Upload complete.")
+        except Exception as e:
+            self.logger.error(f"❌ Upload failed: {e}")
+
     
     def _load_data(self):
         """Load recipe embeddings and product data"""
         try:
-            # Load recipe embeddings
-            with open(self.RECIPE_DATA_PATH, 'rb') as f:
-                self.recipe_data = pickle.load(f)
-            
             # Load products
             with open(self.PRODUCTS_FILE, 'r', encoding='utf-8') as f:
                 products_data = json.load(f)
             
             self.products = products_data['products']
-            
-            print(f"Loaded {len(self.recipe_data['recipes_df'])} recipes")
-            print(f"Loaded {len(self.products)} products from Biedronka")
+            self.logger.info(f"Loaded {len(self.products)} products from Biedronka")
             
         except Exception as e:
-            print(f"Error loading data: {e}")
+            self.logger.error(f"Error loading data: {e}")
             raise
 
     def search_recipes_by_keywords(self, keywords: List[str], top_k: int = 5) -> List[Dict]:
-        """Search recipes using English keywords"""
+        """Search recipes using LangChain + Qdrant vector DB"""
         if not keywords:
             return []
-        
+
         try:
-            # Create query from keywords
             query = " ".join(keywords) + " recipes"
-            
-            # Get query embedding
-            query_response = self.client.embeddings.create(
-                input=[query],
-                model='text-embedding-3-small'
-            )
-            query_embedding = query_response.data[0].embedding
-            
-            # Calculate similarities
-            recipe_embeddings = np.array(self.recipe_data['embeddings'])
-            similarities = cosine_similarity([query_embedding], recipe_embeddings)[0]
-            
-            # Get top results
-            top_indices = np.argsort(similarities)[::-1][:top_k]
-            
-            results = []
-            for idx in top_indices:
-                recipe = self.recipe_data['recipes_df'][idx]
-                results.append({
-                    'title': recipe['Title'],
-                    'similarity': similarities[idx],
-                    'ingredients': str(recipe['Cleaned_Ingredients']),
-                    'instructions': recipe['Instructions'],
-                    'image_name': recipe['Image_Name'],
-                    'recipe_idx': idx
+
+            #results = self.vectorstore.similarity_search_with_score(query, k=top_k)
+            self.retriever.search_kwargs["k"] = top_k
+            results = self.retriever.invoke(query)
+
+            out = []
+            for doc in results:
+                meta = doc.metadata or {}
+                out.append({
+                    "title": doc.page_content[:100].split(".")[0],  # crude title fallback
+                    "similarity": "N/A",
+                    "ingredients": meta.get("ingredients", ""),
+                    "instructions": meta.get("instructions", ""),
+                    "image_name": meta.get("image_name", ""),
+                    "recipe_idx": meta.get("id", -1)
                 })
-            
-            return results
-            
+
+            return out
+
         except Exception as e:
-            print(f"Recipe search error: {e}")
+            self.logger.error(f"Vector search error: {e}")
             return []
+
 
     def generate_meal_plan_from_products(self, selected_products: List[Dict], question: str, 
                                        days: int = 3, people: int = 2) -> Optional[Dict]:
         """Generate meal plan from specific product list"""
-        print(f"Generating {days}-day plan for {people} people...")
-        print(f"Using {len(selected_products)} promotional products")
+        self.logger.info(f"Generating {days}-day plan for {people} people...")
+        self.logger.info(f"Using {len(selected_products)} promotional products")
         
         # Prepare context for LLM
         context = f"AVAILABLE PROMOTIONAL PRODUCTS:\n"
@@ -183,7 +238,7 @@ Return the response in JSON format with Polish text:
             return parsed_plan
             
         except Exception as e:
-            print(f"Meal plan generation error: {e}")
+            self.logger.error(f"Meal plan generation error: {e}")
             return None
 
     def get_all_products(self) -> List[str]:
@@ -198,19 +253,19 @@ Return the response in JSON format with Polish text:
             product = next((p for p in self.products if name.lower() in p['name'].lower()), None)
             if product:
                 selected_products.append(product)
-                print(f"✅ Added: {product['name']}")
+                self.logger.info(f"✅ Added: {product['name']}")
             else:
-                print(f"❌ Not found: {name}")
+                self.logger.info(f"❌ Not found: {name}")
         
         if not selected_products:
-            print("❌ No products selected!")
+            self.logger.info("❌ No products selected!")
             return {"status": "error", "message": "No products selected"}
         
         plan = self.generate_meal_plan_from_products(selected_products, question, days, people)
         
         if plan:
-            print(f"\n✅ GENERATED MEAL PLAN:")
-            print(json.dumps(plan, ensure_ascii=False, indent=2))
+            self.logger.info(f"\n✅ GENERATED MEAL PLAN:")
+            self.logger.info(json.dumps(plan, ensure_ascii=False, indent=2))
             
             # Add status for API compatibility
             plan["status"] = "success"
@@ -249,6 +304,7 @@ Return the response in JSON format with Polish text:
 
 # Initialize the API
 meal_planner = MealPlannerAPI()
+#meal_planner.embed_and_push_test_json()
 
 # Main function for frontend compatibility
 def ask_rag(question: str, days: int = 1, people: int = 1) -> dict:

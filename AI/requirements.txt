@@ -11,3 +11,4 @@ Flask
 python-dotenv
 scikit-learn
 numpy
+qdrant-client
