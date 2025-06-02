@@ -29,3 +29,8 @@ scraper-1  | • Boczek Kraina Wędlin, 100 g → bacon, meat, pork, fat
 TODO: Przyda się jakiś scheduler, który uruchomi scraping plus tłumaczenia wraz z uruchomieniem kontenerów a potem będzie uruchamiać to codziennie np o 3:00 AM. Być może enhancer nie powinien być w folderze scraper, tylko AI (po prostu jakoś to uporządkować i skonteneryzować poprawnie)
 
 W folderze embedder znajduje się notatnik, który tworzy embeddingi dla przepisów umieszcoznych w /datatests - niedostępnych na github (kilka sample przepisów wrzucone w json) To jest do wykonania tylko raz, potem sobie korzystamy z tych embeddingów
+
+![Alt text](Images/1.jpg?raw=true "1")
+![Alt text](Images/2.jpg?raw=true "2")
+![Alt text](Images/3.jpg?raw=true "3")
+![Alt text](Images/4.jpg?raw=true "4")
