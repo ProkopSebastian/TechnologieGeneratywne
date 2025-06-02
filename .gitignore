@@ -4,7 +4,8 @@ dev-scripts/
 # pobrane bazy danych
 datasets/
 
-
+# Ustawienia VS Code
+.vscode/
 
 
 # Byte-compiled / optimized / DLL files
