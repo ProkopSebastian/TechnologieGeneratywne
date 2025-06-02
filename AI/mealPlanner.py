@@ -68,6 +68,7 @@ class MealPlannerAPI:
                     'similarity': similarities[idx],
                     'ingredients': str(recipe['Cleaned_Ingredients']),
                     'instructions': recipe['Instructions'],
+                    'image_name': recipe['Image_Name'],
                     'recipe_idx': idx
                 })
             
@@ -96,6 +97,7 @@ class MealPlannerAPI:
                 if recipes:
                     best_recipe = recipes[0]
                     context += f"  Suggested recipe: {best_recipe['title']}\n"
+                    context += f"  Image name: {best_recipe['image_name']}\n"
                     context += f"  Ingredients: {best_recipe['ingredients'][:1000]}...\n"
                     context += f"  Full recipe: {best_recipe['instructions'][:1000]}...\n"
         
@@ -113,7 +115,7 @@ RULES:
 - Create varied, healthy meals (breakfast, lunch, dinner)
 - Use suggested recipes as inspiration - you can copy their instructions directly
 - Include precise quantities for all ingredients (e.g., "200g chicken breast")
-- Provide detailed step-by-step cooking instructions
+- Provide detailed step-by-step cooking instructions - if using a suggested recipe, copy its instructions directly
 - Calculate estimated total cost
 - You can add basic ingredients (bread, eggs, milk, etc.)
 
@@ -129,6 +131,7 @@ Return the response in JSON format with Polish text:
       "day": 1,
       "type": "breakfast",
       "name": "Meal name in Polish",
+      "image_name": "copy image name from suggested recipe only if you used it, otherwise leave empty",
       "main_products": [
         {{
           "name": "Product name",

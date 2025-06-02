@@ -4,6 +4,7 @@ services:
       context: ./frontend
     volumes:
       - ./frontend:/app
+      - ./datasets/FoodImages:/app/Images
     ports:
       - "8501:8501"
     networks:

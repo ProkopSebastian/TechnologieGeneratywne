@@ -1,15 +1,17 @@
 Prompt:
-Create a detailed meal plan for 3 days for 2 people using promotional products from Biedronka.
+Create a detailed meal plan for 1 days for 1 people using promotional products from Biedronka.
 
 AVAILABLE PROMOTIONAL PRODUCTS:
 - Kiełbasa Podwawelska Kraina Wędlin: 1,89 PLN (21% taniej)
   Suggested recipe: Pigs-in-a-Blanket with Sauerkraut and Mustard
+  Image name: pigs-in-a-blanket-with-sauerkraut-and-mustard-51260010
   Ingredients: ['1 large egg', 'One 14- to 17-ounce box of puff pastry (preferably all-butter), thawed according to package directions', '2 pounds fully cooked German-style sausage such as bockwurst or bratwurst, halved lengthwise if thick, and cut into 32 pieces (about 2 1/2 inches each)', '1/3 cup whole-grain mustard', '1/3 cup drained sauerkraut', 'Caraway seeds', 'for sprinkling']...
   Full recipe: Preheat the oven to 400°F. Set racks in the upper and lower thirds of the oven. Line two 13x18-inch baking sheets with parchment paper. In a small bowl, beat the egg with 1 tablespoon water. Prep the ingredients for the filling and set aside.
 If using a 17-ounce puff pastry package, roll each sheet to a 9x12-inch rectangle. Cut each piece lengthwise into eight 1 1/2-inch wide strips. Cut each strip crosswise into two pieces, about 4 1/2 inches long. You should have 32 pieces of pastry.
 Spread the center of each piece of pastry with 1/2 teaspoon mustard and top with 1/2 teaspoon sauerkraut. Brush one narrow end of the pastry with egg wash, add one piece of sausage, and roll to enclose. Return to parchment-lined baking sheets. Brush the top of each pastry with egg wash and sprinkle with caraway seeds, seam-side down. Chill in refrigerator for 15 minutes. Bake until golden brown and puffed, 23 to 27 minutes....
 - Szynka Kraina Wędlin, 100 g: 4,99 PLN (62% taniej na drugi produkt)
   Suggested recipe: Pork Meatballs and Cucumber Salad
+  Image name: pork-meatballs-and-cucumber-salad
   Ingredients: ['¼ cup golden raisins', '2 lb. thin-skinned cucumbers (such as Persian, English hothouse, and/or kirby) cut into bite-size pieces', '2½ tsp. kosher salt, divided, plus more', '3 Tbsp. extra-virgin olive oil, divided', '3 Tbsp. pine nuts', '¾ cup Castelvetrano olives, pitted, divided', '1 large egg', '2 garlic cloves, finely grated', '½ cup panko (Japanese breadcrumbs)', '3 Tbsp. finely chopped parsley', '¼ tsp. crushed red pepper flakes, plus more for serving', 'Freshly ground black pepper', '1 lb. ground pork', '½ small red onion, very thinly sliced (use a mandoline if you have one)', '2 cups tender herb leaves (such as mint and/or parsley)', '1 Tbsp. red wine vinegar', 'Plain whole-milk Greek yogurt (for serving)']...
   Full recipe: Place racks in upper and lower thirds of oven; preheat to 425°F. Place raisins in a small bowl and pour in hot water to cover; let sit until ready to use.
 Place cucumbers in a colander or sieve set in or over a large bowl; sprinkle with 1 tsp. salt and toss to combine. Let sit while you make the meatballs. (It will seem like a lot of cucumbers at first, but they will shrink down as they drain.)
@@ -17,18 +19,21 @@ Meanwhile, drizzle 2 Tbsp. oil over a large rimmed baking sheet. Arrange pine nu
 Finely chop ¼ cup olives. Transfer to a large bowl and add egg, garlic, panko, parsley, 1½ tsp. salt, and ¼ tsp. red pepper flakes; season with black pepper. Drain raisins and add half to bowl; mix well to combine. Add pork and gently mix with your hands to incorporate. Working one at a time, scoop out heaping tablespoonfuls of pork mixture and form into balls (think about the size of a golf ball; you should get about 20). Arra...
 - Boczek Kraina Wędlin, 100 g: 4,49 PLN (46% taniej na drugi produkt)
   Suggested recipe: Irish Weekend Fry-Up
+  Image name: irish-weekend-fry-up-51145610
   Ingredients: ['Vegetable, sunflower, or olive oil, for frying', 'Butter, for frying and spreading on toast', '1-2 medium-size pork sausages', '1-2 slices (rashers) thick-cut, dry-cured, smoked or unsmoked, Canadian (back) or regular (streaky) bacon, rind removed', '2 to 3 slices of black and/or white pudding', '2 ounces (50g) button mushrooms, sliced, or 1 large flat mushroom, stem removed', 'Salt and freshly ground black pepper', '1 ripe tomato, halved', 'Pinch of sugar (if roasting the tomato in the oven)', '1 to 2 eggs', '1/2 tablespoon milk (for scrambled eggs)', '1 to 1 1/2 tablespoons (5-20g) butter (for scrambled eggs)', '2 slices white or whole-grain (brown) bread']...
   Full recipe: Heat 1 tablespoon oil and 1 tablespoon butter in a large frying pan over a medium heat. Add the sausages and fry for 10 to 15 minutes, until golden and cooked through. Add the bacon and fry for 3 to 4 minutes on each side, until crisp and golden, dabbing off any milky liquid with paper towels. Add the black and/or white pudding slices to the pan and fry for 2 to 3 minutes on each side, until beginning to crisp; the white pudding (if using) should turn golden. Remove the sausages, bacon, and pudding slices from the pan and drain on paper towels.
 Place in an ovenproof dish in a low oven to keep warm.
 Meanwhile, add a dash of oil and pat (knob) of butter to another frying pan over medium heat. Add the button mushrooms and sauté for 3 to 4 minutes, until softened and turning golden. Season with salt and pepper, then remove from the pan and keep warm (adding to the dish with the sausages and bacon). If you are cooking a large flat mushroom, then add the oil and butter to the pan and fry the...
 - Kiełbasa krakowska parzona w plastrach Kraina Wędlin, 250 g: 6,49 PLN (76% taniej na drugi produkt)
   Suggested recipe: Pigs-in-a-Blanket with Sauerkraut and Mustard
+  Image name: pigs-in-a-blanket-with-sauerkraut-and-mustard-51260010
   Ingredients: ['1 large egg', 'One 14- to 17-ounce box of puff pastry (preferably all-butter), thawed according to package directions', '2 pounds fully cooked German-style sausage such as bockwurst or bratwurst, halved lengthwise if thick, and cut into 32 pieces (about 2 1/2 inches each)', '1/3 cup whole-grain mustard', '1/3 cup drained sauerkraut', 'Caraway seeds', 'for sprinkling']...
   Full recipe: Preheat the oven to 400°F. Set racks in the upper and lower thirds of the oven. Line two 13x18-inch baking sheets with parchment paper. In a small bowl, beat the egg with 1 tablespoon water. Prep the ingredients for the filling and set aside.
 If using a 17-ounce puff pastry package, roll each sheet to a 9x12-inch rectangle. Cut each piece lengthwise into eight 1 1/2-inch wide strips. Cut each strip crosswise into two pieces, about 4 1/2 inches long. You should have 32 pieces of pastry.
 Spread the center of each piece of pastry with 1/2 teaspoon mustard and top with 1/2 teaspoon sauerkraut. Brush one narrow end of the pastry with egg wash, add one piece of sausage, and roll to enclose. Return to parchment-lined baking sheets. Brush the top of each pastry with egg wash and sprinkle with caraway seeds, seam-side down. Chill in refrigerator for 15 minutes. Bake until golden brown and puffed, 23 to 27 minutes....
 - Kabanosy z wędzarni Kraina Wędlin Select, 175 g: 7,99 PLN (40% taniej na drugi produkt)
   Suggested recipe: Spicy Egg Sandwich with Sausage and Pickled Peppers
+  Image name: spicy-egg-sandwich-with-sausage-and-pickled-peppers
   Ingredients: ['1/2 lb. sweet or spicy Italian sausage, casings removed', '1 Tbsp. unsalted butter', '2 large eggs', 'Pinch of kosher salt', 'Pinch of crushed red pepper flakes (optional)', '2 English muffins, toasted', 'Harissa paste (for muffins)', '3 oz. feta cheese, thinly sliced', '1/3 cup sliced drained Peppadew peppers (about 3 oz.)', '1/2 cup cilantro leaves with tender stems', 'Mayonnaise (for muffins)']...
   Full recipe: Using damp hands, form sausage into two 1/4"-thick patties.
 Heat a large cast-iron skillet over medium-high until hot. Cook patties until golden brown on bottom side, about 2 minutes. Turn and continue to cook until other side is browned and cooked through, 2–3 minutes more. Transfer to a plate. Wipe out skillet.
@@ -36,12 +41,14 @@ Heat butter over medium in same skillet until melted. Cook eggs, undisturbed, un
 Spread harissa on 2 muffin halves. Top with feta, patties, eggs, peppers, and cilantro. Spread mayonnaise on remaining muffin halves, then close up sandwiches....
 - Kiełbasa krakowska z szynki Tarczyński, 330 g: 11,99 PLN (68% taniej na drugi produkt)
   Suggested recipe: Pigs-in-a-Blanket with Sauerkraut and Mustard
+  Image name: pigs-in-a-blanket-with-sauerkraut-and-mustard-51260010
   Ingredients: ['1 large egg', 'One 14- to 17-ounce box of puff pastry (preferably all-butter), thawed according to package directions', '2 pounds fully cooked German-style sausage such as bockwurst or bratwurst, halved lengthwise if thick, and cut into 32 pieces (about 2 1/2 inches each)', '1/3 cup whole-grain mustard', '1/3 cup drained sauerkraut', 'Caraway seeds', 'for sprinkling']...
   Full recipe: Preheat the oven to 400°F. Set racks in the upper and lower thirds of the oven. Line two 13x18-inch baking sheets with parchment paper. In a small bowl, beat the egg with 1 tablespoon water. Prep the ingredients for the filling and set aside.
 If using a 17-ounce puff pastry package, roll each sheet to a 9x12-inch rectangle. Cut each piece lengthwise into eight 1 1/2-inch wide strips. Cut each strip crosswise into two pieces, about 4 1/2 inches long. You should have 32 pieces of pastry.
 Spread the center of each piece of pastry with 1/2 teaspoon mustard and top with 1/2 teaspoon sauerkraut. Brush one narrow end of the pastry with egg wash, add one piece of sausage, and roll to enclose. Return to parchment-lined baking sheets. Brush the top of each pastry with egg wash and sprinkle with caraway seeds, seam-side down. Chill in refrigerator for 15 minutes. Bake until golden brown and puffed, 23 to 27 minutes....
 - Jogurt proteinowy pitny YoPRO, 270 g: 3,00 PLN (50% taniej)
   Suggested recipe: Zucchini-Lentil Fritters With Lemony Yogurt
+  Image name: zucchini-lentil-fritters-with-lemony-yogurt
   Ingredients: ['¾ cup whole-milk yogurt', '2 Tbsp. fresh lemon juice', '½ tsp. sugar', 'Kosher salt', '1 cup red lentils (masoor dal)', '1 medium zucchini (about 5 oz.)', '½ medium onion, thinly sliced', '1¾ tsp. kosher salt, divided, plus more', '½ tsp. Kashmiri chile powder or ¼ tsp. cayenne pepper', '¼ tsp. ground turmeric', '1 cup parsley leaves with tender stems', '1 Tbsp. finely grated lemon zest', '1 cup ghee or neutral vegetable oil']...
   Full recipe: Whisk yogurt, lemon juice, and sugar in a small bowl to combine. Season with salt.
 Do Ahead: Yogurt can be made 1 day ahead. Cover and chill.
@@ -50,6 +57,7 @@ Meanwhile, trim ends of zucchini and cut crosswise into 3 pieces about 2" long. 
 Drain lentils and transfer to a food processor. Add chile powder, turmeric, and ¾ tsp. salt. Pulse, scraping down sides, until a purée forms. Transfer to a medium bowl and ...
 - Krem do smarowania Nutella, 350 g: 11,49 PLN (30% taniej)
   Suggested recipe: Chocolatey Chocolate Cake
+  Image name: chocolatey-chocolate-cake
   Ingredients: ['1 3/4 cups (225g) all-purpose flour', '1/2 cup (45g) unsweetened Dutch-processed cocoa powder', '1 1/2 teaspoons baking powder', '1 1/2 teaspoons baking soda', '1/2 teaspoon salt', '1 1/2 cups (300g) granulated sugar', '2 eggs, at room temperature', '1 cup (240ml) whole milk', '1/2 cup (120ml) grapeseed oil or any mild-flavored oil', '1/2 teaspoon pure vanilla extract', '1 cup (240ml) boiling water', '"Confectioners sugar', 'chocolate Swiss meringue buttercream', 'warm ganache', 'marshmallow icing', 'whipped cream"']...
   Full recipe: Preheat the oven to 350°F. Grease a 10 by 3-inch round pan with butter, line the bottom and sides of the pan with parchment paper, and grease the paper. (I’ll let you just grease, line the bottom of the pan, and lightly flour the sides if you’re feeling lazy.)
 Place a large sifter or a sieve in a large mixing bowl. Add the flour, cocoa, baking powder, baking soda, and salt and sift.
@@ -61,10 +69,12 @@ Pour the batter into the prepared pan. Bake in the center of the oven for approx
 Remove from the oven and let the cake stand for 10 minutes. Run a b...
 - Pasztet Podlaski Drosed, 195 g: 2,69 PLN (44% taniej na drugi produkt)
   Suggested recipe: Mortadella Moments
+  Image name: mortadella-moments
   Ingredients: ['1 (8x8") piece of focaccia', 'Mayonnaise (for spreading)', '2 lb. very thinly sliced mortadella', '16 peperoncini', 'halved or quartered if very large']...
   Full recipe: Holding a bread knife parallel to a cutting board, slice focaccia in half. Spread cut sides with mayonnaise and cut each half into 2" squares. Working one at a time, drape mortadella onto squares, top with peperoncini, and secure with skewers....
 - Gulasz angielski Krakus, 300 g: 5,99 PLN (None)
   Suggested recipe: Sunday Stash Braised Beef
+  Image name: sunday-stash-braised-beef
   Ingredients: ['5 lb. boneless beef short ribs or Denver steaks', '1 Tbsp. plus 2 tsp. kosher salt', '1 Tbsp. freshly ground black pepper', '1 Tbsp. (or more) canola or vegetable oil', '5 garlic cloves, crushed', '2 Tbsp. tomato paste', '1/2 cup red or white wine vinegar', '1 1/2 cups (or more) beef or chicken stock', '4 dried bay leaves']...
   Full recipe: Season beef on all sides with salt and pepper. Let sit at room temperature at least 45 minutes or up to 1 hour.
 Preheat oven to 275°F. Heat 1 Tbsp. oil in a large Dutch oven over medium-high. Working in batches and adding more oil if needed, sear meat until browned on all sides, 4–5 minutes per side. Transfer to a plate.
@@ -72,16 +82,19 @@ Add garlic and tomato paste to hot pot and stir to coat. Cook over medium-high h
 Do Ahead: Beef can be cooked up to 5 days ahead. Store in braising liquid (to keep it from drying out) in an airtight container and chill, or freeze up to 2 months. Before reheating, break off and discard fat cap ...
 - Herbata Lipton Yellow Label, 25 torebek: 5,00 PLN (50% taniej)
   Suggested recipe: Tea-Totaler’s Toddy
+  Image name: tea-totalers-toddy
   Ingredients: ['6 jasmine green tea bags', '¾ cup honey', '12 sprigs mint, divided', '6 lemons', 'divided']...
   Full recipe: Bring 3 quarts water to a boil in a medium pot. Remove from heat and add tea bags, honey, and 6 mint sprigs. Cover and let sit 8 minutes. Using a slotted spoon, remove tea bags and mint, gently pressing with a spoon to extract as much liquid as possible.
 Meanwhile, slice 4 lemons in half and squeeze juice into a small bowl. Slice remaining 2 lemons into rounds; remove seeds. Add lemon juice, lemon slices, and remaining 6 mint sprigs to hot toddy. Ladle into mugs....
 - Herbata Teekanne, 20 torebek: 3,99 PLN (27% taniej)
   Suggested recipe: Tea-Totaler’s Toddy
+  Image name: tea-totalers-toddy
   Ingredients: ['6 jasmine green tea bags', '¾ cup honey', '12 sprigs mint, divided', '6 lemons', 'divided']...
   Full recipe: Bring 3 quarts water to a boil in a medium pot. Remove from heat and add tea bags, honey, and 6 mint sprigs. Cover and let sit 8 minutes. Using a slotted spoon, remove tea bags and mint, gently pressing with a spoon to extract as much liquid as possible.
 Meanwhile, slice 4 lemons in half and squeeze juice into a small bowl. Slice remaining 2 lemons into rounds; remove seeds. Add lemon juice, lemon slices, and remaining 6 mint sprigs to hot toddy. Ladle into mugs....
 - Kawa ziarnista Jacobs Barista Editions, 1 kg: 57,99 PLN (27% taniej)
   Suggested recipe: Coconut Cold Brew Coffee
+  Image name: coconut-cold-brew-coffee
   Ingredients: ['16 oz. coffee beans (about 4 cups), coarsely ground', '1 1/2 cups toasted unsweetened shredded coconut', '3 cups milk (cow’s, oat, or nut) or water', '2 Tbsp. (or more) pure maple syrup']...
   Full recipe: Place coffee and coconut in large bowl, jar, or pot. Slowly pour in 8 cups cool water and stir very gently until grounds are just moistened. Cover and chill 24 hours.
 Strain coffee grounds through a fine-mesh sieve into a large measuring glass or bowl. Discard grinds. Line sieve with a coffee filter and add as much coffee as will fit. Strain gradually into a 1-qt. airtight container or jar, adding more coffee as space is available until all the coffee has been added. Allow grounds to sit in strainer and continue to drip 20 minutes.
@@ -89,6 +102,7 @@ To serve, pour 1/2 cup coffee into an ice-filled glass; add ½ cup milk and 1 ts
 Cold brew (without milk and maple syrup) can be made 2 weeks ahead. Keep chilled....
 - Kapsułki Dolce Gusto, 16 szt.: 20,99 PLN (60% taniej na drugi produkt)
   Suggested recipe: Coconut Cold Brew Coffee
+  Image name: coconut-cold-brew-coffee
   Ingredients: ['16 oz. coffee beans (about 4 cups), coarsely ground', '1 1/2 cups toasted unsweetened shredded coconut', '3 cups milk (cow’s, oat, or nut) or water', '2 Tbsp. (or more) pure maple syrup']...
   Full recipe: Place coffee and coconut in large bowl, jar, or pot. Slowly pour in 8 cups cool water and stir very gently until grounds are just moistened. Cover and chill 24 hours.
 Strain coffee grounds through a fine-mesh sieve into a large measuring glass or bowl. Discard grinds. Line sieve with a coffee filter and add as much coffee as will fit. Strain gradually into a 1-qt. airtight container or jar, adding more coffee as space is available until all the coffee has been added. Allow grounds to sit in strainer and continue to drip 20 minutes.
@@ -96,44 +110,52 @@ To serve, pour 1/2 cup coffee into an ice-filled glass; add ½ cup milk and 1 ts
 Cold brew (without milk and maple syrup) can be made 2 weeks ahead. Keep chilled....
 - Jajko Kinder Joy, 20 g: 3,66 PLN (33% taniej)
   Suggested recipe: Chocolate-Hazelnut Cookies
+  Image name: chocolate-hazelnut-cookies
   Ingredients: ['¾ cup (115 g) blanched hazelnuts', '3½ cups (440 g) all-purpose flour', '1 tsp. kosher salt', '¾ tsp. baking powder', '½ tsp. baking soda', '½ tsp. ground ginger', '1 cup (2 sticks) unsalted butter, room temperature', '½ cup (100 g) granulated sugar', '½ cup (100 g) raw sugar or granulated sugar', '½ cup (100 g) (packed) light brown sugar', '2 large eggs, room temperature', '¼ cup honey', '½ tsp. vanilla extract', '4 (2-oz.) bittersweet chocolate bars, cut lengthwise into ¼"-thick sticks', 'Flaky sea salt']...
   Full recipe: Place racks in upper and lower thirds of oven; preheat to 300°F. Toast hazelnuts on a rimmed baking sheet on upper rack, tossing halfway through, until golden brown, 8–10 minutes. Let cool slightly, then chop very coarsely; set aside. Increase oven temperature to 350°F.
 Whisk flour, kosher salt, baking powder, baking soda, and ginger in a large bowl to combine. Beat butter, granulated sugar, raw sugar, and brown sugar in the bowl of a stand mixer fitted with the paddle attachment on high speed, scraping down sides of bowl occasionally, until pale and fluffy, 5–7 minutes. Reduce speed to medium-high and add eggs, one at a time, increasing speed to high after each addition to fully incorporate and stopping periodically to scrape down sides of bowl. Add honey and vanilla and beat just to combine. Reduce speed to low and add dry ingredients; beat until combined. Add chocolate and reserved nuts and beat just until incorporated.
 Scoop dough into 1½-oz. portions (about 3 Tbsp.); roll into bal...
 - Olej rzepakowy Kujawski, 2 l: 11,98 PLN (44% taniej)
   Suggested recipe: Crunchy Spice Oil
+  Image name: crunchy-spice-oil
   Ingredients: ['1 cup sunflower or other neutral oil', '6 garlic cloves, finely chopped', '¼ cup sesame seeds', '2 Tbsp. black mustard seeds', '4 tsp. cumin seeds', '1 Tbsp. pink peppercorns, lightly crushed', '1 Tbsp. crushed red pepper flakes', '2 tsp. kosher salt', '1 tsp. paprika', '1 tsp. pure maple syrup']...
   Full recipe: Heat oil, garlic, sesame seeds, mustard seeds, cumin seeds, pink peppercorns, and red pepper flakes in a small saucepan over medium-high until oil is sizzling and bubbling, about 2 minutes. Immediately reduce heat to low and continue to cook, stirring constantly, until garlic is golden brown and spices are fragrant, about 5 minutes. Remove from heat and stir in salt, paprika, and maple syrup. Let cool. Transfer to an airtight container.
 Do ahead: Spice oil can be made 1 month ahead. Cover and chill....
 - Mleko UHT 3,2% Mleczna Dolina, 1 l: 1,89 PLN (50% taniej)
   Suggested recipe: Oat Milk
+  Image name: homemade-oat-milk
   Ingredients: ['1 cup old-fashioned rolled oats', 'Pinch of salt (optional)', '1 tablespoon raw honey or pure maple syrup (optional)']...
   Full recipe: In a medium bowl, combine the oats and 4 cups cold water and stir to combine. Allow to soak at room temperature for up to 1 hour.
 Drain the oats (discarding the water) and rinse them. Transfer the oats to a blender, add 4 cups fresh water, and the salt and/or sweetener, if using. Blend until completely smooth, about 2 minutes. Strain through a fine-mesh sieve and chill. Keeps up to 5 days in the refrigerator. Shake before using....
 - Ser plastry Światowid, 2x250 g/500 g: 9,99 PLN (74% taniej na drugi produkt)
   Suggested recipe: Pimiento Cheese Crackers
+  Image name: pimiento-cheese-crackers
   Ingredients: ['12 oz. sharp cheddar, coarsely grated (about 4 cups)', '1 cup plus 2 Tbsp. all-purpose flour', '1 1/2 tsp. kosher salt', '1/4 tsp. cayenne pepper', '1/4 cup chopped jarred pimiento peppers', '5 Tbsp. chilled unsalted butter, cut into pieces', '3 Tbsp. white or black sesame seeds']...
   Full recipe: Pulse cheese, flour, salt, and cayenne in a food processor to combine (4–6 pulses should do it). Add pimiento peppers and pulse until mixture turns orange (another 2 or 3 pulses). Add butter and pulse until largest pieces are about the size of a pea (4–6 pulses). Drizzle in 2 Tbsp. ice water and pulse 2 or 3 more times. Dough should stick together when squeezed in your hand. If not, pulse in another tablespoonful of ice water.
 Transfer dough to a work surface and form into a tightly packed 2"-diameter log. Gently sprinkle sesame seeds over surface and roll log over sesame seeds, pressing them into dough to adhere, until completely coated. Discard any sesame seeds that don’t stick. Wrap dough in plastic and chill at least 4 hours and up to 2 days before rolling out.
 Place a rack in the middle of oven; preheat to 350°F. Unwrap dough and using a sharp knife, slice into thin rounds; aim for 1/8"–1/4" thick. Transfer rounds to a parchment-lined baking sheet, spacing about 1" apart (they won...
 - Odżywcze mleczko lub balsam do ciała Nivea, 400 ml: 16,00 PLN (50% taniej)
   Suggested recipe: Secret Mango Creamsicle Smoothie
+  Image name: mango-persimmon-creamsicle-smoothie-catherine-mccord-recipe
   Ingredients: ['1⁄2 cup (80 g) frozen mango chunks', '1⁄2 ripe persimmon (Hachiya or Fuyu), stemmed', '1 small carrot, peeled and chopped (about 1⁄4 cup/32 g)', '1 tablespoon almond butter', '1 teaspoon flax seeds or flaxseed meal', '1 teaspoon hemp seeds', '1⁄4 teaspoon ground cinnamon or favorite spice blend', '1 cup (240 ml) coconut milk beverage or almond milk', 'or milk of choice']...
   Full recipe: Combine all the ingredients in a blender and blend until smooth....
 - Łopatka wieprzowa: 13,99 PLN (30% taniej)
   Suggested recipe: Grilled Pork Shoulder With Butter Vinegar Sauce
+  Image name: grilled-pork-shoulder-with-butter-vinegar-sauce
   Ingredients: ['1 Tbsp. fennel seeds', '2 Tbsp. dried oregano', '2–2½-lb. boneless pork shoulder (Boston butt)', 'Grapeseed or other neutral oil (for pork)', '1 Tbsp. kosher salt, plus more', '3 chiles de árbol, torn in half, seeds removed if desired', '½ cup apple cider vinegar', '½ cup (1 stick) unsalted butter', '2 Tbsp. sugar', 'Special Equipment: A spice mill or mortar and pestle']...
   Full recipe: Toast fennel seeds in a dry small skillet over medium heat, tossing often, until golden brown and starting to pop, about 3 minutes. Transfer to a spice mill or mortar and pestle and let cool; coarsely grind. Transfer to a small bowl and mix in oregano. Place pork on a wire rack set inside a rimmed baking sheet and rub with oil. Season all over with 1 Tbsp. salt, then rub with spice mixture, packing it on. Let sit at room temperature 2 hours or chill, uncovered, up to 2 days.
 Bring chiles, vinegar, butter, and sugar to a simmer in a small saucepan over medium-high heat; cook, stirring occasionally, until sugar is dissolved and sauce is reduced by about a third, about 5 minutes. Season with salt; cover and keep warm over low heat until ready to use.
 Prepare a grill for medium heat. Drizzle pork all over with oil, then grill, turning every 5 minutes or so, until extremely, gorgeously browned and crisp and an instant-read thermometer inserted into thickest part registers 120°F, 35–45 minut...
 - Świeże udo lub podudzie kurczaka pakowane próżniowo Kraina Mięs: 6,49 PLN (48% taniej)
   Suggested recipe: Chicken Thighs With Tomatoes and Feta
+  Image name: chicken-thighs-with-tomatoes-and-feta
   Ingredients: ['6 skin-on, bone-in chicken thighs (about 2¼ lb. total)', '½ tsp. kosher salt, plus more', '1¼ lb. cherry tomatoes (about 2 pints)', '¼ cup harissa paste', '3 Tbsp. red wine vinegar', '3 sprigs oregano, divided', '4 oz. feta, cut into (¼"-thick) planks', 'Crusty bread (for serving)']...
   Full recipe: Pat chicken thighs dry with paper towels; season all over with salt. Arrange skin side down in a cold large cast-iron skillet. Set over medium heat and cook chicken, undisturbed, rotating pan as needed for even browning, until skin is very deep golden brown and crisp and chicken releases easily from pan, 13–16 minutes. Using tongs, transfer chicken to a plate, arranging skin side up.
 Combine tomatoes, harissa paste, vinegar, 1 oregano sprig, and ½ tsp. salt in same skillet. Increase heat to medium-high and cook, stirring occasionally, until tomatoes burst and their juices start to thicken, 8–10 minutes.
 Nestle chicken thighs into tomatoes, skin side up. Reduce heat to medium-low, bring to a simmer, and cook until chicken is just cooked through and flesh is no longer pink (an instant-read thermometer inserted into the thickest part near the bone will register 165°F), and tomato sauce is thickened so that a wooden spoon dragged through it leaves a trail, 6–8 minutes. Remove from heat and...
 - Krewetki gotowane Marinero, 250 g: 14,99 PLN (62% taniej na drugi produkt)
   Suggested recipe: Grilled Coconut Shrimp With Shishito Peppers
+  Image name: grilled-coconut-shrimp-shishito-peppers
   Ingredients: ['6 garlic cloves, finely grated', '1 Tbsp. finely grated lime zest', '¼ cup low-sodium or tamari soy sauce', '¼ cup grapeseed or vegetable oil, plus more for grill', '1 lb. large shrimp, peeled, deveined, preferably with tails left on', '½ cup toasted unsweetened shredded coconut, plus more for serving', '8 oz. shishito peppers', '½ cup basil leaves', '¼ cup fresh lime juice', 'Flaky sea salt']...
   Full recipe: Stir together garlic, lime zest, soy sauce, and ¼ cup oil in a medium bowl. Add shrimp and toss to coat. Add ½ cup coconut and toss again to coat. Let sit while grill heats, at least 5 minutes and up to 30 minutes.
 Prepare a grill for high heat, lightly oil grate.
@@ -142,21 +164,25 @@ Grill peppers, turning occasionally and being careful not to let them fall throu
 Top shrimp and peppers with basil, drizzle with lime juice, and sprinkle with sea salt and more coconut....
 - Sok jabłkowy Riviva, 1 l: 2,99 PLN (21% taniej)
   Suggested recipe: Better Than Celery Juice
+  Image name: celery-apple-juice-tonic
   Ingredients: ['3 Granny Smith apples, scrubbed, coarsely chopped', '½ bunch parsley, coarsely chopped (leaves and stems)', '5 celery stalks with leaves attached, coarsely chopped, plus more for serving', '¼ cup apple cider vinegar', 'Pinch of kosher salt', '¼ tsp. freshly ground black pepper', 'plus more for serving']...
   Full recipe: Purée apples, parsley, 5 celery stalks, and 3 cups water in batches in a blender. Strain through a fine-mesh sieve into a pitcher, gently pressing with a spoon to extract as much liquid as possible (alternatively, run apples, parsley, and celery through a juicer and mix with 3 cups water). Stir in vinegar, salt, and ¼ tsp. pepper and add more celery stalks.
 To serve, pour 4 oz. juice into an ice-filled glass and sprinkle with pepper....
 - Lekki krem do twarzy NIVEA Care 5w1, 100 ml: 10,00 PLN (50% taniej)
   Suggested recipe: Secret Mango Creamsicle Smoothie
+  Image name: mango-persimmon-creamsicle-smoothie-catherine-mccord-recipe
   Ingredients: ['1⁄2 cup (80 g) frozen mango chunks', '1⁄2 ripe persimmon (Hachiya or Fuyu), stemmed', '1 small carrot, peeled and chopped (about 1⁄4 cup/32 g)', '1 tablespoon almond butter', '1 teaspoon flax seeds or flaxseed meal', '1 teaspoon hemp seeds', '1⁄4 teaspoon ground cinnamon or favorite spice blend', '1 cup (240 ml) coconut milk beverage or almond milk', 'or milk of choice']...
   Full recipe: Combine all the ingredients in a blender and blend until smooth....
 - Szynka konserwowa Kraina Wędlin, 200 g: 3,99 PLN (84% taniej na drugi produkt)
   Suggested recipe: Pineapple-Glazed Ham
+  Image name: pineapple-glazed-ham
   Ingredients: ['1/2 pineapple, peeled, sliced into rings', '1 large orange, sliced into thick rounds', '1 (10-lb.) cured smoked bone-in ham or 6-lb. cured boneless ham', '3 cups pineapple juice', '1/2 cup apple cider vinegar', '1/2 cup (packed) light brown sugar', '1/4 cup hot sauce', 'Maraschino cherries (for serving)']...
   Full recipe: Preheat oven to 300°F. Stack 2–3 sheets of foil ample enough to cover ham on a work surface and arrange pineapple and orange slices on top in a single layer. Set ham on fruit (if using a bone-in ham and it has a fat cap, score very lightly, making cuts about 3/4" apart) and wrap up tightly. Transfer to a wire rack set inside a large rimmed baking sheet and bake until an instant-read thermometer inserted into the thickest part of ham registers 115°F, 3–3 1/2 hours for boneless, 3 1/2–4 hours for bone-in.
 Meanwhile, bring pineapple juice, vinegar, brown sugar, and hot sauce to a boil in a large saucepan. Reduce heat; simmer, swirling occasionally, until thick enough to coat a spoon. Keep warm.
 Remove ham from oven and increase oven temperature to 425°F. Unwrap ham, peeling back the foil so it covers the baking sheet (this will make for easy cleanup). Once oven is at 425°F, baste ham with warm glaze and return to oven. Bake, brushing with more glaze every 3 minutes or so, until glaze is d...
 - Płyn do płukania tkanin Silan, opak. 1,32 l: 9,50 PLN (50% taniej)
   Suggested recipe: Food Processor Butter
+  Image name: food-processor-butter
   Ingredients: ['2 cups heavy cream, preferably not ultra-pasteurized', '1 tsp. kosher salt (optional)', '2 Tbsp. sugar', '1 Tbsp. ground cinnamon', '1 tsp. finely grated orange zest', '1/4 cup parsley leaves with tender stems, finely chopped', '1 tsp. finely grated garlic', '1 tsp. finely grated lemon zest', '2 Tbsp. toasted sesame seeds', '2 tsp. coarsely grated black pepper', '2 tsp. smoked paprika', 'Cheesecloth']...
   Full recipe: Process cream in a food processor until the butter solids have separated from the buttermilk and you see lots of little clumps of butter clinging together distinctly separated from thin milky liquid, 4–7 minutes (unpasteurized cream will separate more quickly). Carefully drain buttermilk; reserve for another use.
 Remove jar with blade still attached. Pour cold water over butter solids left in food processor jar, then drain. Repeat until water runs clear, 3–4 times. Pour off as much water as possible out of jar of food processor, using your hands to hold the butter solids in place while you pour. Continue to process until butter forms a solid ball, about 2 minutes. Pour off water again, then add salt (if using) and process to combine.
@@ -164,12 +190,14 @@ If making compound butter, add ingredients for chosen flavor and process until f
 Transfer butter to a medium bowl lined with a double layer of cheesecloth. Gather cheesecloth up around butter and twist to squeeze until no more liquid runs...
 - Kiełbaski z szynki i cielęciny Kraina Wędlin, 300 g: 7,99 PLN (60% taniej na drugi produkt)
   Suggested recipe: Pigs-in-a-Blanket with Sauerkraut and Mustard
+  Image name: pigs-in-a-blanket-with-sauerkraut-and-mustard-51260010
   Ingredients: ['1 large egg', 'One 14- to 17-ounce box of puff pastry (preferably all-butter), thawed according to package directions', '2 pounds fully cooked German-style sausage such as bockwurst or bratwurst, halved lengthwise if thick, and cut into 32 pieces (about 2 1/2 inches each)', '1/3 cup whole-grain mustard', '1/3 cup drained sauerkraut', 'Caraway seeds', 'for sprinkling']...
   Full recipe: Preheat the oven to 400°F. Set racks in the upper and lower thirds of the oven. Line two 13x18-inch baking sheets with parchment paper. In a small bowl, beat the egg with 1 tablespoon water. Prep the ingredients for the filling and set aside.
 If using a 17-ounce puff pastry package, roll each sheet to a 9x12-inch rectangle. Cut each piece lengthwise into eight 1 1/2-inch wide strips. Cut each strip crosswise into two pieces, about 4 1/2 inches long. You should have 32 pieces of pastry.
 Spread the center of each piece of pastry with 1/2 teaspoon mustard and top with 1/2 teaspoon sauerkraut. Brush one narrow end of the pastry with egg wash, add one piece of sausage, and roll to enclose. Return to parchment-lined baking sheets. Brush the top of each pastry with egg wash and sprinkle with caraway seeds, seam-side down. Chill in refrigerator for 15 minutes. Bake until golden brown and puffed, 23 to 27 minutes....
 - Schab lub szynka w plastrach ciemno wędzone Kraina Wędlin, 400 g: 12,99 PLN (46% taniej na drugi produkt)
   Suggested recipe: Smoky Dry-Rubbed Pork Steaks
+  Image name: smoky-dry-rubbed-pork-steaks
   Ingredients: ['2 tsp. fennel seeds', '2 Tbsp. light brown sugar', '4 tsp. kosher salt', '1 Tbsp. smoked Spanish paprika', '2 tsp. garlic powder', '2 tsp. mustard powder (preferably Colman’s English)', '1 lemon', '1 orange', '1 (4-lb.) boneless pork butt, cut crosswise against the grain into two or three 2"-thick steaks', '3 Tbsp. grapeseed', 'sunflower', 'or vegetable oil']...
   Full recipe: Toast fennel seeds in a dry small skillet over medium-low heat, tossing occasionally, until nutty and fragrant, 1–2 minutes. Transfer to a cutting board and coarsely chop, then transfer to a small bowl. Add brown sugar, salt, paprika, garlic powder, and mustard powder. Zest lemon and orange (reserve zested lemon and orange), add zest to bowl, and toss to combine. Rub pork all over with dry rub, pressing to adhere as much as possible to the surface. Place steaks on a wire rack set over a sheet pan and chill at least 3 hours and up to 24.
 Preheat oven to 325°F. Thoroughly pat dry pork steaks. Heat a large ovenproof skillet (preferably cast iron) over high until smoking. Drizzle steaks with oil and rub to cover all surfaces. Working in batches if needed, sear steaks on all sides until deeply browned and lightly charred, 4–5 minutes per side. (Keep a good eye on them; they’ll take on color relatively fast because of the sugar.) Transfer steaks to a plate. Reserve skillet.
@@ -177,7 +205,7 @@ Wipe out any accu...
 
 
 ADDITIONAL INSTRUCTIONS:
-You are preparing a diet for person that watns following: "Chcę dietę bezmięsną"
+You are preparing a diet for person that watns following: "Chcę dużo białka"
 
 RULES:
 - Use as many promotional products as possible
@@ -185,15 +213,15 @@ RULES:
 - Create varied, healthy meals (breakfast, lunch, dinner)
 - Use suggested recipes as inspiration - you can copy their instructions directly
 - Include precise quantities for all ingredients (e.g., "200g chicken breast")
-- Provide detailed step-by-step cooking instructions
+- Provide detailed step-by-step cooking instructions - if using a suggested recipe, copy its instructions directly
 - Calculate estimated total cost
 - You can add basic ingredients (bread, eggs, milk, etc.)
 
 Return the response in JSON format with Polish text:
 {
   "plan_info": {
-    "days": 3,
-    "people": 2,
+    "days": 1,
+    "people": 1,
     "estimated_total_cost": "XX.XX PLN"
   },
   "meals": [
@@ -201,6 +229,7 @@ Return the response in JSON format with Polish text:
       "day": 1,
       "type": "breakfast",
       "name": "Meal name in Polish",
+      "image_name": "copy image name from suggested recipe only if you used it, otherwise leave empty",
       "main_products": [
         {
           "name": "Product name",
@@ -231,348 +260,140 @@ Response:
 ```json
 {
   "plan_info": {
-    "days": 3,
-    "people": 2,
-    "estimated_total_cost": "76.00 PLN"
+    "days": 1,
+    "people": 1,
+    "estimated_total_cost": "39.76 PLN"
   },
   "meals": [
     {
       "day": 1,
       "type": "breakfast",
-      "name": "Kanapki z serem i pomidorami",
+      "name": "Jajka z kiełbasą i pomidorami",
+      "image_name": "",
       "main_products": [
         {
-          "name": "Ser plastry Światowid",
-          "quantity": "250g",
-          "price": "9.99 PLN"
+          "name": "Kiełbasa Podwawelska Kraina Wędlin",
+          "quantity": "200g",
+          "price": "3.78 PLN"
+        },
+        {
+          "name": "Jajko",
+          "quantity": "2 szt.",
+          "price": "0.50 PLN"
         }
       ],
       "additional_ingredients": [
         {
-          "name": "Chleb pełnoziarnisty",
-          "quantity": "200g",
-          "estimated_price": "3.00 PLN"
+          "name": "Mleko UHT 3,2%",
+          "quantity": "100ml",
+          "estimated_price": "0.19 PLN"
         },
         {
-          "name": "Pomidor",
-          "quantity": "2 szt.",
-          "estimated_price": "2.00 PLN"
+          "name": "Sól",
+          "quantity": "szczypta",
+          "estimated_price": "0.01 PLN"
         },
         {
-          "name": "Olej rzepakowy Kujawski",
-          "quantity": "10ml",
-          "estimated_price": "0.20 PLN"
+          "name": "Pieprz",
+          "quantity": "szczypta",
+          "estimated_price": "0.01 PLN"
         }
       ],
-      "instructions": "Pokrój chleb na kromki. Na każdej kromce rozsmaruj odrobinę oleju rzepakowego. Nałóż plasterki sera i pokrojone pomidory. Podawaj na zimno.",
+      "instructions": "Na patelni rozgrzej odrobinę oleju. Kiełbasę pokrój w plastry i smaż na średnim ogniu przez około 5-7 minut, aż będzie złocista. W międzyczasie w misce roztrzep jajka z mlekiem, solą i pieprzem. Wlej mieszankę jajeczną na patelnię z kiełbasą i smaż na małym ogniu, aż jajka się zetną, około 5-7 minut.",
       "prep_time": "10 min",
-      "cooking_time": "0 min"
+      "cooking_time": "10 min"
     },
     {
       "day": 1,
       "type": "lunch",
-      "name": "Sałatka z ogórków i orzechów",
+      "name": "Klopsiki wieprzowe z sałatką ogórkową",
+      "image_name": "",
       "main_products": [
         {
           "name": "Szynka Kraina Wędlin",
           "quantity": "100g",
           "price": "4.99 PLN"
+        },
+        {
+          "name": "Kiełbasa krakowska parzona w plastrach Kraina Wędlin",
+          "quantity": "100g",
+          "price": "2.60 PLN"
         }
       ],
       "additional_ingredients": [
         {
           "name": "Ogórki",
-          "quantity": "300g",
-          "estimated_price": "2.50 PLN"
+          "quantity": "200g",
+          "estimated_price": "1.00 PLN"
         },
         {
-          "name": "Orzechy włoskie",
-          "quantity": "50g",
-          "estimated_price": "5.00 PLN"
+          "name": "Czosnek",
+          "quantity": "1 ząbek",
+          "estimated_price": "0.10 PLN"
         },
         {
           "name": "Oliwa z oliwek",
-          "quantity": "20ml",
-          "estimated_price": "1.00 PLN"
+          "quantity": "1 łyżka",
+          "estimated_price": "0.50 PLN"
         },
         {
           "name": "Sól",
           "quantity": "szczypta",
-          "estimated_price": "0.05 PLN"
+          "estimated_price": "0.01 PLN"
+        },
+        {
+          "name": "Pieprz",
+          "quantity": "szczypta",
+          "estimated_price": "0.01 PLN"
         }
       ],
-      "instructions": "Ogórki pokrój w kostkę, dodaj pokrojoną szynkę i orzechy. Skrop oliwą, dopraw solą. Wymieszaj i podawaj.",
+      "instructions": "W misce wymieszaj szynkę, kiełbasę, czosnek, sól i pieprz. Formuj małe klopsiki. Smaż na patelni z oliwą przez około 10-12 minut, aż będą złociste. Ogórki pokrój w kostkę, wymieszaj z oliwą, solą i pieprzem. Podawaj klopsiki z sałatką ogórkową.",
       "prep_time": "15 min",
-      "cooking_time": "0 min"
+      "cooking_time": "15 min"
     },
     {
       "day": 1,
       "type": "dinner",
-      "name": "Fritters z cukinii z jogurtem",
+      "name": "Pigs-in-a-Blanket z kapustą kiszoną",
+      "image_name": "pigs-in-a-blanket-with-sauerkraut-and-mustard-51260010",
       "main_products": [
         {
-          "name": "Jogurt proteinowy pitny YoPRO",
-          "quantity": "270g",
+          "name": "Kiełbasa krakowska parzona w plastrach Kraina Wędlin",
+          "quantity": "200g",
+          "price": "5.20 PLN"
+        },
+        {
+          "name": "Puff pastry",
+          "quantity": "1 opakowanie",
           "price": "3.00 PLN"
         }
       ],
       "additional_ingredients": [
         {
-          "name": "Cukinia",
-          "quantity": "200g",
-          "estimated_price": "2.00 PLN"
-        },
-        {
-          "name": "Cebula",
-          "quantity": "1 szt.",
+          "name": "Musztarda",
+          "quantity": "50g",
           "estimated_price": "0.50 PLN"
         },
         {
-          "name": "Mąka pszenna",
-          "quantity": "100g",
-          "estimated_price": "0.50 PLN"
+          "name": "Kapusta kiszona",
+          "quantity": "50g",
+          "estimated_price": "0.30 PLN"
         },
         {
           "name": "Jajko",
           "quantity": "1 szt.",
-          "estimated_price": "0.50 PLN"
-        },
-        {
-          "name": "Sól",
-          "quantity": "szczypta",
-          "estimated_price": "0.05 PLN"
-        },
-        {
-          "name": "Olej do smażenia",
-          "quantity": "50ml",
-          "estimated_price": "0.50 PLN"
+          "estimated_price": "0.25 PLN"
         }
       ],
-      "instructions": "Cukinię zetrzyj na tarce, odciśnij nadmiar wody. W misce wymieszaj cukinię, cebulę, mąkę, jajko i sól. Smaż na rozgrzanym oleju na złoty kolor z obu stron.",
+      "instructions": "Rozgrzej piekarnik do 200°C. Rozwałkuj ciasto francuskie i pokrój na prostokąty. Na każdym prostokącie umieść kawałek kiełbasy, 1/2 łyżeczki musztardy i 1/2 łyżeczki kapusty kiszonej. Zwiń ciasto, formując małe pakunki. Ułóż na blaszce wyłożonej papierem do pieczenia. Posmaruj jajkiem. Piecz przez 25-30 minut, aż będą złociste.",
       "prep_time": "15 min",
-      "cooking_time": "15 min"
-    },
-    {
-      "day": 2,
-      "type": "breakfast",
-      "name": "Owsianka z owocami",
-      "main_products": [
-        {
-          "name": "Mleko UHT 3,2% Mleczna Dolina",
-          "quantity": "500ml",
-          "price": "1.89 PLN"
-        }
-      ],
-      "additional_ingredients": [
-        {
-          "name": "Płatki owsiane",
-          "quantity": "100g",
-          "estimated_price": "1.00 PLN"
-        },
-        {
-          "name": "Banany",
-          "quantity": "2 szt.",
-          "estimated_price": "2.00 PLN"
-        },
-        {
-          "name": "Miód",
-          "quantity": "20g",
-          "estimated_price": "1.00 PLN"
-        }
-      ],
-      "instructions": "W garnku zagotuj mleko, dodaj płatki owsiane i gotuj przez 5 minut. Podawaj z pokrojonymi bananami i miodem.",
-      "prep_time": "5 min",
-      "cooking_time": "10 min"
-    },
-    {
-      "day": 2,
-      "type": "lunch",
-      "name": "Zupa krem z pomidorów",
-      "main_products": [
-        {
-          "name": "Sok jabłkowy Riviva",
-          "quantity": "1l",
-          "price": "2.99 PLN"
-        }
-      ],
-      "additional_ingredients": [
-        {
-          "name": "Pomidory",
-          "quantity": "500g",
-          "estimated_price": "3.00 PLN"
-        },
-        {
-          "name": "Cebula",
-          "quantity": "1 szt.",
-          "estimated_price": "0.50 PLN"
-        },
-        {
-          "name": "Czosnek",
-          "quantity": "2 ząbki",
-          "estimated_price": "0.50 PLN"
-        },
-        {
-          "name": "Oliwa z oliwek",
-          "quantity": "20ml",
-          "estimated_price": "1.00 PLN"
-        },
-        {
-          "name": "Sól i pieprz",
-          "quantity": "szczypta",
-          "estimated_price": "0.05 PLN"
-        }
-      ],
-      "instructions": "Na oliwie zeszklij cebulę i czosnek, dodaj pomidory i gotuj przez 15 minut. Zmiksuj na gładką masę, dopraw solą i pieprzem.",
-      "prep_time": "10 min",
-      "cooking_time": "20 min"
-    },
-    {
-      "day": 2,
-      "type": "dinner",
-      "name": "Makaron z sosem pesto",
-      "main_products": [
-        {
-          "name": "Kabanosy z wędzarni Kraina Wędlin Select",
-          "quantity": "175g",
-          "price": "7.99 PLN"
-        }
-      ],
-      "additional_ingredients": [
-        {
-          "name": "Makaron",
-          "quantity": "200g",
-          "estimated_price": "2.00 PLN"
-        },
-        {
-          "name": "Pesto",
-          "quantity": "100g",
-          "estimated_price": "3.00 PLN"
-        },
-        {
-          "name": "Parmezan",
-          "quantity": "50g",
-          "estimated_price": "2.00 PLN"
-        }
-      ],
-      "instructions": "Ugotuj makaron według instrukcji. Na patelni podsmaż kabanosy, dodaj pesto i wymieszaj z makaronem. Podawaj z tartym parmezanem.",
-      "prep_time": "10 min",
-      "cooking_time": "15 min"
-    },
-    {
-      "day": 3,
-      "type": "breakfast",
-      "name": "Smoothie owocowe",
-      "main_products": [
-        {
-          "name": "Jogurt proteinowy pitny YoPRO",
-          "quantity": "270g",
-          "price": "3.00 PLN"
-        }
-      ],
-      "additional_ingredients": [
-        {
-          "name": "Banany",
-          "quantity": "2 szt.",
-          "estimated_price": "2.00 PLN"
-        },
-        {
-          "name": "Mango mrożone",
-          "quantity": "100g",
-          "estimated_price": "3.00 PLN"
-        },
-        {
-          "name": "Mleko UHT 3,2% Mleczna Dolina",
-          "quantity": "200ml",
-          "estimated_price": "0.38 PLN"
-        }
-      ],
-      "instructions": "Wszystkie składniki zmiksuj w blenderze na gładką masę. Podawaj schłodzone.",
-      "prep_time": "5 min",
-      "cooking_time": "0 min"
-    },
-    {
-      "day": 3,
-      "type": "lunch",
-      "name": "Sałatka z ciecierzycy",
-      "main_products": [
-        {
-          "name": "Pasztet Podlaski Drosed",
-          "quantity": "195g",
-          "price": "2.69 PLN"
-        }
-      ],
-      "additional_ingredients": [
-        {
-          "name": "Ciecierzyca",
-          "quantity": "200g",
-          "estimated_price": "2.00 PLN"
-        },
-        {
-          "name": "Ogórki",
-          "quantity": "100g",
-          "estimated_price": "1.00 PLN"
-        },
-        {
-          "name": "Papryka",
-          "quantity": "1 szt.",
-          "estimated_price": "2.00 PLN"
-        },
-        {
-          "name": "Oliwa z oliwek",
-          "quantity": "20ml",
-          "estimated_price": "1.00 PLN"
-        },
-        {
-          "name": "Sól i pieprz",
-          "quantity": "szczypta",
-          "estimated_price": "0.05 PLN"
-        }
-      ],
-      "instructions": "Ciecierzycę ugotuj do miękkości. W misce wymieszaj z pokrojonymi ogórkami, papryką, pasztetem, oliwą, solą i pieprzem.",
-      "prep_time": "10 min",
       "cooking_time": "30 min"
-    },
-    {
-      "day": 3,
-      "type": "dinner",
-      "name": "Ziemniaki pieczone z warzywami",
-      "main_products": [],
-      "additional_ingredients": [
-        {
-          "name": "Ziemniaki",
-          "quantity": "500g",
-          "estimated_price": "2.00 PLN"
-        },
-        {
-          "name": "Marchew",
-          "quantity": "2 szt.",
-          "estimated_price": "1.00 PLN"
-        },
-        {
-          "name": "Cebula",
-          "quantity": "1 szt.",
-          "estimated_price": "0.50 PLN"
-        },
-        {
-          "name": "Oliwa z oliwek",
-          "quantity": "30ml",
-          "estimated_price": "1.00 PLN"
-        },
-        {
-          "name": "Sól i pieprz",
-          "quantity": "szczypta",
-          "estimated_price": "0.05 PLN"
-        }
-      ],
-      "instructions": "Ziemniaki i marchew pokrój w kostkę, cebulę w pióra. Wymieszaj z oliwą, solą i pieprzem. Piecz w piekarniku w 200°C przez 30-40 minut.",
-      "prep_time": "10 min",
-      "cooking_time": "40 min"
     }
   ],
   "shopping_summary": {
-    "promotional_products_cost": "40.00 PLN",
-    "additional_ingredients_cost": "36.00 PLN",
-    "total_savings": "Savings from promotions in 20.00 PLN"
+    "promotional_products_cost": "16.57 PLN",
+    "additional_ingredients_cost": "3.81 PLN",
+    "total_savings": "Savings from promotions in PLN"
   }
 }
 ```
