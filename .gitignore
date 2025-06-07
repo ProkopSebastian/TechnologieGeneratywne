@@ -4,6 +4,9 @@ dev-scripts/
 # pobrane bazy danych
 datasets/
 
+# zdjecia z frontendu
+frontend/Images/
+
 # Ustawienia VS Code
 .vscode/
 

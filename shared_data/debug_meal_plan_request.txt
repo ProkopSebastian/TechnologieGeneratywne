@@ -1,375 +1,398 @@
 Prompt:
 Create a detailed meal plan for 1 days for 1 people using promotional products from Biedronka.
 
-AVAILABLE PROMOTIONAL PRODUCTS:
-- Kiełbasa Podwawelska Kraina Wędlin: 1,89 PLN (21% taniej)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
-- Szynka Kraina Wędlin, 100 g: 4,99 PLN (62% taniej na drugi produkt)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
-- Boczek Kraina Wędlin, 100 g: 4,49 PLN (46% taniej na drugi produkt)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
-- Kiełbasa krakowska parzona w plastrach Kraina Wędlin, 250 g: 6,49 PLN (76% taniej na drugi produkt)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
-- Kabanosy z wędzarni Kraina Wędlin Select, 175 g: 7,99 PLN (40% taniej na drugi produkt)
-  Suggested recipe: Recipe: Apples and Oranges
-Ingredients: 3 oz
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
-- Kiełbasa krakowska z szynki Tarczyński, 330 g: 11,99 PLN (68% taniej na drugi produkt)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
+    AVAILABLE PROMOTIONAL PRODUCTS:
 - Jogurt proteinowy pitny YoPRO, 270 g: 3,00 PLN (50% taniej)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+  Suggested recipe: Recipe: Tomato Pie With Sour Cream Crust
+Ingredients: 2 cups all-purpose flour, plus a little extra 
   Image name: 
   Ingredients: ...
   Full recipe: ...
 - Krem do smarowania Nutella, 350 g: 11,49 PLN (30% taniej)
-  Suggested recipe: Recipe: Apples and Oranges
-Ingredients: 3 oz
+  Suggested recipe: Recipe: Mr
   Image name: 
   Ingredients: ...
   Full recipe: ...
 - Pasztet Podlaski Drosed, 195 g: 2,69 PLN (44% taniej na drugi produkt)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+  Suggested recipe: Recipe: Saucy Beans and Artichoke Hearts with Feta
+Ingredients: 1/2 cup plus 1 Tbsp
   Image name: 
   Ingredients: ...
   Full recipe: ...
 - Gulasz angielski Krakus, 300 g: 5,99 PLN (None)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+  Suggested recipe: Recipe: Mr
   Image name: 
   Ingredients: ...
   Full recipe: ...
 - Herbata Lipton Yellow Label, 25 torebek: 5,00 PLN (50% taniej)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+  Suggested recipe: Recipe: Mr
   Image name: 
   Ingredients: ...
   Full recipe: ...
 - Herbata Teekanne, 20 torebek: 3,99 PLN (27% taniej)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+  Suggested recipe: Recipe: Mr
   Image name: 
   Ingredients: ...
   Full recipe: ...
 - Kawa ziarnista Jacobs Barista Editions, 1 kg: 57,99 PLN (27% taniej)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+  Suggested recipe: Recipe: Mr
   Image name: 
   Ingredients: ...
   Full recipe: ...
 - Kapsułki Dolce Gusto, 16 szt.: 20,99 PLN (60% taniej na drugi produkt)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+  Suggested recipe: Recipe: Mr
   Image name: 
   Ingredients: ...
   Full recipe: ...
 - Jajko Kinder Joy, 20 g: 3,66 PLN (33% taniej)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
+Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
   Image name: 
   Ingredients: ...
   Full recipe: ...
 - Olej rzepakowy Kujawski, 2 l: 11,98 PLN (44% taniej)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+  Suggested recipe: Recipe: Saucy Beans and Artichoke Hearts with Feta
+Ingredients: 1/2 cup plus 1 Tbsp
   Image name: 
   Ingredients: ...
   Full recipe: ...
-- Mleko UHT 3,2% Mleczna Dolina, 1 l: 1,89 PLN (50% taniej)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+- Masło ekstra Łaciate, 200 g: 4,75 PLN (50% taniej)
+  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
+Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
   Image name: 
   Ingredients: ...
   Full recipe: ...
-- Ser plastry Światowid, 2x250 g/500 g: 9,99 PLN (74% taniej na drugi produkt)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+- Jaja z chowu ściółkowego Moja Kurka, rozmiar M, 10 szt.: 8,24 PLN (50% taniej na drugi produkt)
+  Suggested recipe: Recipe: Chinese Broccoli With Soy Paste
+Ingredients: 1 lb
   Image name: 
   Ingredients: ...
   Full recipe: ...
-- Odżywcze mleczko lub balsam do ciała Nivea, 400 ml: 16,00 PLN (50% taniej)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+- Parówki z szynki Tarczyński, 2x220 g: 8,44 PLN (70% taniej na drugi produkt)
+  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
+Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
   Image name: 
   Ingredients: ...
   Full recipe: ...
-- Łopatka wieprzowa: 13,99 PLN (30% taniej)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+- Kiełbasa śląska z szynki Kraina Wędlin Select, 450 g: 9,48 PLN (70% taniej na drugi produkt)
+  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
+Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
   Image name: 
   Ingredients: ...
   Full recipe: ...
-- Świeże udo lub podudzie kurczaka pakowane próżniowo Kraina Mięs: 6,49 PLN (48% taniej)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+- Mieszanka nerkowiec-żurawina BakaD’Or, 200 g: 7,39 PLN (33% taniej)
+  Suggested recipe: Recipe: Tomato Pie With Sour Cream Crust
+Ingredients: 2 cups all-purpose flour, plus a little extra 
+  Image name: 
+  Ingredients: ...
+  Full recipe: ...
+- Sok 100% jabłko Hortex, 1 l: 2,25 PLN (50% taniej)
+  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
+Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
+  Image name: 
+  Ingredients: ...
+  Full recipe: ...
+- Napój gazowany Coca-Cola, 2x2 l: 6,99 PLN (12% taniej)
+  Suggested recipe: Recipe: Mr
+  Image name: 
+  Ingredients: ...
+  Full recipe: ...
+- Kapsułki do prania Vizir All in 1 PODS, 22 szt.: 18,35 PLN (50% taniej)
+  Suggested recipe: Recipe: Tomato Pie With Sour Cream Crust
+Ingredients: 2 cups all-purpose flour, plus a little extra 
+  Image name: 
+  Ingredients: ...
+  Full recipe: ...
+- Filet z pstrąga tęczowego łososiowego ze skórą Marinero: 3,99 PLN (30% taniej)
+  Suggested recipe: Recipe: Buttered Tomatoes with Ginger
+Ingredients: 4 scallions, 4 Tbsp
   Image name: 
   Ingredients: ...
   Full recipe: ...
 - Krewetki gotowane Marinero, 250 g: 14,99 PLN (62% taniej na drugi produkt)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+  Suggested recipe: Recipe: Mr
+  Image name: 
+  Ingredients: ...
+  Full recipe: ...
+- Mięso mielone z łopatki wieprzowej i wołowiny Kraina Mięs, 400 g: 6,75 PLN (50% taniej)
+  Suggested recipe: Recipe: Mr
+  Image name: 
+  Ingredients: ...
+  Full recipe: ...
+- Ćwiartka tylna z kurczaka: 6,99 PLN (30% taniej)
+  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
+Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
+  Image name: 
+  Ingredients: ...
+  Full recipe: ...
+- Łosoś Coho rodzinna porcja Marinero: 4,99 PLN (16% taniej)
+  Suggested recipe: Recipe: Buttered Tomatoes with Ginger
+Ingredients: 4 scallions, 4 Tbsp
+  Image name: 
+  Ingredients: ...
+  Full recipe: ...
+- Sushi Sushiko, 230 g: 8,49 PLN (44% taniej na drugi produkt)
+  Suggested recipe: Recipe: Melted Broccoli Pasta With Capers and Anchovies
+Ingredients: Kosher salt, 2 heads (about 1 p
+  Image name: 
+  Ingredients: ...
+  Full recipe: ...
+- Sushi Premium Kyoko, 430 g: 15,99 PLN (54% taniej na drugi produkt)
+  Suggested recipe: Recipe: Melted Broccoli Pasta With Capers and Anchovies
+Ingredients: Kosher salt, 2 heads (about 1 p
+  Image name: 
+  Ingredients: ...
+  Full recipe: ...
+- Schab z Zalasku Podlaskie Specjały Kraina Wędlin, 100 g: 5,99 PLN (40% taniej na drugi produkt)
+  Suggested recipe: Recipe: Melted Broccoli Pasta With Capers and Anchovies
+Ingredients: Kosher salt, 2 heads (about 1 p
+  Image name: 
+  Ingredients: ...
+  Full recipe: ...
+- Kiełbaski Swojskie Podlaskie Specjały Kraina Wędlin, 300 g: 9,99 PLN (40% taniej na drugi produkt)
+  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
+Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
+  Image name: 
+  Ingredients: ...
+  Full recipe: ...
+- Brykiet z węgla drzewnego, 2,5 kg: 8,99 PLN (86% taniej na drugi produkt)
+  Suggested recipe: Recipe: Mr
   Image name: 
   Ingredients: ...
   Full recipe: ...
 - Sok jabłkowy Riviva, 1 l: 2,99 PLN (21% taniej)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
+Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
   Image name: 
   Ingredients: ...
   Full recipe: ...
-- Lekki krem do twarzy NIVEA Care 5w1, 100 ml: 10,00 PLN (50% taniej)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+- Lekki krem do twarzy NIVEA Care 5w1, 100 ml: 19,99 PLN (50% taniej)
+  Suggested recipe: Recipe: Mr
   Image name: 
   Ingredients: ...
   Full recipe: ...
 - Szynka konserwowa Kraina Wędlin, 200 g: 3,99 PLN (84% taniej na drugi produkt)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+  Suggested recipe: Recipe: Mr
   Image name: 
   Ingredients: ...
   Full recipe: ...
 - Płyn do płukania tkanin Silan, opak. 1,32 l: 9,50 PLN (50% taniej)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+  Suggested recipe: Recipe: Saucy Beans and Artichoke Hearts with Feta
+Ingredients: 1/2 cup plus 1 Tbsp
   Image name: 
   Ingredients: ...
   Full recipe: ...
-- Kiełbaski z szynki i cielęciny Kraina Wędlin, 300 g: 7,99 PLN (60% taniej na drugi produkt)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+- Kiełbaski z szynki i cielęciny Kraina Wędlin, 300 g: 11,49 PLN (30% taniej)
+  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
+Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
   Image name: 
   Ingredients: ...
   Full recipe: ...
-- Schab lub szynka w plastrach ciemno wędzone Kraina Wędlin, 400 g: 12,99 PLN (46% taniej na drugi produkt)
-  Suggested recipe: Recipe: Newton's Law
-Ingredients: 1 teaspoon dark brown sugar, 1 teaspoon hot water, 1 ½ oz
+- Schab lub szynka w plastrach ciemno wędzone Kraina Wędlin, 400 g: 16,99 PLN (23% taniej)
+  Suggested recipe: Recipe: Melted Broccoli Pasta With Capers and Anchovies
+Ingredients: Kosher salt, 2 heads (about 1 p
+  Image name: 
+  Ingredients: ...
+  Full recipe: ...
+- Kiełbasa Podwawelska Kraina Wędlin: 24,00 PLN (21% taniej)
+  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
+Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
+  Image name: 
+  Ingredients: ...
+  Full recipe: ...
+- Szynka Kraina Wędlin, 100 g: 4,99 PLN (62% taniej na drugi produkt)
+  Suggested recipe: Recipe: Mr
+  Image name: 
+  Ingredients: ...
+  Full recipe: ...
+- Boczek Kraina Wędlin, 100 g: 4,49 PLN (46% taniej na drugi produkt)
+  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
+Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
+  Image name: 
+  Ingredients: ...
+  Full recipe: ...
+- Kiełbasa krakowska parzona w plastrach Kraina Wędlin, 250 g: 6,49 PLN (76% taniej na drugi produkt)
+  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
+Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
+  Image name: 
+  Ingredients: ...
+  Full recipe: ...
+- Kabanosy z wędzarni Kraina Wędlin Select, 175 g: 7,99 PLN (40% taniej na drugi produkt)
+  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
+Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
+  Image name: 
+  Ingredients: ...
+  Full recipe: ...
+- Kiełbasa krakowska z szynki Tarczyński, 330 g: 11,99 PLN (68% taniej na drugi produkt)
+  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
+Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
   Image name: 
   Ingredients: ...
   Full recipe: ...
 
 
-ADDITIONAL INSTRUCTIONS:
-You are preparing a diet for person that watns following: "Dieta tylko z kurczakiem"
+    ADDITIONAL INSTRUCTIONS:
+    You are preparing a diet for person that wants the following: "I want Soy-Glazed Chicken with Broccoli for dinner."
 
-RULES:
-- Use as many promotional products as possible
-- One meal can include multiple promotional products
-- Create varied, healthy meals (breakfast, lunch, dinner)
-- Use suggested recipes as inspiration - you can copy their instructions directly
-- Include precise quantities for all ingredients (e.g., "200g chicken breast")
-- Provide detailed step-by-step cooking instructions - if using a suggested recipe, copy its instructions directly
-- Calculate estimated total cost
-- You can add basic ingredients (bread, eggs, milk, etc.)
+    RULES:
+    - Use as many promotional products as possible
+    - One meal can include multiple promotional products
+    - Create varied, healthy meals (breakfast, lunch, dinner)
+    - STRICT DIETARY RULE: If the question requests a vegetarian diet, DO NOT use meat, poultry, or fish in any meal. You can use plant-based alternatives like tofu, lentils, eggs, or dairy.
+    - Use suggested recipes as inspiration - you can copy their instructions directly
+    - Include precise quantities for all ingredients (e.g., "200g tofu")
+    - Provide detailed step-by-step cooking instructions - if using a suggested recipe, copy its instructions directly
+    - Calculate estimated total cost
+    - You can add basic ingredients (bread, eggs, milk, etc.)
 
-Return the response in JSON format with Polish text:
-{
-  "plan_info": {
-    "days": 1,
-    "people": 1,
-    "estimated_total_cost": "XX.XX PLN"
-  },
-  "meals": [
+
+    Return the response in JSON format with Polish text:
     {
-      "day": 1,
-      "type": "breakfast",
-      "name": "Meal name in Polish",
-      "image_name": "copy image name from suggested recipe only if you used it, otherwise leave empty",
-      "main_products": [
+    "plan_info": {
+        "days": 1,
+        "people": 1,
+        "estimated_total_cost": "XX.XX PLN"
+    },
+    "meals": [
         {
-          "name": "Product name",
-          "quantity": "200g",
-          "price": "X.XX PLN"
+        "day": 1,
+        "type": "breakfast",
+        "name": "Meal name in Polish",
+        "image_name": "copy image name from suggested recipe only if you used it, otherwise leave empty",
+        "main_products": [
+            {
+            "name": "Product name",
+            "quantity": "200g",
+            "price": "X.XX PLN"
+            }
+        ],
+        "additional_ingredients": [
+            {
+            "name": "Basic ingredient",
+            "quantity": "100ml",
+            "estimated_price": "X.XX PLN"
+            }
+        ],
+        "instructions": "Detailed step-by-step preparation instructions in Polish. Should be very specific with cooking times, temperatures, and techniques. If using a suggested recipe, you can copy its instructions directly.",
+        "prep_time": "XX min",
+        "cooking_time": "XX min"
         }
-      ],
-      "additional_ingredients": [
-        {
-          "name": "Basic ingredient",
-          "quantity": "100ml",
-          "estimated_price": "X.XX PLN"
-        }
-      ],
-      "instructions": "Detailed step-by-step preparation instructions in Polish. Should be very specific with cooking times, temperatures, and techniques. If using a suggested recipe, you can copy its instructions directly.",
-      "prep_time": "XX min",
-      "cooking_time": "XX min"
+    ],
+    "shopping_summary": {
+        "promotional_products_cost": "XX.XX PLN",
+        "additional_ingredients_cost": "XX.XX PLN",
+        "total_savings": "Savings from promotions in PLN"
     }
-  ],
-  "shopping_summary": {
-    "promotional_products_cost": "XX.XX PLN",
-    "additional_ingredients_cost": "XX.XX PLN",
-    "total_savings": "Savings from promotions in PLN"
-  }
-}
+    }
 
 Response:
+```json
 {
-  "plan_info": {
-    "days": 1,
-    "people": 1,
-    "estimated_total_cost": "25.62 PLN"
-  },
-  "meals": [
-    {
-      "day": 1,
-      "type": "breakfast",
-      "name": "Jajecznica z kurczakiem",
-      "image_name": "",
-      "main_products": [
-        {
-          "name": "Świeże udo kurczaka",
-          "quantity": "200g",
-          "price": "6.49 PLN"
-        },
-        {
-          "name": "Ser plastry Światowid",
-          "quantity": "50g",
-          "price": "1.25 PLN"
-        }
-      ],
-      "additional_ingredients": [
-        {
-          "name": "Jajka",
-          "quantity": "2 szt.",
-          "estimated_price": "1.50 PLN"
-        },
-        {
-          "name": "Olej rzepakowy",
-          "quantity": "10ml",
-          "estimated_price": "0.60 PLN"
-        },
-        {
-          "name": "Sól",
-          "quantity": "szczypta",
-          "estimated_price": "0.05 PLN"
-        },
-        {
-          "name": "Pieprz",
-          "quantity": "szczypta",
-          "estimated_price": "0.05 PLN"
-        }
-      ],
-      "instructions": "1. Umyj udo kurczaka i pokrój na małe kawałki. 2. Rozgrzej olej na patelni na średnim ogniu. 3. Dodaj kurczaka i smaż przez 5-7 minut, aż będzie dobrze usmażony. 4. W misce rozbij jajka, dodaj sól i pieprz, a następnie wymieszaj. 5. Wlej mieszankę jajeczną na patelnię z kurczakiem. 6. Smaż przez 3-4 minuty, delikatnie mieszając, aż jajka się zetną. 7. Na koniec dodaj plastry sera i poczekaj, aż się roztopią. 8. Podawaj na ciepło.",
-      "prep_time": "10 min",
-      "cooking_time": "15 min"
+    "plan_info": {
+        "days": 1,
+        "people": 1,
+        "estimated_total_cost": "28.64 PLN"
     },
-    {
-      "day": 1,
-      "type": "lunch",
-      "name": "Sałatka z kurczakiem i boczkiem",
-      "image_name": "",
-      "main_products": [
+    "meals": [
         {
-          "name": "Boczek Kraina Wędlin",
-          "quantity": "100g",
-          "price": "4.49 PLN"
+            "day": 1,
+            "type": "breakfast",
+            "name": "Kanapki z pasztetem i herbatą",
+            "image_name": "",
+            "main_products": [
+                {
+                    "name": "Pasztet Podlaski Drosed",
+                    "quantity": "100g",
+                    "price": "1.35 PLN"
+                },
+                {
+                    "name": "Herbata Lipton Yellow Label",
+                    "quantity": "1 torebka",
+                    "price": "0.20 PLN"
+                }
+            ],
+            "additional_ingredients": [
+                {
+                    "name": "Chleb",
+                    "quantity": "2 kromki",
+                    "estimated_price": "1.00 PLN"
+                },
+                {
+                    "name": "Masło",
+                    "quantity": "20g",
+                    "estimated_price": "0.50 PLN"
+                }
+            ],
+            "instructions": "Posmaruj kromki chleba masłem, a następnie nałóż na nie pasztet. Podawaj z gorącą herbatą Lipton Yellow Label.",
+            "prep_time": "5 min",
+            "cooking_time": "0 min"
         },
         {
-          "name": "Świeże udo kurczaka",
-          "quantity": "200g",
-          "price": "6.49 PLN"
+            "day": 1,
+            "type": "lunch",
+            "name": "Gulasz angielski z ryżem",
+            "image_name": "",
+            "main_products": [
+                {
+                    "name": "Gulasz angielski Krakus",
+                    "quantity": "150g",
+                    "price": "3.00 PLN"
+                }
+            ],
+            "additional_ingredients": [
+                {
+                    "name": "Ryż",
+                    "quantity": "100g",
+                    "estimated_price": "1.50 PLN"
+                }
+            ],
+            "instructions": "Ugotuj ryż zgodnie z instrukcją na opakowaniu. Podgrzej gulasz angielski w rondlu na średnim ogniu przez około 5 minut. Podawaj gulasz na gorącym ryżu.",
+            "prep_time": "5 min",
+            "cooking_time": "15 min"
+        },
+        {
+            "day": 1,
+            "type": "dinner",
+            "name": "Kurczak glazurowany sosem sojowym z brokułami",
+            "image_name": "",
+            "main_products": [
+                {
+                    "name": "Ćwiartka tylna z kurczaka",
+                    "quantity": "200g",
+                    "price": "3.50 PLN"
+                }
+            ],
+            "additional_ingredients": [
+                {
+                    "name": "Brokuły",
+                    "quantity": "200g",
+                    "estimated_price": "3.00 PLN"
+                },
+                {
+                    "name": "Sos sojowy",
+                    "quantity": "30ml",
+                    "estimated_price": "1.00 PLN"
+                },
+                {
+                    "name": "Czosnek",
+                    "quantity": "2 ząbki",
+                    "estimated_price": "0.50 PLN"
+                },
+                {
+                    "name": "Olej rzepakowy Kujawski",
+                    "quantity": "10ml",
+                    "price": "0.06 PLN"
+                }
+            ],
+            "instructions": "Na patelni rozgrzej olej rzepakowy. Dodaj pokrojony czosnek i smaż przez 1 minutę. Dodaj kurczaka i smaż na średnim ogniu przez około 10 minut, aż będzie złocisty. Dodaj sos sojowy i brokuły, przykryj i gotuj na małym ogniu przez kolejne 10 minut, aż brokuły będą miękkie.",
+            "prep_time": "10 min",
+            "cooking_time": "20 min"
         }
-      ],
-      "additional_ingredients": [
-        {
-          "name": "Sałata",
-          "quantity": "50g",
-          "estimated_price": "1.00 PLN"
-        },
-        {
-          "name": "Pomidor",
-          "quantity": "1 szt.",
-          "estimated_price": "1.00 PLN"
-        },
-        {
-          "name": "Ogórek",
-          "quantity": "1 szt.",
-          "estimated_price": "1.00 PLN"
-        },
-        {
-          "name": "Olej rzepakowy",
-          "quantity": "10ml",
-          "estimated_price": "0.60 PLN"
-        },
-        {
-          "name": "Sól",
-          "quantity": "szczypta",
-          "estimated_price": "0.05 PLN"
-        },
-        {
-          "name": "Pieprz",
-          "quantity": "szczypta",
-          "estimated_price": "0.05 PLN"
-        }
-      ],
-      "instructions": "1. Umyj i pokrój sałatę, pomidora i ogórka. 2. Udo kurczaka ugotuj w osolonej wodzie przez 20 minut, a następnie pokrój w kostkę. 3. Boczek pokrój na małe kawałki i usmaż na patelni przez 5-7 minut, aż będzie chrupiący. 4. W dużej misce połącz sałatę, pomidora, ogórka, kurczaka i boczek. 5. Skrop sałatkę olejem, dodaj sól i pieprz do smaku. 6. Wymieszaj wszystko dokładnie i podawaj.",
-      "prep_time": "10 min",
-      "cooking_time": "30 min"
-    },
-    {
-      "day": 1,
-      "type": "dinner",
-      "name": "Kurczak pieczony z ziołami",
-      "image_name": "",
-      "main_products": [
-        {
-          "name": "Świeże udo kurczaka",
-          "quantity": "200g",
-          "price": "6.49 PLN"
-        }
-      ],
-      "additional_ingredients": [
-        {
-          "name": "Zioła prowansalskie",
-          "quantity": "1 łyżeczka",
-          "estimated_price": "0.20 PLN"
-        },
-        {
-          "name": "Olej rzepakowy",
-          "quantity": "10ml",
-          "estimated_price": "0.60 PLN"
-        },
-        {
-          "name": "Sól",
-          "quantity": "szczypta",
-          "estimated_price": "0.05 PLN"
-        },
-        {
-          "name": "Pieprz",
-          "quantity": "szczypta",
-          "estimated_price": "0.05 PLN"
-        }
-      ],
-      "instructions": "1. Rozgrzej piekarnik do 200°C. 2. Udo kurczaka umyj i osusz. 3. W misce wymieszaj olej, zioła, sól i pieprz. 4. Natrzyj kurczaka mieszanką ziołową. 5. Umieść kurczaka w naczyniu żaroodpornym i piecz przez 30-35 minut, aż będzie złocisty i dobrze upieczony. 6. Podawaj na ciepło.",
-      "prep_time": "10 min",
-      "cooking_time": "35 min"
+    ],
+    "shopping_summary": {
+        "promotional_products_cost": "8.11 PLN",
+        "additional_ingredients_cost": "20.53 PLN",
+        "total_savings": "16.88 PLN"
     }
-  ],
-  "shopping_summary": {
-    "promotional_products_cost": "18.47 PLN",
-    "additional_ingredients_cost": "7.15 PLN",
-    "total_savings": "Savings from promotions in PLN"
-  }
 }
+```

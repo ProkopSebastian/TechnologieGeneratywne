@@ -1,109 +1,7 @@
 {
-  "scraped_at": "2025-06-02T21:52:05.569957",
-  "total_products": 28,
+  "scraped_at": "2025-06-07T14:57:11.124147",
+  "total_products": 40,
   "products": [
-    {
-      "name": "Kiełbasa Podwawelska Kraina Wędlin",
-      "price": "1,89",
-      "original_price": null,
-      "discount_info": "21% taniej",
-      "unit": "kg",
-      "promotion_type": null,
-      "product_url": "https://www.biedronka.pl/pl/product,id,439144,name,kielbasa-podwawelska-kraina-wedlin",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/kielbasa_podwawelska_kraina_wedlin_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567758",
-      "english_keywords": [
-        "sausage",
-        "meat",
-        "pork",
-        "deli"
-      ]
-    },
-    {
-      "name": "Szynka Kraina Wędlin, 100 g",
-      "price": "4,99",
-      "original_price": null,
-      "discount_info": "62% taniej na drugi produkt",
-      "unit": "opak",
-      "promotion_type": "Drugi 62% taniej",
-      "product_url": "https://www.biedronka.pl/pl/product,id,439145,name,szynka-kraina-wedlin-100-g",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/szynka_kraina_wedlin_100_g_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567770",
-      "english_keywords": [
-        "ham",
-        "meat",
-        "pork",
-        "deli"
-      ]
-    },
-    {
-      "name": "Boczek Kraina Wędlin, 100 g",
-      "price": "4,49",
-      "original_price": null,
-      "discount_info": "46% taniej na drugi produkt",
-      "unit": "opak",
-      "promotion_type": "Drugi 46% taniej",
-      "product_url": "https://www.biedronka.pl/pl/product,id,439146,name,boczek-kraina-wedlin-100-g",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/boczek_kraina_wedlin_100_g_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567772",
-      "english_keywords": [
-        "bacon",
-        "meat",
-        "pork",
-        "breakfast"
-      ]
-    },
-    {
-      "name": "Kiełbasa krakowska parzona w plastrach Kraina Wędlin, 250 g",
-      "price": "6,49",
-      "original_price": null,
-      "discount_info": "76% taniej na drugi produkt",
-      "unit": "opak",
-      "promotion_type": "Drugi 76% taniej",
-      "product_url": "https://www.biedronka.pl/pl/product,id,439147,name,kielbasa-krakowska-parzona-w-plastrach-kraina-wedlin-250-g",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/kielbasa_krakowska_parzona_w_plastrach_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567775",
-      "english_keywords": [
-        "sausage",
-        "meat",
-        "pork",
-        "sliced"
-      ]
-    },
-    {
-      "name": "Kabanosy z wędzarni Kraina Wędlin Select, 175 g",
-      "price": "7,99",
-      "original_price": null,
-      "discount_info": "40% taniej na drugi produkt",
-      "unit": "opak",
-      "promotion_type": "Drugi 40% taniej",
-      "product_url": "https://www.biedronka.pl/pl/product,id,439148,name,kabanosy-z-wedzarni-kraina-wedlin-select-175-g",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/kabanosy_z_wedzarni_kraina_wedlin_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567777",
-      "english_keywords": [
-        "snack",
-        "sausage",
-        "meat",
-        "deli"
-      ]
-    },
-    {
-      "name": "Kiełbasa krakowska z szynki Tarczyński, 330 g",
-      "price": "11,99",
-      "original_price": null,
-      "discount_info": "68% taniej na drugi produkt",
-      "unit": "opak",
-      "promotion_type": "Drugi 68% taniej",
-      "product_url": "https://www.biedronka.pl/pl/product,id,439149,name,kielbasa-krakowska-z-szynki-tarczynski-330-g",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/kielbasa_krakowska_z_szynki_tarczynski_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567779",
-      "english_keywords": [
-        "sausage",
-        "meat",
-        "pork",
-        "deli"
-      ]
-    },
     {
       "name": "Jogurt proteinowy pitny YoPRO, 270 g",
       "price": "3,00",
@@ -113,12 +11,12 @@
       "promotion_type": null,
       "product_url": "https://www.biedronka.pl/pl/product,id,439150,name,jogurt-proteinowy-pitny-yopro-270-g",
       "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/jogurt_proteinowy_pitny_yopro_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567781",
+      "scraped_at": "2025-06-07T14:57:11.121257",
       "english_keywords": [
         "yogurt",
         "dairy",
         "protein",
-        "snack"
+        "drink"
       ]
     },
     {
@@ -130,11 +28,11 @@
       "promotion_type": null,
       "product_url": "https://www.biedronka.pl/pl/product,id,439151,name,krem-do-smarowania-nutella-350-g",
       "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/krem_do_smarowania_nutella_350_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567785",
+      "scraped_at": "2025-06-07T14:57:11.121276",
       "english_keywords": [
         "spread",
+        "hazelnut",
         "chocolate",
-        "dessert",
         "sweet"
       ]
     },
@@ -147,7 +45,7 @@
       "promotion_type": "Drugi 44% taniej",
       "product_url": "https://www.biedronka.pl/pl/product,id,439152,name,pasztet-podlaski-drosed-195-g",
       "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/pasztet_podlaski_drosed_195_g_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567787",
+      "scraped_at": "2025-06-07T14:57:11.121281",
       "english_keywords": [
         "pâté",
         "meat",
@@ -164,12 +62,12 @@
       "promotion_type": "SUPERCENA",
       "product_url": "https://www.biedronka.pl/pl/product,id,439153,name,gulasz-angielski-krakus-300-g",
       "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/gulasz_angielski_krakus_300_g_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567789",
+      "scraped_at": "2025-06-07T14:57:11.121284",
       "english_keywords": [
         "stew",
         "meat",
-        "beef",
-        "cooked"
+        "canned",
+        "ready-to-eat"
       ]
     },
     {
@@ -181,7 +79,7 @@
       "promotion_type": "1+1 GRATIS",
       "product_url": "https://www.biedronka.pl/pl/product,id,439154,name,herbata-lipton-yellow-label-25-torebek",
       "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/herbata_lipton_yellow_label_25_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567791",
+      "scraped_at": "2025-06-07T14:57:11.121288",
       "english_keywords": [
         "tea",
         "beverage",
@@ -198,7 +96,7 @@
       "promotion_type": null,
       "product_url": "https://www.biedronka.pl/pl/product,id,439155,name,herbata-teekanne-20-torebek",
       "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/herbata_teekanne_20_torebek_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567793",
+      "scraped_at": "2025-06-07T14:57:11.121292",
       "english_keywords": [
         "tea",
         "beverage",
@@ -215,12 +113,12 @@
       "promotion_type": null,
       "product_url": "https://www.biedronka.pl/pl/product,id,439156,name,kawa-ziarnista-jacobs-barista-editions-1-kg",
       "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/kawa_ziarnista_jacobs_barista_editions_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567794",
+      "scraped_at": "2025-06-07T14:57:11.121296",
       "english_keywords": [
         "coffee",
         "beans",
-        "beverage",
-        "ground"
+        "ground",
+        "beverage"
       ]
     },
     {
@@ -232,12 +130,12 @@
       "promotion_type": "Drugi 60% taniej",
       "product_url": "https://www.biedronka.pl/pl/product,id,439157,name,kapsulki-dolce-gusto-16-szt",
       "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/kapsulki_dolce_gusto_16_szt_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567796",
+      "scraped_at": "2025-06-07T14:57:11.121302",
       "english_keywords": [
         "coffee",
         "capsules",
-        "beverage",
-        "espresso"
+        "espresso",
+        "beverage"
       ]
     },
     {
@@ -249,12 +147,12 @@
       "promotion_type": null,
       "product_url": "https://www.biedronka.pl/pl/product,id,439158,name,jajko-kinder-joy-20-g",
       "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/jajko_kinder_joy_20_g_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567798",
+      "scraped_at": "2025-06-07T14:57:11.121306",
       "english_keywords": [
         "chocolate",
-        "snack",
         "candy",
-        "sweet"
+        "snack",
+        "dessert"
       ]
     },
     {
@@ -266,97 +164,165 @@
       "promotion_type": null,
       "product_url": "https://www.biedronka.pl/pl/product,id,439159,name,olej-rzepakowy-kujawski-2-l",
       "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/olej_rzepakowy_kujawski_2_l_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567800",
+      "scraped_at": "2025-06-07T14:57:11.121311",
       "english_keywords": [
         "oil",
         "cooking",
         "vegetable",
-        "rapeseed"
+        "frying"
       ]
     },
     {
-      "name": "Mleko UHT 3,2% Mleczna Dolina, 1 l",
-      "price": "1,89",
+      "name": "Masło ekstra Łaciate, 200 g",
+      "price": "4,75",
       "original_price": null,
       "discount_info": "50% taniej",
       "unit": "opak",
       "promotion_type": null,
-      "product_url": "https://www.biedronka.pl/pl/product,id,439132,name,mleko-uht-3-2-mleczna-dolina-1-l",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/mleko_uht_3_2_mleczna_dolina_1_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567802",
+      "product_url": "https://www.biedronka.pl/pl/product,id,439649,name,maslo-ekstra-laciate-200-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23B/mb/maslo_ekstra_laciate_200_g_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121314",
       "english_keywords": [
-        "milk",
+        "butter",
         "dairy",
-        "UHT",
-        "beverage"
+        "spread",
+        "fat"
       ]
     },
     {
-      "name": "Ser plastry Światowid, 2x250 g/500 g",
-      "price": "9,99",
+      "name": "Jaja z chowu ściółkowego Moja Kurka, rozmiar M, 10 szt.",
+      "price": "8,24",
       "original_price": null,
-      "discount_info": "74% taniej na drugi produkt",
+      "discount_info": "50% taniej na drugi produkt",
       "unit": "opak",
-      "promotion_type": "Drugi 74% taniej",
-      "product_url": "https://www.biedronka.pl/pl/product,id,439133,name,ser-plastry-swiatowid-2x250-g-500-g",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/ser_plastry_swiatowid_2x250_g_500_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567804",
+      "promotion_type": "Drugi 50% taniej",
+      "product_url": "https://www.biedronka.pl/pl/product,id,439650,name,jaja-z-chowu-sciolkowego-moja-kurka-rozmiar-m-10-szt",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23B/mb/jaja_z_chowu_sciolkowego_moja_kurka_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121317",
       "english_keywords": [
-        "cheese",
-        "slices",
-        "dairy",
-        "snack"
+        "egg",
+        "poultry",
+        "protein",
+        "breakfast"
       ]
     },
     {
-      "name": "Odżywcze mleczko lub balsam do ciała Nivea, 400 ml",
-      "price": "16,00",
+      "name": "Parówki z szynki Tarczyński, 2x220 g",
+      "price": "8,44",
+      "original_price": null,
+      "discount_info": "70% taniej na drugi produkt",
+      "unit": "opak",
+      "promotion_type": "Drugi 70% taniej",
+      "product_url": "https://www.biedronka.pl/pl/product,id,439651,name,parowki-z-szynki-tarczynski-2x220-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23B/mb/parowki_z_szynki_tarczynski_2x220_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121320",
+      "english_keywords": [
+        "sausage",
+        "meat",
+        "pork",
+        "deli"
+      ]
+    },
+    {
+      "name": "Kiełbasa śląska z szynki Kraina Wędlin Select, 450 g",
+      "price": "9,48",
+      "original_price": null,
+      "discount_info": "70% taniej na drugi produkt",
+      "unit": "opak",
+      "promotion_type": "Drugi 70% taniej",
+      "product_url": "https://www.biedronka.pl/pl/product,id,439652,name,kielbasa-slaska-z-szynki-kraina-wedlin-select-450-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23B/mb/kielbasa_slaska_z_szynki_kraina_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121322",
+      "english_keywords": [
+        "sausage",
+        "meat",
+        "pork",
+        "smoked"
+      ]
+    },
+    {
+      "name": "Mieszanka nerkowiec-żurawina BakaD’Or, 200 g",
+      "price": "7,39",
+      "original_price": null,
+      "discount_info": "33% taniej",
+      "unit": "opak",
+      "promotion_type": null,
+      "product_url": "https://www.biedronka.pl/pl/product,id,439653,name,mieszanka-nerkowiec-zurawina-bakad-or-200-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23B/mb/mieszanka_nerkowiec_zurawina_bakad_or_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121325",
+      "english_keywords": [
+        "nuts",
+        "snack",
+        "healthy",
+        "trail mix"
+      ]
+    },
+    {
+      "name": "Sok 100% jabłko Hortex, 1 l",
+      "price": "2,25",
+      "original_price": null,
+      "discount_info": "50% taniej",
+      "unit": null,
+      "promotion_type": null,
+      "product_url": "https://www.biedronka.pl/pl/product,id,439654,name,sok-100-jablko-hortex-1-l",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23B/mb/sok_100_jablko_hortex_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121327",
+      "english_keywords": [
+        "juice",
+        "beverage",
+        "fruit",
+        "healthy"
+      ]
+    },
+    {
+      "name": "Napój gazowany Coca-Cola, 2x2 l",
+      "price": "6,99",
+      "original_price": null,
+      "discount_info": "12% taniej",
+      "unit": "l",
+      "promotion_type": null,
+      "product_url": "https://www.biedronka.pl/pl/product,id,439655,name,napoj-gazowany-coca-cola-2x2-l",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23B/mb/napoj_gazowany_coca_cola_2x2_l_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121330",
+      "english_keywords": [
+        "soda",
+        "beverage",
+        "carbonated",
+        "drink"
+      ]
+    },
+    {
+      "name": "Kapsułki do prania Vizir All in 1 PODS, 22 szt.",
+      "price": "18,35",
       "original_price": null,
       "discount_info": "50% taniej",
       "unit": "opak",
       "promotion_type": "1+1 GRATIS",
-      "product_url": "https://www.biedronka.pl/pl/product,id,439137,name,odzywcze-mleczko-lub-balsam-do-ciala-nivea-400-ml",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/odzywcze_mleczko_lub_balsam_do_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567806",
+      "product_url": "https://www.biedronka.pl/pl/product,id,439656,name,kapsulki-do-prania-vizir-all-in-1-pods-22-szt",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23B/mb/kapsulki_do_prania_vizir_all_in_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121334",
       "english_keywords": [
-        "body lotion",
-        "moisturizer",
-        "skincare",
-        "cream"
+        "detergent",
+        "cleaning",
+        "laundry",
+        "pods"
       ]
     },
     {
-      "name": "Łopatka wieprzowa",
-      "price": "13,99",
+      "name": "Filet z pstrąga tęczowego łososiowego ze skórą Marinero",
+      "price": "3,99",
       "original_price": null,
       "discount_info": "30% taniej",
       "unit": "kg",
       "promotion_type": null,
-      "product_url": "https://www.biedronka.pl/pl/product,id,439139,name,lopatka-wieprzowa",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/lopatka_wieprzowa_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567808",
+      "product_url": "https://www.biedronka.pl/pl/product,id,439657,name,filet-z-pstraga-teczowego-lososiowego-ze-skora-marinero",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23B/mb/swiezy_filet_z_pstraga_teczowego_lososiowego_ze_skora_marinero_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121337",
       "english_keywords": [
-        "pork",
-        "meat",
-        "shoulder",
-        "protein"
-      ]
-    },
-    {
-      "name": "Świeże udo lub podudzie kurczaka pakowane próżniowo Kraina Mięs",
-      "price": "6,49",
-      "original_price": null,
-      "discount_info": "48% taniej",
-      "unit": "kg",
-      "promotion_type": null,
-      "product_url": "https://www.biedronka.pl/pl/product,id,439140,name,swieze-udo-lub-podudzie-kurczaka-pakowane-prozniowo-kraina-mies",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/swieze_udo_lub_podudzie_kurczaka_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567810",
-      "english_keywords": [
-        "chicken",
-        "meat",
-        "thigh",
-        "poultry"
+        "fish",
+        "trout",
+        "salmon",
+        "seafood"
       ]
     },
     {
@@ -366,14 +332,150 @@
       "discount_info": "62% taniej na drugi produkt",
       "unit": "opak",
       "promotion_type": "Drugi 62% taniej",
-      "product_url": "https://www.biedronka.pl/pl/product,id,439141,name,krewetki-gotowane-marinero-250-g",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/kabanosy_z_wedzarni_kraina_wedlin_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567812",
+      "product_url": "https://www.biedronka.pl/pl/product,id,439658,name,krewetki-gotowane-marinero-250-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23B/mb/krewetki_gotowane_marinero_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121340",
       "english_keywords": [
         "shrimp",
         "seafood",
-        "protein",
-        "cooked"
+        "cooked",
+        "protein"
+      ]
+    },
+    {
+      "name": "Mięso mielone z łopatki wieprzowej i wołowiny Kraina Mięs, 400 g",
+      "price": "6,75",
+      "original_price": null,
+      "discount_info": "50% taniej",
+      "unit": "opak",
+      "promotion_type": "1+1 GRATIS",
+      "product_url": "https://www.biedronka.pl/pl/product,id,439659,name,mieso-mielone-z-lopatki-wieprzowej-i-wolowiny-kraina-mies-400-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23B/mb/mieso_mielone_z_lopatki_wieprzowej_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121343",
+      "english_keywords": [
+        "meat",
+        "ground",
+        "pork",
+        "beef"
+      ]
+    },
+    {
+      "name": "Ćwiartka tylna z kurczaka",
+      "price": "6,99",
+      "original_price": null,
+      "discount_info": "30% taniej",
+      "unit": "kg",
+      "promotion_type": null,
+      "product_url": "https://www.biedronka.pl/pl/product,id,439660,name,cwiartka-tylna-z-kurczaka",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23B/mb/cwiartka_tylna_z_kurczaka_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121345",
+      "english_keywords": [
+        "chicken",
+        "poultry",
+        "leg",
+        "meat"
+      ]
+    },
+    {
+      "name": "Łosoś Coho rodzinna porcja Marinero",
+      "price": "4,99",
+      "original_price": null,
+      "discount_info": "16% taniej",
+      "unit": "kg",
+      "promotion_type": null,
+      "product_url": "https://www.biedronka.pl/pl/product,id,439661,name,losos-coho-rodzinna-porcja-marinero",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23B/mb/losos_coho_rodzinna_porcja_marinero_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121349",
+      "english_keywords": [
+        "salmon",
+        "fish",
+        "seafood",
+        "healthy"
+      ]
+    },
+    {
+      "name": "Sushi Sushiko, 230 g",
+      "price": "8,49",
+      "original_price": null,
+      "discount_info": "44% taniej na drugi produkt",
+      "unit": "opak",
+      "promotion_type": "Drugi 44% taniej",
+      "product_url": "https://www.biedronka.pl/pl/product,id,439662,name,sushi-sushiko-230-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23B/mb/sushi_sushiko_230_g_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121352",
+      "english_keywords": [
+        "sushi",
+        "rice",
+        "seafood",
+        "Japanese"
+      ]
+    },
+    {
+      "name": "Sushi Premium Kyoko, 430 g",
+      "price": "15,99",
+      "original_price": null,
+      "discount_info": "54% taniej na drugi produkt",
+      "unit": "opak",
+      "promotion_type": "Drugi 54% taniej",
+      "product_url": "https://www.biedronka.pl/pl/product,id,439663,name,sushi-premium-kyoko-430-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23B/mb/sushi_premium_kyoko_430_g_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121354",
+      "english_keywords": [
+        "sushi",
+        "rice",
+        "seafood",
+        "rolls"
+      ]
+    },
+    {
+      "name": "Schab z Zalasku Podlaskie Specjały Kraina Wędlin, 100 g",
+      "price": "5,99",
+      "original_price": null,
+      "discount_info": "40% taniej na drugi produkt",
+      "unit": "opak",
+      "promotion_type": "Drugi 40% taniej",
+      "product_url": "https://www.biedronka.pl/pl/product,id,439664,name,schab-z-zalasku-podlaskie-specjaly-kraina-wedlin-100-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23B/mb/schab_z_zalasku_podlaskie_specjaly_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121357",
+      "english_keywords": [
+        "pork",
+        "meat",
+        "ham",
+        "deli"
+      ]
+    },
+    {
+      "name": "Kiełbaski Swojskie Podlaskie Specjały Kraina Wędlin, 300 g",
+      "price": "9,99",
+      "original_price": null,
+      "discount_info": "40% taniej na drugi produkt",
+      "unit": "opak",
+      "promotion_type": "Drugi 40% taniej",
+      "product_url": "https://www.biedronka.pl/pl/product,id,439665,name,kielbaski-swojskie-podlaskie-specjaly-kraina-wedlin-300-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23B/mb/kielbaski_swojskie_podlaskie_specjaly_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121359",
+      "english_keywords": [
+        "sausage",
+        "meat",
+        "pork",
+        "snack"
+      ]
+    },
+    {
+      "name": "Brykiet z węgla drzewnego, 2,5 kg",
+      "price": "8,99",
+      "original_price": null,
+      "discount_info": "86% taniej na drugi produkt",
+      "unit": "opak",
+      "promotion_type": "Drugi 86% taniej",
+      "product_url": "https://www.biedronka.pl/pl/product,id,439666,name,brykiet-z-wegla-drzewnego-2-5-kg",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23B/mb/brykiet_z_wegla_drzewnego_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121361",
+      "english_keywords": [
+        "charcoal",
+        "grilling",
+        "bbq",
+        "fuel"
       ]
     },
     {
@@ -385,29 +487,29 @@
       "promotion_type": null,
       "product_url": "https://www.biedronka.pl/pl/product,id,439135,name,sok-jablkowy-riviva-1-l",
       "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/sok_jablkowy_riviva_1_l_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567813",
+      "scraped_at": "2025-06-07T14:57:11.121363",
       "english_keywords": [
-        "apple",
         "juice",
+        "apple",
         "beverage",
-        "fruit"
+        "drink"
       ]
     },
     {
       "name": "Lekki krem do twarzy NIVEA Care 5w1, 100 ml",
-      "price": "10,00",
+      "price": "19,99",
       "original_price": null,
       "discount_info": "50% taniej",
       "unit": "opak",
-      "promotion_type": "1+1 GRATIS",
+      "promotion_type": null,
       "product_url": "https://www.biedronka.pl/pl/product,id,439136,name,lekki-krem-do-twarzy-nivea-care-5w1-100-ml",
       "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/lekki_krem_do_twarzy_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567815",
+      "scraped_at": "2025-06-07T14:57:11.121366",
       "english_keywords": [
-        "face cream",
+        "cream",
         "moisturizer",
         "skincare",
-        "cosmetics"
+        "beauty"
       ]
     },
     {
@@ -419,12 +521,12 @@
       "promotion_type": "Drugi 84% taniej",
       "product_url": "https://www.biedronka.pl/pl/product,id,439134,name,szynka-konserwowa-kraina-wedlin-200-g",
       "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/szynka_konserwowa_kraina_wedlin_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567817",
+      "scraped_at": "2025-06-07T14:57:11.121368",
       "english_keywords": [
-        "canned",
         "ham",
+        "canned",
         "meat",
-        "protein"
+        "deli"
       ]
     },
     {
@@ -436,45 +538,147 @@
       "promotion_type": "1+1 GRATIS",
       "product_url": "https://www.biedronka.pl/pl/product,id,439138,name,plyn-do-plukania-tkanin-silan-opak-1-32-l",
       "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/plyn_do_plukania_tkanin_silan_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567819",
+      "scraped_at": "2025-06-07T14:57:11.121370",
       "english_keywords": [
         "fabric",
         "softener",
-        "cleaning",
-        "household"
+        "laundry",
+        "cleaning"
       ]
     },
     {
       "name": "Kiełbaski z szynki i cielęciny Kraina Wędlin, 300 g",
-      "price": "7,99",
+      "price": "11,49",
       "original_price": null,
-      "discount_info": "60% taniej na drugi produkt",
+      "discount_info": "30% taniej",
       "unit": "opak",
-      "promotion_type": "Drugi 60% taniej",
+      "promotion_type": null,
       "product_url": "https://www.biedronka.pl/pl/product,id,439142,name,kielbaski-z-szynki-i-cieleciny-kraina-wedlin-300-g",
       "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/kielbaski_z_szynki_i_cieleciny_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567820",
+      "scraped_at": "2025-06-07T14:57:11.121372",
       "english_keywords": [
         "sausage",
-        "meat",
-        "pork",
-        "deli"
+        "ham",
+        "veal",
+        "meat"
       ]
     },
     {
       "name": "Schab lub szynka w plastrach ciemno wędzone Kraina Wędlin, 400 g",
-      "price": "12,99",
+      "price": "16,99",
+      "original_price": null,
+      "discount_info": "23% taniej",
+      "unit": "opak",
+      "promotion_type": null,
+      "product_url": "https://www.biedronka.pl/pl/product,id,439143,name,schab-lub-szynka-w-plastrach-ciemno-wedzone-kraina-wedlin-400-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/schab_lub_szynka_w_plastrach_ciemno_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121375",
+      "english_keywords": [
+        "pork",
+        "ham",
+        "smoked",
+        "slices"
+      ]
+    },
+    {
+      "name": "Kiełbasa Podwawelska Kraina Wędlin",
+      "price": "24,00",
+      "original_price": null,
+      "discount_info": "21% taniej",
+      "unit": "kg",
+      "promotion_type": null,
+      "product_url": "https://www.biedronka.pl/pl/product,id,439144,name,kielbasa-podwawelska-kraina-wedlin",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/kielbasa_podwawelska_kraina_wedlin_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121378",
+      "english_keywords": [
+        "sausage",
+        "smoked",
+        "pork",
+        "traditional"
+      ]
+    },
+    {
+      "name": "Szynka Kraina Wędlin, 100 g",
+      "price": "4,99",
+      "original_price": null,
+      "discount_info": "62% taniej na drugi produkt",
+      "unit": "opak",
+      "promotion_type": "Drugi 62% taniej",
+      "product_url": "https://www.biedronka.pl/pl/product,id,439145,name,szynka-kraina-wedlin-100-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/szynka_kraina_wedlin_100_g_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121379",
+      "english_keywords": [
+        "ham",
+        "deli",
+        "sliced",
+        "meat"
+      ]
+    },
+    {
+      "name": "Boczek Kraina Wędlin, 100 g",
+      "price": "4,49",
       "original_price": null,
       "discount_info": "46% taniej na drugi produkt",
       "unit": "opak",
       "promotion_type": "Drugi 46% taniej",
-      "product_url": "https://www.biedronka.pl/pl/product,id,439143,name,schab-lub-szynka-w-plastrach-ciemno-wedzone-kraina-wedlin-400-g",
-      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/schab_lub_szynka_w_plastrach_ciemno_2x2.jpg",
-      "scraped_at": "2025-06-02T21:52:05.567821",
+      "product_url": "https://www.biedronka.pl/pl/product,id,439146,name,boczek-kraina-wedlin-100-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/boczek_kraina_wedlin_100_g_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121382",
       "english_keywords": [
+        "bacon",
         "pork",
-        "sliced",
+        "fat",
+        "meat"
+      ]
+    },
+    {
+      "name": "Kiełbasa krakowska parzona w plastrach Kraina Wędlin, 250 g",
+      "price": "6,49",
+      "original_price": null,
+      "discount_info": "76% taniej na drugi produkt",
+      "unit": "opak",
+      "promotion_type": "Drugi 76% taniej",
+      "product_url": "https://www.biedronka.pl/pl/product,id,439147,name,kielbasa-krakowska-parzona-w-plastrach-kraina-wedlin-250-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/kielbasa_krakowska_parzona_w_plastrach_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121385",
+      "english_keywords": [
+        "sausage",
+        "pork",
+        "slices",
+        "traditional"
+      ]
+    },
+    {
+      "name": "Kabanosy z wędzarni Kraina Wędlin Select, 175 g",
+      "price": "7,99",
+      "original_price": null,
+      "discount_info": "40% taniej na drugi produkt",
+      "unit": "opak",
+      "promotion_type": "Drugi 40% taniej",
+      "product_url": "https://www.biedronka.pl/pl/product,id,439148,name,kabanosy-z-wedzarni-kraina-wedlin-select-175-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/kabanosy_z_wedzarni_kraina_wedlin_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121388",
+      "english_keywords": [
+        "sausage",
+        "snack",
         "smoked",
+        "meat"
+      ]
+    },
+    {
+      "name": "Kiełbasa krakowska z szynki Tarczyński, 330 g",
+      "price": "11,99",
+      "original_price": null,
+      "discount_info": "68% taniej na drugi produkt",
+      "unit": "opak",
+      "promotion_type": "Drugi 68% taniej",
+      "product_url": "https://www.biedronka.pl/pl/product,id,439149,name,kielbasa-krakowska-z-szynki-tarczynski-330-g",
+      "image_url": "https://cdn.biedronka.pl/__2025/T23A/mb/kielbasa_krakowska_z_szynki_tarczynski_2x2.jpg",
+      "scraped_at": "2025-06-07T14:57:11.121390",
+      "english_keywords": [
+        "sausage",
+        "ham",
+        "pork",
         "meat"
       ]
     }

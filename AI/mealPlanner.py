@@ -102,13 +102,92 @@ class MealPlannerAPI:
             self.logger.error(f"Error loading data: {e}")
             raise
 
-    def search_recipes_by_keywords(self, keywords: List[str], top_k: int = 5) -> List[Dict]:
+    def translate_to_english(self, text: str) -> str:
+        try:
+            response = self.client.chat.completions.create(
+                model="gpt-3.5-turbo",
+                messages=[
+                    {"role": "system", "content": "Translate the user's message to English."},
+                    {"role": "user", "content": text}
+                ],
+                temperature=0,
+                max_tokens=60
+            )
+            return response.choices[0].message.content.strip()
+        except Exception as e:
+            self.logger.error(f"Translation error: {e}")
+            return text  # fallback to original if translation fails
+
+    def generate_search_query(self, user_query: str) -> str:
+        """
+        Use LLM to convert user goal into a better search query for recipe retrieval.
+        """
+        try:
+            response = self.client.chat.completions.create(
+                model="gpt-3.5-turbo",
+                messages=[
+                    {
+                        "role": "system",
+                        "content": "You are a helpful assistant that rewrites vague meal planning requests into clear, concrete recipe search queries."
+                    },
+                    {
+                        "role": "user",
+                        "content": f"User wants: '{user_query}'\n\nRewrite this into a specific search query to find matching recipes."
+                    }
+                ],
+                temperature=0,
+                max_tokens=50
+            )
+            return response.choices[0].message.content.strip()
+        except Exception as e:
+            self.logger.error(f"Query rewriting error: {e}")
+            return user_query
+
+
+    def batch_search_recipes(self, question: str, products: List[Dict], top_k: int = 10) -> Dict[str, List[Dict]]:
+        """
+        Batch search recipes for all unique keywords from products.
+        Returns a mapping: keyword -> list of top_k recipe dicts
+        """
+        all_keywords = set()
+        for p in products:
+            all_keywords.update(p.get("english_keywords", []))
+
+        results_by_keyword = {}
+
+        for keyword in all_keywords:
+            # use llm query rewriting
+            search_prompt = self.generate_search_query(question)
+            combined_query = f"{search_prompt} {keyword}"
+            # combined_query = f"{question} {keyword}"
+            self.retriever.search_kwargs["k"] = top_k
+            try:
+                results = self.retriever.invoke(combined_query)
+                recipes = []
+                for doc in results:
+                    meta = doc.metadata or {}
+                    recipes.append({
+                        "title": doc.page_content[:100].split(".")[0],
+                        "similarity": "N/A",
+                        "ingredients": meta.get("ingredients", ""),
+                        "instructions": meta.get("instructions", ""),
+                        "image_name": meta.get("image_name", ""),
+                        "recipe_idx": meta.get("id", -1)
+                    })
+                results_by_keyword[keyword] = recipes
+            except Exception as e:
+                self.logger.error(f"Batch vector search error for keyword '{keyword}': {e}")
+                results_by_keyword[keyword] = []
+
+        return results_by_keyword
+
+    def search_recipes_by_keywords(self, question: str, keywords: List[str], top_k: int = 5) -> List[Dict]:
         """Search recipes using LangChain + Qdrant vector DB"""
         if not keywords:
             return []
 
         try:
-            query = " ".join(keywords) + " recipes"
+            query = f"{question} " + " ".join(keywords)
 
             #results = self.vectorstore.similarity_search_with_score(query, k=top_k)
             self.retriever.search_kwargs["k"] = top_k
@@ -133,99 +212,108 @@ class MealPlannerAPI:
             return []
 
 
-    def generate_meal_plan_from_products(self, selected_products: List[Dict], question: str, 
-                                       days: int = 3, people: int = 2) -> Optional[Dict]:
-        """Generate meal plan from specific product list"""
+    def generate_meal_plan_from_products(self, selected_products: List[Dict], question: str,
+                                     days: int = 3, people: int = 2) -> Optional[Dict]:
+        """Generate meal plan from specific product list with batched recipe search"""
         self.logger.info(f"Generating {days}-day plan for {people} people...")
         self.logger.info(f"Using {len(selected_products)} promotional products")
-        
+
+        # Batch recipe search (1 per unique keyword)
+        recipe_lookup = self.batch_search_recipes(question, selected_products, top_k=1)
+
         # Prepare context for LLM
         context = f"AVAILABLE PROMOTIONAL PRODUCTS:\n"
-        
+
         for product in selected_products:
             context += f"- {product['name']}: {product['price']} PLN ({product.get('discount_info', 'no discount')})\n"
-            
-            # Add best recipe as inspiration
+
             keywords = product.get('english_keywords', [])
-            if keywords:
-                recipes = self.search_recipes_by_keywords(keywords, top_k=1)
-                if recipes:
-                    best_recipe = recipes[0]
-                    context += f"  Suggested recipe: {best_recipe['title']}\n"
-                    context += f"  Image name: {best_recipe['image_name']}\n"
-                    context += f"  Ingredients: {best_recipe['ingredients'][:1000]}...\n"
-                    context += f"  Full recipe: {best_recipe['instructions'][:1000]}...\n"
-        
-        # LLM prompt in English with detailed instructions
+            best_recipe = None
+
+            # Pick first available recipe from matching keywords
+            for keyword in keywords:
+                if keyword in recipe_lookup and recipe_lookup[keyword]:
+                    best_recipe = recipe_lookup[keyword][0]
+                    break
+
+            if best_recipe:
+                context += f"  Suggested recipe: {best_recipe['title']}\n"
+                context += f"  Image name: {best_recipe['image_name']}\n"
+                context += f"  Ingredients: {best_recipe['ingredients'][:1000]}...\n"
+                context += f"  Full recipe: {best_recipe['instructions'][:1000]}...\n"
+
+        # LLM prompt
         prompt = f"""Create a detailed meal plan for {days} days for {people} people using promotional products from Biedronka.
 
-{context}
+    {context}
 
-ADDITIONAL INSTRUCTIONS:
-You are preparing a diet for person that watns following: "{question}"
+    ADDITIONAL INSTRUCTIONS:
+    You are preparing a diet for person that wants the following: "{question}"
 
-RULES:
-- Use as many promotional products as possible
-- One meal can include multiple promotional products
-- Create varied, healthy meals (breakfast, lunch, dinner)
-- Use suggested recipes as inspiration - you can copy their instructions directly
-- Include precise quantities for all ingredients (e.g., "200g chicken breast")
-- Provide detailed step-by-step cooking instructions - if using a suggested recipe, copy its instructions directly
-- Calculate estimated total cost
-- You can add basic ingredients (bread, eggs, milk, etc.)
+    RULES:
+    - Use as many promotional products as possible
+    - One meal can include multiple promotional products
+    - Create varied, healthy meals (breakfast, lunch, dinner)
+    - STRICT DIETARY RULE: If the question requests a vegetarian diet, DO NOT use meat, poultry, or fish in any meal. You can use plant-based alternatives like tofu, lentils, eggs, or dairy.
+    - Use suggested recipes as inspiration - you can copy their instructions directly
+    - Include precise quantities for all ingredients (e.g., "200g tofu")
+    - Provide detailed step-by-step cooking instructions - if using a suggested recipe, copy its instructions directly
+    - Calculate estimated total cost
+    - You can add basic ingredients (bread, eggs, milk, etc.)
 
-Return the response in JSON format with Polish text:
-{{
-  "plan_info": {{
-    "days": {days},
-    "people": {people},
-    "estimated_total_cost": "XX.XX PLN"
-  }},
-  "meals": [
+
+    Return the response in JSON format with Polish text:
     {{
-      "day": 1,
-      "type": "breakfast",
-      "name": "Meal name in Polish",
-      "image_name": "copy image name from suggested recipe only if you used it, otherwise leave empty",
-      "main_products": [
+    "plan_info": {{
+        "days": {days},
+        "people": {people},
+        "estimated_total_cost": "XX.XX PLN"
+    }},
+    "meals": [
         {{
-          "name": "Product name",
-          "quantity": "200g",
-          "price": "X.XX PLN"
+        "day": 1,
+        "type": "breakfast",
+        "name": "Meal name in Polish",
+        "image_name": "copy image name from suggested recipe only if you used it, otherwise leave empty",
+        "main_products": [
+            {{
+            "name": "Product name",
+            "quantity": "200g",
+            "price": "X.XX PLN"
+            }}
+        ],
+        "additional_ingredients": [
+            {{
+            "name": "Basic ingredient",
+            "quantity": "100ml",
+            "estimated_price": "X.XX PLN"
+            }}
+        ],
+        "instructions": "Detailed step-by-step preparation instructions in Polish. Should be very specific with cooking times, temperatures, and techniques. If using a suggested recipe, you can copy its instructions directly.",
+        "prep_time": "XX min",
+        "cooking_time": "XX min"
         }}
-      ],
-      "additional_ingredients": [
-        {{
-          "name": "Basic ingredient",
-          "quantity": "100ml",
-          "estimated_price": "X.XX PLN"
-        }}
-      ],
-      "instructions": "Detailed step-by-step preparation instructions in Polish. Should be very specific with cooking times, temperatures, and techniques. If using a suggested recipe, you can copy its instructions directly.",
-      "prep_time": "XX min",
-      "cooking_time": "XX min"
+    ],
+    "shopping_summary": {{
+        "promotional_products_cost": "XX.XX PLN",
+        "additional_ingredients_cost": "XX.XX PLN",
+        "total_savings": "Savings from promotions in PLN"
     }}
-  ],
-  "shopping_summary": {{
-    "promotional_products_cost": "XX.XX PLN",
-    "additional_ingredients_cost": "XX.XX PLN",
-    "total_savings": "Savings from promotions in PLN"
-  }}
-}}"""
-        
+    }}"""
+
         try:
             response = self.client.chat.completions.create(
-                model="gpt-4o-mini",
+                model="gpt-4o",  #gpt-4o or gpt-3.5-turbo-1106 for faster results
                 messages=[
                     {"role": "system", "content": "You are an expert meal planner. Respond ONLY in the specified JSON format with Polish text."},
                     {"role": "user", "content": prompt}
                 ],
                 temperature=0.3,
-                max_tokens=8000
+                max_tokens=3000
             )
-            
+
             result = response.choices[0].message.content.strip()
-            
+
             # Save debug info
             with open("shared_data/debug_meal_plan_request.txt", "w", encoding='utf-8') as f:
                 f.write(f"Prompt:\n{prompt}\n\nResponse:\n{result}\n")
@@ -233,13 +321,14 @@ Return the response in JSON format with Polish text:
             # Clean JSON response
             if result.startswith('```json'):
                 result = result.replace('```json', '').replace('```', '').strip()
-            
+
             parsed_plan = json.loads(result)
             return parsed_plan
-            
+
         except Exception as e:
             self.logger.error(f"Meal plan generation error: {e}")
             return None
+
 
     def get_all_products(self) -> List[str]:
         """Get all product names"""
@@ -290,8 +379,11 @@ Return the response in JSON format with Polish text:
         Returns the new clean format directly
         """
         try:
+            # translate to english for better accuracy
+            translated_query = self.translate_to_english(question)
+
             # Generate a plan from all products
-            plan = self.generate_plan_from_all_products(question, days, people)
+            plan = self.generate_plan_from_all_products(translated_query, days, people)
             
             if plan and plan.get("status") == "success":
                 return plan
