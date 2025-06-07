@@ -14,7 +14,11 @@ from uuid import uuid4
 from qdrant_client.models import VectorParams, Distance, PointStruct
 from qdrant_client.http.models import SearchRequest
 from langchain.schema import Document
+from langchain.prompts import PromptTemplate
+from langchain.chat_models import ChatOpenAI
+from langchain.chains import LLMChain
 import openai
+from prompts import search_query_prompt
 
 class MealPlannerAPI:
     def __init__(self):
@@ -36,9 +40,12 @@ class MealPlannerAPI:
             metadata_payload_key=None            # This tells LangChain to treat everything else as metadata
         )
 
-        self.retriever = self.vectorstore.as_retriever(search_kwargs={"k": 5})
-
-        self.client = openai.OpenAI(api_key=self.API_KEY)
+        self.llm_quick = ChatOpenAI(
+            model="gpt-3.5-turbo",
+            temperature=0,
+            max_tokens=20
+        )
+        self.search_query_chain = LLMChain(llm=self.llm_quick, prompt=search_query_prompt)
         self.qdrant = QdrantClient(host="qdrant", port=6333)
         
         # Load data
@@ -105,27 +112,15 @@ class MealPlannerAPI:
 
     def generate_search_query(self, user_query: str) -> str:
         """
-        Use LLM to convert user goal into a better search query for recipe retrieval.
+        Convert user query into a concise recipe search query using LangChain.
         """
         try:
-            response = self.client.chat.completions.create(
-                model="gpt-3.5-turbo",
-                messages=[
-                    {
-                        "role": "system",
-                        "content": "You are a helpful assistant that rewrites vague meal planning requests into clear, concrete recipe search queries."
-                    },
-                    {
-                        "role": "user",
-                        "content": f"User wants: '{user_query}'\n\nRewrite this into a specific search query to find matching recipes."
-                    }
-                ],
-                temperature=0,
-                max_tokens=50
-            )
-            return response.choices[0].message.content.strip()
+            result = self.search_query_chain.run(user_request=user_query)
+            rewritten = result.strip()
+            self.logger.info(f"Rewritten query: {rewritten}")
+            return rewritten
         except Exception as e:
-            self.logger.error(f"Query rewriting error: {e}")
+            self.logger.error(f"LangChain search query generation failed: {e}")
             return user_query
 
 
