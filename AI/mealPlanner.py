@@ -12,6 +12,9 @@ from langchain.embeddings import OpenAIEmbeddings
 import pandas as pd
 from uuid import uuid4
 from qdrant_client.models import VectorParams, Distance, PointStruct
+from qdrant_client.http.models import SearchRequest
+from langchain.schema import Document
+import openai
 
 class MealPlannerAPI:
     def __init__(self):
@@ -29,64 +32,46 @@ class MealPlannerAPI:
             client=self.qdrant_client,
             collection_name="recipes",
             embeddings=self.embedding_model,
+            content_payload_key="page_content",  # This tells LangChain to use 'page_content' as the main doc body
+            metadata_payload_key=None            # This tells LangChain to treat everything else as metadata
         )
 
         self.retriever = self.vectorstore.as_retriever(search_kwargs={"k": 5})
+
+        self.client = openai.OpenAI(api_key=self.API_KEY)
+        self.qdrant = QdrantClient(host="qdrant", port=6333)
         
         # Load data
         self._load_data()
+        # translate products to english for better results
+        self.translate_product_names()
 
-    def embed_and_push_test_json(self, json_path="shared_data/sample_recipes.json", collection_name="recipes"):
-        """
-        Embed and upload recipes from JSON file (with 'embedding_text') to Qdrant.
-        """
-        self.logger.info(f"📄 Loading test recipes from: {json_path}")
-        
-        try:
-            with open(json_path, "r", encoding="utf-8") as f:
-                recipes = json.load(f)
-        except Exception as e:
-            self.logger.error(f"❌ Failed to load JSON: {e}")
-            return
+    def translate_product_names(self):
+        """Translate Polish product names into English (once per session)."""
+        for product in self.products:
+            original_name = product.get("name", "")
+            try:
+                # Skip if already translated
+                if "translated_name" in product:
+                    continue
 
-        texts = [r.get("embedding_text", "") for r in recipes]
-        self.logger.info(f"🔢 Generating {len(texts)} embeddings...")
+                response = self.client.chat.completions.create(
+                    model="gpt-3.5-turbo",
+                    messages=[
+                        {"role": "system", "content": "Translate the following grocery product name from Polish to English. Only respond with a direct, short translation."},
+                        {"role": "user", "content": original_name}
+                    ],
+                    temperature=0,
+                    max_tokens=20
+                )
 
-        try:
-            response = self.client.embeddings.create(input=texts, model="text-embedding-3-small")
-            embeddings = [r.embedding for r in response.data]
-        except Exception as e:
-            self.logger.error(f"❌ Failed to get embeddings: {e}")
-            return
+                translated = response.choices[0].message.content.strip()
+                product["translated_name"] = translated
+                self.logger.info(f"🗨️ Translated: {original_name} → {translated}")
 
-        self.logger.info("📦 Recreating Qdrant collection...")
-        self.qdrant_client.recreate_collection(
-            collection_name=collection_name,
-            vectors_config=VectorParams(size=1536, distance=Distance.COSINE)
-        )
-
-        points = []
-        for i, (recipe, vector) in enumerate(zip(recipes, embeddings)):
-            points.append(PointStruct(
-                id=str(uuid4()),
-                vector=vector,
-                payload={
-                    "page_content": recipe.get("embedding_text", ""),
-                    "title": recipe.get("Title", ""),
-                    "ingredients": recipe.get("Cleaned_Ingredients", ""),
-                    "instructions": recipe.get("Instructions", ""),
-                    "image_name": recipe.get("Image_Name", ""),
-                    "id": recipe.get("Unnamed: 0", i)
-                }
-            ))
-
-        self.logger.info(f"⬆️ Uploading {len(points)} vectors to Qdrant...")
-        try:
-            self.qdrant_client.upsert(collection_name=collection_name, points=points)
-            self.logger.info("✅ Upload complete.")
-        except Exception as e:
-            self.logger.error(f"❌ Upload failed: {e}")
-
+            except Exception as e:
+                self.logger.error(f"❌ Translation failed for '{original_name}': {e}")
+                product["translated_name"] = original_name  # fallback
     
     def _load_data(self):
         """Load recipe embeddings and product data"""
@@ -146,40 +131,83 @@ class MealPlannerAPI:
 
     def batch_search_recipes(self, question: str, products: List[Dict], top_k: int = 10) -> Dict[str, List[Dict]]:
         """
-        Batch search recipes for all unique keywords from products.
-        Returns a mapping: keyword -> list of top_k recipe dicts
+        Optimized batch search of recipes using Qdrant + text-embedding-3-small.
+        Ensures each recipe (based on its 'id') is only returned once across all keywords.
+        Returns: keyword -> list of top_k unique recipes
         """
-        all_keywords = set()
-        for p in products:
-            all_keywords.update(p.get("english_keywords", []))
+        # Extract unique keywords from products
+        # keywords = sorted({kw for product in products for kw in product.get("english_keywords", [])})
 
-        results_by_keyword = {}
+        # use english name for better accuracy
+        keywords = sorted({
+            self.translate_to_english(product.get("translated_name", product.get("name", "")))
+            for product in products
+        })
+        if not keywords:
+            return {}
 
-        for keyword in all_keywords:
-            # use llm query rewriting
-            search_prompt = self.generate_search_query(question)
-            combined_query = f"{search_prompt} {keyword}"
-            # combined_query = f"{question} {keyword}"
-            self.retriever.search_kwargs["k"] = top_k
-            try:
-                results = self.retriever.invoke(combined_query)
+        try:
+            # Generate prompt base
+            base_query = self.generate_search_query(question)
+            queries = [
+                f"{base_query}. Focus on recipes using: {kw}. Prioritize the user’s intent."
+                for kw in keywords
+            ]
+
+            # Batch embed all queries
+            embeddings = self.embedding_model.embed_documents(queries)
+
+            # Prepare search requests
+            search_requests = [
+                SearchRequest(
+                    vector=embedding,
+                    limit=top_k,
+                    with_payload=True,
+                    with_vector=False
+                )
+                for embedding in embeddings
+            ]
+
+            # Perform batch search
+            results = self.qdrant_client.search_batch(
+                collection_name="recipes",
+                requests=search_requests
+            )
+
+            # Initialize result containers
+            seen_ids = set()
+            results_by_keyword = {}
+
+            for keyword, hits in zip(keywords, results):
                 recipes = []
-                for doc in results:
-                    meta = doc.metadata or {}
-                    recipes.append({
-                        "title": doc.page_content[:100].split(".")[0],
-                        "similarity": "N/A",
-                        "ingredients": meta.get("ingredients", ""),
-                        "instructions": meta.get("instructions", ""),
-                        "image_name": meta.get("image_name", ""),
-                        "recipe_idx": meta.get("id", -1)
-                    })
-                results_by_keyword[keyword] = recipes
-            except Exception as e:
-                self.logger.error(f"Batch vector search error for keyword '{keyword}': {e}")
-                results_by_keyword[keyword] = []
+                for hit in hits:
+                    payload = hit.payload or {}
+                    recipe_id = payload.get("id")
 
-        return results_by_keyword
+                    # Skip duplicates globally
+                    if recipe_id in seen_ids:
+                        continue
+                    seen_ids.add(recipe_id)
+
+                    title = payload.get("title", "Unknown")
+                    self.logger.info(f"✔️ Retrieved: {title} | image: {payload.get('image_name', '')}")
+                    
+                    recipes.append({
+                        "title": title,
+                        "similarity": hit.score,
+                        "ingredients": payload.get("ingredients", []),
+                        "instructions": payload.get("instructions", ""),
+                        "image_name": payload.get("image_name", ""),
+                        "recipe_idx": recipe_id
+                    })
+
+                results_by_keyword[keyword] = recipes
+
+            return results_by_keyword
+
+        except Exception as e:
+            self.logger.error(f"Batch vector search failed: {e}")
+            return {kw: [] for kw in keywords}
 
     def search_recipes_by_keywords(self, question: str, keywords: List[str], top_k: int = 5) -> List[Dict]:
         """Search recipes using LangChain + Qdrant vector DB"""
@@ -297,19 +325,19 @@ class MealPlannerAPI:
     "shopping_summary": {{
         "promotional_products_cost": "XX.XX PLN",
         "additional_ingredients_cost": "XX.XX PLN",
-        "total_savings": "Savings from promotions in PLN"
+        "total_savings": "Calculate savings from promotions in PLN"
     }}
     }}"""
 
         try:
             response = self.client.chat.completions.create(
-                model="gpt-4o",  #gpt-4o or gpt-3.5-turbo-1106 for faster results
+                model="gpt-4o-mini",  #gpt-4o or gpt-3.5-turbo-1106 for faster results
                 messages=[
                     {"role": "system", "content": "You are an expert meal planner. Respond ONLY in the specified JSON format with Polish text."},
                     {"role": "user", "content": prompt}
                 ],
                 temperature=0.3,
-                max_tokens=3000
+                max_tokens=6000
             )
 
             result = response.choices[0].message.content.strip()

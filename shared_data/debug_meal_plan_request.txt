@@ -3,236 +3,49 @@ Create a detailed meal plan for 1 days for 1 people using promotional products f
 
     AVAILABLE PROMOTIONAL PRODUCTS:
 - Jogurt proteinowy pitny YoPRO, 270 g: 3,00 PLN (50% taniej)
-  Suggested recipe: Recipe: Tomato Pie With Sour Cream Crust
-Ingredients: 2 cups all-purpose flour, plus a little extra 
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Krem do smarowania Nutella, 350 g: 11,49 PLN (30% taniej)
-  Suggested recipe: Recipe: Mr
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Pasztet Podlaski Drosed, 195 g: 2,69 PLN (44% taniej na drugi produkt)
-  Suggested recipe: Recipe: Saucy Beans and Artichoke Hearts with Feta
-Ingredients: 1/2 cup plus 1 Tbsp
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Gulasz angielski Krakus, 300 g: 5,99 PLN (None)
-  Suggested recipe: Recipe: Mr
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Herbata Lipton Yellow Label, 25 torebek: 5,00 PLN (50% taniej)
-  Suggested recipe: Recipe: Mr
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Herbata Teekanne, 20 torebek: 3,99 PLN (27% taniej)
-  Suggested recipe: Recipe: Mr
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Kawa ziarnista Jacobs Barista Editions, 1 kg: 57,99 PLN (27% taniej)
-  Suggested recipe: Recipe: Mr
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Kapsułki Dolce Gusto, 16 szt.: 20,99 PLN (60% taniej na drugi produkt)
-  Suggested recipe: Recipe: Mr
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Jajko Kinder Joy, 20 g: 3,66 PLN (33% taniej)
-  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
-Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Olej rzepakowy Kujawski, 2 l: 11,98 PLN (44% taniej)
-  Suggested recipe: Recipe: Saucy Beans and Artichoke Hearts with Feta
-Ingredients: 1/2 cup plus 1 Tbsp
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Masło ekstra Łaciate, 200 g: 4,75 PLN (50% taniej)
-  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
-Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Jaja z chowu ściółkowego Moja Kurka, rozmiar M, 10 szt.: 8,24 PLN (50% taniej na drugi produkt)
-  Suggested recipe: Recipe: Chinese Broccoli With Soy Paste
-Ingredients: 1 lb
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Parówki z szynki Tarczyński, 2x220 g: 8,44 PLN (70% taniej na drugi produkt)
-  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
-Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Kiełbasa śląska z szynki Kraina Wędlin Select, 450 g: 9,48 PLN (70% taniej na drugi produkt)
-  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
-Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Mieszanka nerkowiec-żurawina BakaD’Or, 200 g: 7,39 PLN (33% taniej)
-  Suggested recipe: Recipe: Tomato Pie With Sour Cream Crust
-Ingredients: 2 cups all-purpose flour, plus a little extra 
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Sok 100% jabłko Hortex, 1 l: 2,25 PLN (50% taniej)
-  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
-Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Napój gazowany Coca-Cola, 2x2 l: 6,99 PLN (12% taniej)
-  Suggested recipe: Recipe: Mr
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Kapsułki do prania Vizir All in 1 PODS, 22 szt.: 18,35 PLN (50% taniej)
-  Suggested recipe: Recipe: Tomato Pie With Sour Cream Crust
-Ingredients: 2 cups all-purpose flour, plus a little extra 
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Filet z pstrąga tęczowego łososiowego ze skórą Marinero: 3,99 PLN (30% taniej)
-  Suggested recipe: Recipe: Buttered Tomatoes with Ginger
-Ingredients: 4 scallions, 4 Tbsp
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Krewetki gotowane Marinero, 250 g: 14,99 PLN (62% taniej na drugi produkt)
-  Suggested recipe: Recipe: Mr
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Mięso mielone z łopatki wieprzowej i wołowiny Kraina Mięs, 400 g: 6,75 PLN (50% taniej)
-  Suggested recipe: Recipe: Mr
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Ćwiartka tylna z kurczaka: 6,99 PLN (30% taniej)
-  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
-Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Łosoś Coho rodzinna porcja Marinero: 4,99 PLN (16% taniej)
-  Suggested recipe: Recipe: Buttered Tomatoes with Ginger
-Ingredients: 4 scallions, 4 Tbsp
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Sushi Sushiko, 230 g: 8,49 PLN (44% taniej na drugi produkt)
-  Suggested recipe: Recipe: Melted Broccoli Pasta With Capers and Anchovies
-Ingredients: Kosher salt, 2 heads (about 1 p
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Sushi Premium Kyoko, 430 g: 15,99 PLN (54% taniej na drugi produkt)
-  Suggested recipe: Recipe: Melted Broccoli Pasta With Capers and Anchovies
-Ingredients: Kosher salt, 2 heads (about 1 p
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Schab z Zalasku Podlaskie Specjały Kraina Wędlin, 100 g: 5,99 PLN (40% taniej na drugi produkt)
-  Suggested recipe: Recipe: Melted Broccoli Pasta With Capers and Anchovies
-Ingredients: Kosher salt, 2 heads (about 1 p
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Kiełbaski Swojskie Podlaskie Specjały Kraina Wędlin, 300 g: 9,99 PLN (40% taniej na drugi produkt)
-  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
-Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Brykiet z węgla drzewnego, 2,5 kg: 8,99 PLN (86% taniej na drugi produkt)
-  Suggested recipe: Recipe: Mr
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Sok jabłkowy Riviva, 1 l: 2,99 PLN (21% taniej)
-  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
-Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Lekki krem do twarzy NIVEA Care 5w1, 100 ml: 19,99 PLN (50% taniej)
-  Suggested recipe: Recipe: Mr
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Szynka konserwowa Kraina Wędlin, 200 g: 3,99 PLN (84% taniej na drugi produkt)
-  Suggested recipe: Recipe: Mr
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Płyn do płukania tkanin Silan, opak. 1,32 l: 9,50 PLN (50% taniej)
-  Suggested recipe: Recipe: Saucy Beans and Artichoke Hearts with Feta
-Ingredients: 1/2 cup plus 1 Tbsp
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Kiełbaski z szynki i cielęciny Kraina Wędlin, 300 g: 11,49 PLN (30% taniej)
-  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
-Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Schab lub szynka w plastrach ciemno wędzone Kraina Wędlin, 400 g: 16,99 PLN (23% taniej)
-  Suggested recipe: Recipe: Melted Broccoli Pasta With Capers and Anchovies
-Ingredients: Kosher salt, 2 heads (about 1 p
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Kiełbasa Podwawelska Kraina Wędlin: 24,00 PLN (21% taniej)
-  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
-Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Szynka Kraina Wędlin, 100 g: 4,99 PLN (62% taniej na drugi produkt)
-  Suggested recipe: Recipe: Mr
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Boczek Kraina Wędlin, 100 g: 4,49 PLN (46% taniej na drugi produkt)
-  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
-Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Kiełbasa krakowska parzona w plastrach Kraina Wędlin, 250 g: 6,49 PLN (76% taniej na drugi produkt)
-  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
-Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Kabanosy z wędzarni Kraina Wędlin Select, 175 g: 7,99 PLN (40% taniej na drugi produkt)
-  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
-Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 - Kiełbasa krakowska z szynki Tarczyński, 330 g: 11,99 PLN (68% taniej na drugi produkt)
-  Suggested recipe: Recipe: Vanilla Butter Anchovy Toasts
-Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
-  Image name: 
-  Ingredients: ...
-  Full recipe: ...
 
 
     ADDITIONAL INSTRUCTIONS:
-    You are preparing a diet for person that wants the following: "I want Soy-Glazed Chicken with Broccoli for dinner."
+    You are preparing a diet for person that wants the following: "Diet with Chicken"
 
     RULES:
     - Use as many promotional products as possible
@@ -281,7 +94,7 @@ Ingredients: 3/4 cup (1 1/2 sticks) unsalted butter, room temp
     "shopping_summary": {
         "promotional_products_cost": "XX.XX PLN",
         "additional_ingredients_cost": "XX.XX PLN",
-        "total_savings": "Savings from promotions in PLN"
+        "total_savings": "Calculate savings from promotions in PLN"
     }
     }
 
@@ -291,41 +104,41 @@ Response:
     "plan_info": {
         "days": 1,
         "people": 1,
-        "estimated_total_cost": "28.64 PLN"
+        "estimated_total_cost": "45.67 PLN"
     },
     "meals": [
         {
             "day": 1,
             "type": "breakfast",
-            "name": "Kanapki z pasztetem i herbatą",
+            "name": "Jajecznica z kurczakiem i chlebem",
             "image_name": "",
             "main_products": [
                 {
-                    "name": "Pasztet Podlaski Drosed",
-                    "quantity": "100g",
-                    "price": "1.35 PLN"
+                    "name": "Ćwiartka tylna z kurczaka",
+                    "quantity": "200g",
+                    "price": "6.99 PLN"
                 },
                 {
-                    "name": "Herbata Lipton Yellow Label",
-                    "quantity": "1 torebka",
-                    "price": "0.20 PLN"
+                    "name": "Jaja z chowu ściółkowego Moja Kurka",
+                    "quantity": "2 szt.",
+                    "price": "1.65 PLN"
                 }
             ],
             "additional_ingredients": [
                 {
-                    "name": "Chleb",
-                    "quantity": "2 kromki",
-                    "estimated_price": "1.00 PLN"
+                    "name": "Chleb pszenny",
+                    "quantity": "100g",
+                    "estimated_price": "1.50 PLN"
                 },
                 {
-                    "name": "Masło",
+                    "name": "Masło ekstra Łaciate",
                     "quantity": "20g",
-                    "estimated_price": "0.50 PLN"
+                    "estimated_price": "0.48 PLN"
                 }
             ],
-            "instructions": "Posmaruj kromki chleba masłem, a następnie nałóż na nie pasztet. Podawaj z gorącą herbatą Lipton Yellow Label.",
+            "instructions": "1. Na patelni rozgrzej masło. 2. Dodaj pokrojoną w kostkę ćwiartkę kurczaka i smaż przez 5-7 minut, aż będzie złocista. 3. Wbij jajka na patelnię i mieszaj, aż się zetną. 4. Podawaj z chlebem.",
             "prep_time": "5 min",
-            "cooking_time": "0 min"
+            "cooking_time": "10 min"
         },
         {
             "day": 1,
@@ -335,64 +148,69 @@ Response:
             "main_products": [
                 {
                     "name": "Gulasz angielski Krakus",
-                    "quantity": "150g",
-                    "price": "3.00 PLN"
+                    "quantity": "300g",
+                    "price": "5.99 PLN"
                 }
             ],
             "additional_ingredients": [
                 {
-                    "name": "Ryż",
+                    "name": "Ryż biały",
                     "quantity": "100g",
-                    "estimated_price": "1.50 PLN"
+                    "estimated_price": "1.00 PLN"
+                },
+                {
+                    "name": "Sól",
+                    "quantity": "do smaku",
+                    "estimated_price": "0.10 PLN"
                 }
             ],
-            "instructions": "Ugotuj ryż zgodnie z instrukcją na opakowaniu. Podgrzej gulasz angielski w rondlu na średnim ogniu przez około 5 minut. Podawaj gulasz na gorącym ryżu.",
+            "instructions": "1. Ugotuj ryż według instrukcji na opakowaniu. 2. W międzyczasie podgrzej gulasz w garnku przez 5-10 minut. 3. Podawaj gulasz na ryżu.",
             "prep_time": "5 min",
             "cooking_time": "15 min"
         },
         {
             "day": 1,
             "type": "dinner",
-            "name": "Kurczak glazurowany sosem sojowym z brokułami",
+            "name": "Sałatka z kurczakiem i mieszanką nerkowiec-żurawina",
             "image_name": "",
             "main_products": [
                 {
                     "name": "Ćwiartka tylna z kurczaka",
                     "quantity": "200g",
-                    "price": "3.50 PLN"
+                    "price": "6.99 PLN"
+                },
+                {
+                    "name": "Mieszanka nerkowiec-żurawina BakaD’Or",
+                    "quantity": "50g",
+                    "price": "1.85 PLN"
                 }
             ],
             "additional_ingredients": [
                 {
-                    "name": "Brokuły",
-                    "quantity": "200g",
-                    "estimated_price": "3.00 PLN"
+                    "name": "Sałata lodowa",
+                    "quantity": "100g",
+                    "estimated_price": "1.50 PLN"
                 },
                 {
-                    "name": "Sos sojowy",
-                    "quantity": "30ml",
+                    "name": "Pomidor",
+                    "quantity": "1 szt.",
                     "estimated_price": "1.00 PLN"
-                },
-                {
-                    "name": "Czosnek",
-                    "quantity": "2 ząbki",
-                    "estimated_price": "0.50 PLN"
                 },
                 {
                     "name": "Olej rzepakowy Kujawski",
                     "quantity": "10ml",
-                    "price": "0.06 PLN"
+                    "estimated_price": "0.60 PLN"
                 }
             ],
-            "instructions": "Na patelni rozgrzej olej rzepakowy. Dodaj pokrojony czosnek i smaż przez 1 minutę. Dodaj kurczaka i smaż na średnim ogniu przez około 10 minut, aż będzie złocisty. Dodaj sos sojowy i brokuły, przykryj i gotuj na małym ogniu przez kolejne 10 minut, aż brokuły będą miękkie.",
+            "instructions": "1. Ugotuj ćwiartkę kurczaka, a następnie pokrój w kostkę. 2. W misce wymieszaj sałatę, pokrojonego pomidora, kurczaka i mieszankę nerkowiec-żurawina. 3. Skrop oliwą i wymieszaj.",
             "prep_time": "10 min",
             "cooking_time": "20 min"
         }
     ],
     "shopping_summary": {
-        "promotional_products_cost": "8.11 PLN",
-        "additional_ingredients_cost": "20.53 PLN",
-        "total_savings": "16.88 PLN"
+        "promotional_products_cost": "24.51 PLN",
+        "additional_ingredients_cost": "6.68 PLN",
+        "total_savings": "12.40 PLN"
     }
 }
 ```
