@@ -227,39 +227,39 @@ class MealPlannerAPI:
             return {kw: [] for kw in keywords}
 
     def generate_meal_plan_from_products(self, selected_products: List[Dict], question: str,
-                                     days: int = 3, people: int = 2) -> Optional[Dict]:
+                                        days: int = 3, people: int = 2) -> Optional[Dict]:
         """Generate meal plan from specific product list with batched recipe search"""
         self.logger.info(f"Generating {days}-day plan for {people} people...")
         self.logger.info(f"Using {len(selected_products)} promotional products")
 
-        # Batch recipe search (1 per unique keyword)
+        # Step 1: Build keyword-to-product map
+        keyword_to_product = {}
+        for product in selected_products:
+            keyword = product.get("translated_name") or product.get("name", "")
+            if keyword:
+                keyword_to_product[keyword] = product
+
+        # Step 2: Perform batched recipe search
         recipe_lookup = self.batch_search_recipes(question, selected_products, top_k=1)
 
-
-        # Prepare context for LLM
+        # Step 3: Prepare context for LLM
         products = ""
         recipies = ""
 
-        for product in selected_products:
+        for keyword, product in keyword_to_product.items():
             products += f"- {product['name']}: {product['price']} PLN ({product.get('discount_info', 'no discount')})\n"
 
-            keywords = product.get('english_keywords', [])
             best_recipe = None
-
-            # Pick first available recipe from matching keywords
-            for keyword in keywords:
-                if keyword in recipe_lookup and recipe_lookup[keyword]:
-                    best_recipe = recipe_lookup[keyword][0]
-                    break
+            if keyword in recipe_lookup and recipe_lookup[keyword]:
+                best_recipe = recipe_lookup[keyword][0]
 
             if best_recipe:
-                recipies += f"  Suggested recipe: {best_recipe['title']}\n"
-                recipies += f"  Image name: {best_recipe['image_name']}\n"
-                recipies += f"  Ingredients: {best_recipe['ingredients'][:1000]}...\n"
-                recipies += f"  Full recipe: {best_recipe['instructions'][:1000]}...\n"
+                recipies += f"Suggested recipe for '{keyword}': {best_recipe['title']}\n"
+                recipies += f"Image name: {best_recipe['image_name']}\n"
+                recipies += f"Ingredients: {best_recipe['ingredients'][:1000]}...\n"
+                recipies += f"Full recipe: {best_recipe['instructions'][:1000]}...\n\n"
 
         try:
-
             parsed_plan = self.chat_chain.invoke({
                 "products": products,
                 "recipies": recipies,
@@ -268,7 +268,6 @@ class MealPlannerAPI:
                 "question": question
             })
 
-            
             parsed_plan = recalculate_prices_manual(parsed_plan)
 
             return parsed_plan
