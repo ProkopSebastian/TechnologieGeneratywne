@@ -257,17 +257,6 @@ class MealPlannerAPI:
                 recipies += f"  Full recipe: {best_recipe['instructions'][:1000]}...\n"
 
         try:
-            # response = self.client.chat.completions.create(
-            #     model="gpt-4o-mini",  #gpt-4o or gpt-3.5-turbo-1106 for faster results
-            #     messages=[
-            #         {"role": "system", "content": "You are an expert meal planner. Respond ONLY in the specified JSON format with Polish text."},
-            #         {"role": "user", "content": prompt}
-            #     ],
-            #     temperature=0.3,
-            #     max_tokens=6000
-            # )
-
-            # result = response.choices[0].message.content.strip()
 
             parsed_plan = self.chat_chain.invoke({
                 "products": products,
@@ -280,15 +269,6 @@ class MealPlannerAPI:
             
             parsed_plan = recalculate_prices_manual(parsed_plan)
 
-            # Save debug info
-            # with open("shared_data/debug_meal_plan_request.txt", "w", encoding='utf-8') as f:
-            #     f.write(f"Prompt:\n{prompt}\n\nResponse:\n{result}\n")
-
-            # Clean JSON response
-            # if result.startswith('```json'):
-            #     result = result.replace('```json', '').replace('```', '').strip()
-
-            # parsed_plan = json.loads(result)
             return parsed_plan
 
         except Exception as e:
@@ -362,7 +342,6 @@ class MealPlannerAPI:
 
 # Initialize the API
 meal_planner = MealPlannerAPI()
-#meal_planner.embed_and_push_test_json()
 
 # Main function for frontend compatibility
 def ask_rag(question: str, days: int = 1, people: int = 1) -> dict:
