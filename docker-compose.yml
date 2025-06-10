@@ -24,6 +24,10 @@ services:
       - vector-network
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - LANGSMITH_TRACING=${LANGSMITH_TRACING}
+      - LANGSMITH_ENDPOINT=${LANGSMITH_ENDPOINT}
+      - LANGCHAIN_API_KEY=${LANGCHAIN_API_KEY}
+      - LANGCHAIN_PROJECT=${LANGCHAIN_PROJECT}
     restart: unless-stopped
 
   qdrant:
