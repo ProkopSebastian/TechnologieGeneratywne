@@ -15,6 +15,7 @@ from qdrant_client.http.models import SearchRequest
 from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
 from langchain_core.runnables import RunnableLambda, RunnableSequence
 import openai
+from langsmith import traceable
 from prompts import search_query_prompt, translation_prompt, generic_translation_prompt, chat_prompt, recalculate_prompt
 from utils import recalculate_prices, recalculate_prices_manual
 
@@ -123,6 +124,7 @@ class MealPlannerAPI:
             return user_query
 
 
+    @traceable(name="batch_search_recipes")
     def batch_search_recipes(self, question: str, products: List[Dict], top_k: int = 10) -> Dict[str, List[Dict]]:
         """
         Simple, compatible version that works with any Qdrant client version.

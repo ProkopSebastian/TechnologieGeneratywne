@@ -12,3 +12,4 @@ python-dotenv
 scikit-learn
 numpy
 qdrant-client
+langsmith
