@@ -6,19 +6,17 @@ import pickle
 from typing import List, Dict, Any, Optional
 import os
 from logger import get_logger
-from langchain.vectorstores import Qdrant
 from qdrant_client import QdrantClient
-from langchain.embeddings import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 import pandas as pd
 from uuid import uuid4
 from qdrant_client.models import VectorParams, Distance, PointStruct
 from qdrant_client.http.models import SearchRequest
-from langchain.schema import Document
-from langchain.prompts import PromptTemplate
-from langchain.chat_models import ChatOpenAI
-from langchain.chains import LLMChain
+from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
+from langchain_core.runnables import RunnableLambda, RunnableSequence
 import openai
-from prompts import search_query_prompt
+from prompts import search_query_prompt, translation_prompt, generic_translation_prompt, chat_prompt, recalculate_prompt
+from utils import recalculate_prices, recalculate_prices_manual
 
 class MealPlannerAPI:
     def __init__(self):
@@ -32,20 +30,38 @@ class MealPlannerAPI:
         self.qdrant_client = QdrantClient(host="qdrant", port=6333)
         self.embedding_model = OpenAIEmbeddings(openai_api_key=self.API_KEY)
 
-        self.vectorstore = Qdrant(
-            client=self.qdrant_client,
-            collection_name="recipes",
-            embeddings=self.embedding_model,
-            content_payload_key="page_content",  # This tells LangChain to use 'page_content' as the main doc body
-            metadata_payload_key=None            # This tells LangChain to treat everything else as metadata
-        )
-
         self.llm_quick = ChatOpenAI(
             model="gpt-3.5-turbo",
             temperature=0,
-            max_tokens=20
+            max_tokens=60
         )
-        self.search_query_chain = LLMChain(llm=self.llm_quick, prompt=search_query_prompt)
+
+        self.llm = ChatOpenAI(
+            model="gpt-4o-mini",
+            temperature=0,
+            max_tokens=6000
+        )
+
+        self.str_parser = StrOutputParser()
+        self.json_parser = JsonOutputParser()
+
+        # chains
+        self.search_query_chain = search_query_prompt | self.llm_quick | self.str_parser
+        self.translation_chain = translation_prompt | self.llm_quick | self.str_parser
+        self.generic_translation_chain = generic_translation_prompt | self.llm_quick | self.str_parser
+
+        self.chat_chain = chat_prompt | self.llm | self.json_parser
+        # self.chat_chain: RunnableSequence = (
+        #     chat_prompt
+        #     | self.llm
+        #     | self.json_parser  # returns dict
+        #     | RunnableLambda(recalculate_prices)
+        #     | recalculate_prompt
+        #     | self.llm
+        #     | self.json_parser  # final parsed dict
+        # )
+
+        # vector db
         self.qdrant = QdrantClient(host="qdrant", port=6333)
         
         # Load data
@@ -62,17 +78,8 @@ class MealPlannerAPI:
                 if "translated_name" in product:
                     continue
 
-                response = self.client.chat.completions.create(
-                    model="gpt-3.5-turbo",
-                    messages=[
-                        {"role": "system", "content": "Translate the following grocery product name from Polish to English. Only respond with a direct, short translation."},
-                        {"role": "user", "content": original_name}
-                    ],
-                    temperature=0,
-                    max_tokens=20
-                )
+                translated = self.translation_chain.invoke({"product_name": original_name})
 
-                translated = response.choices[0].message.content.strip()
                 product["translated_name"] = translated
                 self.logger.info(f"🗨️ Translated: {original_name} → {translated}")
 
@@ -96,16 +103,7 @@ class MealPlannerAPI:
 
     def translate_to_english(self, text: str) -> str:
         try:
-            response = self.client.chat.completions.create(
-                model="gpt-3.5-turbo",
-                messages=[
-                    {"role": "system", "content": "Translate the user's message to English."},
-                    {"role": "user", "content": text}
-                ],
-                temperature=0,
-                max_tokens=60
-            )
-            return response.choices[0].message.content.strip()
+            return self.generic_translation_chain.invoke({"input_text": text})
         except Exception as e:
             self.logger.error(f"Translation error: {e}")
             return text  # fallback to original if translation fails
@@ -115,8 +113,9 @@ class MealPlannerAPI:
         Convert user query into a concise recipe search query using LangChain.
         """
         try:
-            result = self.search_query_chain.run(user_request=user_query)
-            rewritten = result.strip()
+            rewritten = self.search_query_chain.invoke({"user_request": user_query})
+            # result = self.search_query_chain.run(user_request=user_query)
+            # rewritten = result.strip()
             self.logger.info(f"Rewritten query: {rewritten}")
             return rewritten
         except Exception as e:
@@ -126,114 +125,104 @@ class MealPlannerAPI:
 
     def batch_search_recipes(self, question: str, products: List[Dict], top_k: int = 10) -> Dict[str, List[Dict]]:
         """
-        Optimized batch search of recipes using Qdrant + text-embedding-3-small.
-        Ensures each recipe (based on its 'id') is only returned once across all keywords.
-        Returns: keyword -> list of top_k unique recipes
+        Simple, compatible version that works with any Qdrant client version.
+        Major performance improvement with maximum compatibility.
         """
-        # Extract unique keywords from products
-        # keywords = sorted({kw for product in products for kw in product.get("english_keywords", [])})
-
-        # use english name for better accuracy
-        keywords = sorted({
-            self.translate_to_english(product.get("translated_name", product.get("name", "")))
-            for product in products
-        })
-        if not keywords:
+        if not products:
             return {}
-
+        
         try:
-            # Generate prompt base
+            keywords = []
+            for product in products:
+                name = product.get("translated_name") or product.get("name", "")
+                keywords.append(name)
+                        
+            
+            # Remove duplicates while preserving order
+            keywords = list(dict.fromkeys(filter(None, keywords)))
+            if not keywords:
+                return {}
+
+            # Create single comprehensive query
             base_query = self.generate_search_query(question)
-            queries = [
-                f"{base_query}. Focus on recipes using: {kw}. Prioritize the user’s intent."
-                for kw in keywords
-            ]
-
-            # Batch embed all queries
-            embeddings = self.embedding_model.embed_documents(queries)
-
-            # Prepare search requests
-            search_requests = [
-                SearchRequest(
-                    vector=embedding,
-                    limit=top_k,
-                    with_payload=True,
-                    with_vector=False
-                )
-                for embedding in embeddings
-            ]
-
-            # Perform batch search
-            results = self.qdrant_client.search_batch(
+            combined_query = f"{base_query} {', '.join(keywords)}"
+            
+            # Single embedding call
+            embedding = self.embedding_model.embed_query(combined_query)
+            
+            # Calculate search limit
+            search_limit = min(top_k * len(keywords) * 2, 150)
+            
+            hits = self.qdrant_client.search(
                 collection_name="recipes",
-                requests=search_requests
+                query_vector=embedding,
+                limit=search_limit
             )
-
-            # Initialize result containers
+            
+            # Initialize results
+            results_by_keyword = {kw: [] for kw in keywords}
             seen_ids = set()
-            results_by_keyword = {}
-
-            for keyword, hits in zip(keywords, results):
-                recipes = []
-                for hit in hits:
-                    payload = hit.payload or {}
-                    recipe_id = payload.get("id")
-
-                    # Skip duplicates globally
-                    if recipe_id in seen_ids:
-                        continue
-                    seen_ids.add(recipe_id)
-
-                    title = payload.get("title", "Unknown")
-                    self.logger.info(f"✔️ Retrieved: {title} | image: {payload.get('image_name', '')}")
+            keyword_counts = {kw: 0 for kw in keywords}
+            
+            # Process and distribute results
+            for hit in hits:
+                # Handle different payload access methods
+                payload = getattr(hit, 'payload', None) or {}
+                recipe_id = payload.get("id")
+                
+                if recipe_id in seen_ids:
+                    continue
                     
-                    recipes.append({
-                        "title": title,
-                        "similarity": hit.score,
-                        "ingredients": payload.get("ingredients", []),
-                        "instructions": payload.get("instructions", ""),
-                        "image_name": payload.get("image_name", ""),
-                        "recipe_idx": recipe_id
-                    })
-
-                results_by_keyword[keyword] = recipes
-
+                ingredients = payload.get("ingredients", [])
+                title = payload.get("title", "Unknown")
+                
+                # Find matching keywords
+                matching_keywords = []
+                for keyword in keywords:
+                    keyword_lower = keyword.lower()
+                    if (any(keyword_lower in str(ing).lower() for ing in ingredients) or 
+                        keyword_lower in title.lower()):
+                        matching_keywords.append(keyword)
+                
+                # Fallback assignment if no matches
+                if not matching_keywords:
+                    # Assign to keyword with fewest results
+                    matching_keywords = [min(keyword_counts.items(), key=lambda x: x[1])[0]]
+                
+                # Assign to first available keyword
+                for keyword in matching_keywords:
+                    if keyword_counts[keyword] < top_k:
+                        # Handle different score access methods
+                        score = getattr(hit, 'score', 0.0)
+                        
+                        results_by_keyword[keyword].append({
+                            "title": title,
+                            "similarity": score,
+                            "ingredients": ingredients,
+                            "instructions": payload.get("instructions", ""),
+                            "image_name": payload.get("image_name", ""),
+                            "recipe_idx": recipe_id
+                        })
+                        
+                        seen_ids.add(recipe_id)
+                        keyword_counts[keyword] += 1
+                        
+                        self.logger.info(f"✔️ Retrieved for '{keyword}': {title} | score: {score:.3f}")
+                        break
+                
+                # Early exit if all keywords satisfied
+                if all(count >= top_k for count in keyword_counts.values()):
+                    break
+            
+            # Log results
+            total_results = sum(len(recipes) for recipes in results_by_keyword.values())
+            self.logger.info(f"Search completed: {total_results} results across {len(keywords)} keywords")
+            
             return results_by_keyword
-
+            
         except Exception as e:
-            self.logger.error(f"Batch vector search failed: {e}")
+            self.logger.error(f"Vector search failed: {e}")
             return {kw: [] for kw in keywords}
-
-    def search_recipes_by_keywords(self, question: str, keywords: List[str], top_k: int = 5) -> List[Dict]:
-        """Search recipes using LangChain + Qdrant vector DB"""
-        if not keywords:
-            return []
-
-        try:
-            query = f"{question} " + " ".join(keywords)
-
-            #results = self.vectorstore.similarity_search_with_score(query, k=top_k)
-            self.retriever.search_kwargs["k"] = top_k
-            results = self.retriever.invoke(query)
-
-            out = []
-            for doc in results:
-                meta = doc.metadata or {}
-                out.append({
-                    "title": doc.page_content[:100].split(".")[0],  # crude title fallback
-                    "similarity": "N/A",
-                    "ingredients": meta.get("ingredients", ""),
-                    "instructions": meta.get("instructions", ""),
-                    "image_name": meta.get("image_name", ""),
-                    "recipe_idx": meta.get("id", -1)
-                })
-
-            return out
-
-        except Exception as e:
-            self.logger.error(f"Vector search error: {e}")
-            return []
-
 
     def generate_meal_plan_from_products(self, selected_products: List[Dict], question: str,
                                      days: int = 3, people: int = 2) -> Optional[Dict]:
@@ -244,11 +233,13 @@ class MealPlannerAPI:
         # Batch recipe search (1 per unique keyword)
         recipe_lookup = self.batch_search_recipes(question, selected_products, top_k=1)
 
+
         # Prepare context for LLM
-        context = f"AVAILABLE PROMOTIONAL PRODUCTS:\n"
+        products = ""
+        recipies = ""
 
         for product in selected_products:
-            context += f"- {product['name']}: {product['price']} PLN ({product.get('discount_info', 'no discount')})\n"
+            products += f"- {product['name']}: {product['price']} PLN ({product.get('discount_info', 'no discount')})\n"
 
             keywords = product.get('english_keywords', [])
             best_recipe = None
@@ -260,92 +251,44 @@ class MealPlannerAPI:
                     break
 
             if best_recipe:
-                context += f"  Suggested recipe: {best_recipe['title']}\n"
-                context += f"  Image name: {best_recipe['image_name']}\n"
-                context += f"  Ingredients: {best_recipe['ingredients'][:1000]}...\n"
-                context += f"  Full recipe: {best_recipe['instructions'][:1000]}...\n"
-
-        # LLM prompt
-        prompt = f"""Create a detailed meal plan for {days} days for {people} people using promotional products from Biedronka.
-
-    {context}
-
-    ADDITIONAL INSTRUCTIONS:
-    You are preparing a diet for person that wants the following: "{question}"
-
-    RULES:
-    - Use as many promotional products as possible
-    - One meal can include multiple promotional products
-    - Create varied, healthy meals (breakfast, lunch, dinner)
-    - STRICT DIETARY RULE: If the question requests a vegetarian diet, DO NOT use meat, poultry, or fish in any meal. You can use plant-based alternatives like tofu, lentils, eggs, or dairy.
-    - Use suggested recipes as inspiration - you can copy their instructions directly
-    - Include precise quantities for all ingredients (e.g., "200g tofu")
-    - Provide detailed step-by-step cooking instructions - if using a suggested recipe, copy its instructions directly
-    - Calculate estimated total cost
-    - You can add basic ingredients (bread, eggs, milk, etc.)
-
-
-    Return the response in JSON format with Polish text:
-    {{
-    "plan_info": {{
-        "days": {days},
-        "people": {people},
-        "estimated_total_cost": "XX.XX PLN"
-    }},
-    "meals": [
-        {{
-        "day": 1,
-        "type": "breakfast",
-        "name": "Meal name in Polish",
-        "image_name": "copy image name from suggested recipe only if you used it, otherwise leave empty",
-        "main_products": [
-            {{
-            "name": "Product name",
-            "quantity": "200g",
-            "price": "X.XX PLN"
-            }}
-        ],
-        "additional_ingredients": [
-            {{
-            "name": "Basic ingredient",
-            "quantity": "100ml",
-            "estimated_price": "X.XX PLN"
-            }}
-        ],
-        "instructions": "Detailed step-by-step preparation instructions in Polish. Should be very specific with cooking times, temperatures, and techniques. If using a suggested recipe, you can copy its instructions directly.",
-        "prep_time": "XX min",
-        "cooking_time": "XX min"
-        }}
-    ],
-    "shopping_summary": {{
-        "promotional_products_cost": "XX.XX PLN",
-        "additional_ingredients_cost": "XX.XX PLN",
-        "total_savings": "Calculate savings from promotions in PLN"
-    }}
-    }}"""
+                recipies += f"  Suggested recipe: {best_recipe['title']}\n"
+                recipies += f"  Image name: {best_recipe['image_name']}\n"
+                recipies += f"  Ingredients: {best_recipe['ingredients'][:1000]}...\n"
+                recipies += f"  Full recipe: {best_recipe['instructions'][:1000]}...\n"
 
         try:
-            response = self.client.chat.completions.create(
-                model="gpt-4o-mini",  #gpt-4o or gpt-3.5-turbo-1106 for faster results
-                messages=[
-                    {"role": "system", "content": "You are an expert meal planner. Respond ONLY in the specified JSON format with Polish text."},
-                    {"role": "user", "content": prompt}
-                ],
-                temperature=0.3,
-                max_tokens=6000
-            )
+            # response = self.client.chat.completions.create(
+            #     model="gpt-4o-mini",  #gpt-4o or gpt-3.5-turbo-1106 for faster results
+            #     messages=[
+            #         {"role": "system", "content": "You are an expert meal planner. Respond ONLY in the specified JSON format with Polish text."},
+            #         {"role": "user", "content": prompt}
+            #     ],
+            #     temperature=0.3,
+            #     max_tokens=6000
+            # )
 
-            result = response.choices[0].message.content.strip()
+            # result = response.choices[0].message.content.strip()
+
+            parsed_plan = self.chat_chain.invoke({
+                "products": products,
+                "recipies": recipies,
+                "days": days,
+                "people": people,
+                "question": question
+            })
+
+            
+            parsed_plan = recalculate_prices_manual(parsed_plan)
 
             # Save debug info
-            with open("shared_data/debug_meal_plan_request.txt", "w", encoding='utf-8') as f:
-                f.write(f"Prompt:\n{prompt}\n\nResponse:\n{result}\n")
+            # with open("shared_data/debug_meal_plan_request.txt", "w", encoding='utf-8') as f:
+            #     f.write(f"Prompt:\n{prompt}\n\nResponse:\n{result}\n")
 
             # Clean JSON response
-            if result.startswith('```json'):
-                result = result.replace('```json', '').replace('```', '').strip()
+            # if result.startswith('```json'):
+            #     result = result.replace('```json', '').replace('```', '').strip()
 
-            parsed_plan = json.loads(result)
+            # parsed_plan = json.loads(result)
             return parsed_plan
 
         except Exception as e:
