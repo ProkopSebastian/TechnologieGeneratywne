@@ -4,5 +4,6 @@ namespace: teg
 
 resources:
   - ./frontend
+  - ./scraper
   - pvc.yaml
   - ingress.yaml
