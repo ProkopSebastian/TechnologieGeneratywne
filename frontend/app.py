@@ -5,9 +5,9 @@ from typing import Dict, Any
 import logging
 import time
 import sys
+import os
 
-USE_MOCK = False
-API_IRL = "http://rag-backend:5000/api/ask"
+API_URL = os.environ.get("API_URL", "http://rag-backend:5000/api/ask")
 
 logging.basicConfig(
     level=logging.INFO,
@@ -28,7 +28,7 @@ def post_query(query, days=1, people=1, dietary_restrictions=[], meal_types=[], 
         "excluded_ingredients": excluded_ingredients,
     }
 
-    return requests.post(API_IRL, json=payload)
+    return requests.post(API_URL, json=payload)
 
 def get_meal_type_emoji(meal_type: str) -> str:
     """Get emoji for meal type"""

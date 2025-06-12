@@ -31,5 +31,4 @@ RUN mkdir -p /shared
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
 
-# Default command - adjust based on your scraper script
-CMD ["python", "-u", "main.py"]
+CMD ["sh", "entrypoint.sh"]

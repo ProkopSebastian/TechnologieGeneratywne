@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: olszewskib/teg-backend:v1
+          ports:
+            - containerPort: 5000
+          envFrom:
+            - secretRef:
+                name: openai-api-key
+            - configMapRef:
+                name: backend-config
+          volumeMounts:
+            - name: shared-storage
+              mountPath: /app/shared_data
+      volumes:
+        - name: shared-storage
+          persistentVolumeClaim:
+            claimName: shared-storage

@@ -1,0 +1,28 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: scraper
+spec:
+  schedule: "0 10 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: scraper
+            image: olszewskib/teg-scraper:v1
+            imagePullPolicy: IfNotPresent
+            volumeMounts:
+            - name: shared-storage
+              mountPath: /shared
+            envFrom:
+            - configMapRef:
+                name: scraper-config
+            - secretRef:
+                name: openai-api-key
+          restartPolicy: OnFailure
+          volumes:
+          - name: shared-storage
+            persistentVolumeClaim:
+              claimName: shared-storage
+
