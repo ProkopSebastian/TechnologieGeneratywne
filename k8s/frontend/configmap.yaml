@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: frontend-config
 data:
-  API_URL: "backend.teg.svc.cluster.local:5000"
+  API_URL: "http://backend.teg.svc.cluster.local:5000"
