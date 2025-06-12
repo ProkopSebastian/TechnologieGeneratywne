@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: scraper-config
 data:
-  MAX_PRODUCTS: 50
+  MAX_PRODUCTS: "50"
   OUTPUT_FILE: /shared/biedronka_offers.json
   SCRAPER_URL: https://www.biedronka.pl/pl/oferta-z-karta-moja-biedronka
