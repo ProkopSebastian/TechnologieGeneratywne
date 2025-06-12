@@ -7,7 +7,7 @@ import time
 import sys
 
 USE_MOCK = False
-API_IRL = "http://rag-backend:5001/api/ask"
+API_IRL = "http://rag-backend:5000/api/ask"
 
 logging.basicConfig(
     level=logging.INFO,
