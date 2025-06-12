@@ -32,16 +32,26 @@ SUGGESTED RECIPIES
 ADDITIONAL INSTRUCTIONS:
 You are preparing a diet for person that wants the following: "{question}"
 
+DIETARY RESTRICTIONS: {dietary_restrictions}
+MEAL TYPES TO INCLUDE: {meal_types}
+EXCLUDED INGREDIENTS: {excluded_ingredients}
+
 RULES:
 - Use as many promotional products as possible
 - One meal can include multiple promotional products
-- Create varied, healthy meals (breakfast, lunch, dinner)
-- STRICT DIETARY RULE: If the question requests a vegetarian diet, DO NOT use meat, poultry, or fish in any meal. You can use plant-based alternatives like tofu, lentils, eggs, or dairy.
+- Create varied, healthy meals matching the requested meal types
+- STRICT DIETARY RESTRICTIONS: Follow all dietary restrictions exactly:
+  * If "Wegetariańskie" is in restrictions, DO NOT use meat, poultry, or fish in any meal
+  * If "Bezglutenowe" is in restrictions, avoid wheat, gluten-containing grains and products
+  * If "Bez laktozy" is in restrictions, avoid dairy products or use lactose-free alternatives
+  * If "Keto" is in restrictions, focus on high-fat, low-carb ingredients
+- EXCLUDED INGREDIENTS: Do NOT use any ingredients mentioned in excluded ingredients list
+- MEAL TYPES: Only create meals of the types specified in meal_types list
 - Use suggested recipes as inspiration - you can copy their instructions directly
 - Include precise quantities for all ingredients (e.g., "200g tofu")
 - Provide detailed step-by-step cooking instructions - if using a suggested recipe, copy its instructions directly
 - Calculate estimated total cost
-- You can add basic ingredients (bread, eggs, milk, etc.)
+- You can add basic ingredients (bread, eggs, milk, etc.) as long as they don't violate restrictions
 
 Return the response in JSON format with Polish text:
 {{

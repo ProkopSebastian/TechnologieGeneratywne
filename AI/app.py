@@ -12,8 +12,11 @@ def ask():
         return jsonify({"status": "error", "message": "Missing 'query' in request"}), 400
     days = data.get("days", 1)
     people = data.get("people", 1)
+    dietary_restrictions = data.get("restrictions", [])
+    meal_types = data.get("meal_types", ["śniadanie", "obiad", "kolacja"])
+    excluded_ingredients = data.get("excluded_ingredients", "")
     query = data["query"]
-    result = ask_rag(query, days, people)
+    result = ask_rag(query, days, people, dietary_restrictions, meal_types, excluded_ingredients)
     return jsonify(result)
 
 if __name__ == "__main__":
