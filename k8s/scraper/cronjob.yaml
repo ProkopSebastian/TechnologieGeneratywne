@@ -10,7 +10,7 @@ spec:
         spec:
           containers:
           - name: scraper
-            image: olszewskib/teg-scraper:v1.0
+            image: olszewskib/teg-scraper:v1
             imagePullPolicy: IfNotPresent
             volumeMounts:
             - name: shared-storage
