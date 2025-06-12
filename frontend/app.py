@@ -7,7 +7,7 @@ import time
 import sys
 import os
 
-API_URL = os.environ.get("API_URL", "http://rag-backend:5001/api/ask")
+API_URL = os.environ.get("API_URL", "http://rag-backend:5000/api/ask")
 
 logging.basicConfig(
     level=logging.INFO,
