@@ -3,5 +3,6 @@ kind: Kustomization
 namespace: teg
 
 resources:
-  - ingress.yaml
   - ./frontend
+  - pvc.yaml
+  - ingress.yaml
