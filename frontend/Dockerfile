@@ -8,6 +8,9 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
+# Copy app files
+COPY app.py .
+
 # Expose Streamlit's default port
 EXPOSE 8501
 
