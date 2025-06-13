@@ -40,7 +40,10 @@ RULES:
 - Use as many promotional products as possible
 - One meal can include multiple promotional products
 - Create varied, healthy meals matching the requested meal types
-- STRICT DIETARY RESTRICTIONS: Follow all dietary restrictions exactly:
+- STRICT DIETARY RESTRICTIONS: Follow all dietary restrictions exactly, 
+     if promotial products conflict with restrictions, do not use them,
+     check polish names like 'pasztet' or 'konserwa' of promotional products if their meaning contradicts restrictions, do not use them
+- DIETARY RESTRICTIONS:
   * If "Wegetariańskie" is in restrictions, DO NOT use meat, poultry, or fish in any meal
   * If "Bezglutenowe" is in restrictions, avoid wheat, gluten-containing grains and products
   * If "Bez laktozy" is in restrictions, avoid dairy products or use lactose-free alternatives
@@ -53,7 +56,7 @@ RULES:
 - Calculate estimated total cost
 - You can add basic ingredients (bread, eggs, milk, etc.) as long as they don't violate restrictions
 
-Return the response in JSON format with Polish text:
+Return the response in JSON format with Polish text if products don't fit restrictions leave empty fields in main_products empty:
 {{
 "plan_info": {{
     "days": {days},
