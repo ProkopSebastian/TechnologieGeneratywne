@@ -63,7 +63,7 @@ Return the response in JSON format with Polish text:
 "meals": [
     {{
     "day": 1,
-    "type": "breakfast",
+    "type": "Breakfast/Lunch/Dinner/Snack in Polish",
     "name": "Meal name in Polish",
     "image_name": "copy image name from suggested recipe only if you used it, otherwise leave empty",
     "main_products": [
@@ -88,7 +88,7 @@ Return the response in JSON format with Polish text:
 "shopping_summary": {{
     "promotional_products_cost": "XX.XX PLN",
     "additional_ingredients_cost": "XX.XX PLN",
-    "total_savings": "Calculate savings from promotions in PLN"
+    "total_savings": "Calculate savings from promotions in XX.XX PLN"
 }}
 }}""")
 ])
