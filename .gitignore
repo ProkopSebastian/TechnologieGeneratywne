@@ -16,6 +16,8 @@ qdrant_data/
 # Ustawienia VS Code
 .vscode/
 
+# Ustawienia Zed
+.zed/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
