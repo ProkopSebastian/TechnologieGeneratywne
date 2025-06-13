@@ -4,3 +4,6 @@ metadata:
   name: backend-config
 data:
   QDRANT_URL: "http://qdrant.teg.svc.cluster.local:6333"
+  LANGSMITH_TRACING: "true"
+  LANGSMITH_ENDPOINT: "https://api.smith.langchain.com"
+  LANGSMITH_PROJECT: "teg"

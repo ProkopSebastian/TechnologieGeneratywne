@@ -22,6 +22,8 @@ spec:
           envFrom:
             - secretRef:
                 name: openai-api-key
+            - secretRef:
+                name: langsmith-api-key
             - configMapRef:
                 name: backend-config
           volumeMounts:
