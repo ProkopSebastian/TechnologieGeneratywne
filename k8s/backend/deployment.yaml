@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: olszewskib/teg-backend:v1
+          image: olszewskib/teg-backend:v2
           ports:
             - containerPort: 5000
           envFrom:
