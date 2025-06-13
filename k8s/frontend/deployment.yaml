@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: olszewskib/teg-frontend:v2.1
+          image: olszewskib/teg-frontend:v3
           ports:
             - containerPort: 8501
           envFrom:
