@@ -16,9 +16,16 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: olszewskib/teg-frontend:v2.1
+          image: olszewskib/teg-frontend:v3
           ports:
             - containerPort: 8501
           envFrom:
             - configMapRef:
                 name: frontend-config
+          volumeMounts:
+            - name: food-images
+              mountPath: /app/Images
+      volumes:
+        - name: food-images
+          persistentVolumeClaim:
+            claimName: food-images

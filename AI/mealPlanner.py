@@ -22,14 +22,14 @@ from utils import recalculate_prices, recalculate_prices_manual
 class MealPlannerAPI:
     def __init__(self):
         self.API_KEY = os.getenv('OPENAI_API_KEY')
-        self.QDRANT_HOST = os.getenv('QDRANT_HOST', 'qdrant')
+        self.QDRANT_URL = os.getenv('QDRANT_URL', 'http://localhost:6333')
         self.RECIPE_DATA_PATH = "shared_data/recipe_embeddings.pkl"
         self.PRODUCTS_FILE = "shared_data/biedronka_offers_enhanced.json"
 
         self.client = openai.OpenAI(api_key=self.API_KEY)
         self.logger = get_logger("app-MealPlanner")
 
-        self.qdrant_client = QdrantClient(host=self.QDRANT_HOST, port=6333)
+        self.qdrant_client = QdrantClient(url=self.QDRANT_URL)
         self.embedding_model = OpenAIEmbeddings(openai_api_key=self.API_KEY)
 
         self.llm_quick = ChatOpenAI(

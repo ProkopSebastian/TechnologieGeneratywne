@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: backend-config
 data:
-  QDRANT_HOST: "qdrant"
+  QDRANT_URL: "http://qdrant.teg.svc.cluster.local:6333"
