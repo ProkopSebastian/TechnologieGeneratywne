@@ -22,3 +22,10 @@ spec:
           envFrom:
             - configMapRef:
                 name: frontend-config
+          volumeMounts:
+            - name: food-images
+              mountPath: /app/Images
+      volumes:
+        - name: food-images
+          persistentVolumeClaim:
+            claimName: food-images
