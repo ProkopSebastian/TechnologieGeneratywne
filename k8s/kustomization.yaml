@@ -5,6 +5,7 @@ namespace: teg
 resources:
   - ./frontend
   - ./backend
+  - ./qdrant
   - ./scraper
   - pvc.yaml
   - ingress.yaml
